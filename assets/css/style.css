@@ -248,9 +248,6 @@ HERO
 .involved-wrapper svg {
   max-width: 18.75rem;
 }
-@supports ((display: -ms-grid) or (display: grid)) {
-
-}
 @media (min-width: 1024px) {
   .location-wrapper .map {
     max-width: 41.66667%;
@@ -291,7 +288,7 @@ HERO
           grid-template-columns: repeat(4, 1fr);
       -ms-grid-rows: (auto)[2];
           grid-template-rows: repeat(2, auto);
-      grid-column-gap: 1.25rem;
+      grid-column-gap: 6.6875rem;
       grid-row-gap: 3.125rem;
       -webkit-align-items: center;
           -ms-flex-align: center;

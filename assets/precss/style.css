@@ -175,9 +175,6 @@ HERO
     max-width: 300px;
   }
 }
-@supports (display: grid) {
-
-}
 @media (--large) {
   .location-wrapper .map {
     max-width: calc(5/12 * 100%);
@@ -206,7 +203,7 @@ HERO
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(2, auto);
-      grid-column-gap: 20px;
+      grid-column-gap: 107px;
       grid-row-gap: 50px;
       align-items: center;
       & .donate-desciption {
