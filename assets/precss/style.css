@@ -158,16 +158,17 @@ HERO
   & .desciption {
     max-width: 100%;
     flex: 1 1 100%;
-    padding: 0 10px;
+    padding: 0 10px 30px;
+
   }
 }
 .involved-wrapper {
   display: flex;
   flex-flow: row wrap;
-  & .donate, & .play, & .donate-desciption, & .play-description {
+  & .donate, & .play, & .donate-desciption, & .play-description, & .sponser-description {
     padding: 0 10px;
   }
-  & .donate, & .play {
+  & .donate, & .play, & .sponser {
     width: 100%;
     text-align: center;
   }
@@ -202,8 +203,8 @@ HERO
     .involved-wrapper {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, auto);
-      grid-column-gap: 107px;
+      grid-template-rows: repeat(3, auto);
+      grid-column-gap: 50px;
       grid-row-gap: 50px;
       align-items: center;
       & .donate-desciption {
@@ -213,6 +214,14 @@ HERO
       & .donate {
         grid-column: 4/5;
         grid-row: 1/2;
+      }
+      & .sponser {
+        grid-column: 4/5;
+        grid-row: 3/4;
+      }
+      & .sponser-description {
+        grid-column: 1/4;
+        grid-row: 3/4;
       }
       & .play-description {
         grid-column: 2/5;
