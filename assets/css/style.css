@@ -244,6 +244,7 @@ HERO
 .involved-wrapper .donate, .involved-wrapper .play, .involved-wrapper .sponser {
   width: 100%;
   text-align: center;
+  padding-bottom: 1.875rem;
 }
 .involved-wrapper svg {
   max-width: 18.75rem;
@@ -293,6 +294,9 @@ HERO
       -webkit-align-items: center;
           -ms-flex-align: center;
               align-items: center
+    }
+    .involved-wrapper .donate, .involved-wrapper .play, .involved-wrapper .sponser {
+      padding-bottom: 0;
     }
     .involved-wrapper .donate-desciption {
       grid-column: 1/4;

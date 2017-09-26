@@ -171,6 +171,7 @@ HERO
   & .donate, & .play, & .sponser {
     width: 100%;
     text-align: center;
+    padding-bottom: 30px;
   }
   & svg {
     max-width: 300px;
@@ -207,6 +208,9 @@ HERO
       grid-column-gap: 50px;
       grid-row-gap: 50px;
       align-items: center;
+      & .donate, & .play, & .sponser {
+        padding-bottom: 0;
+      }
       & .donate-desciption {
         grid-column: 1/4;
         grid-row: 1/2;
