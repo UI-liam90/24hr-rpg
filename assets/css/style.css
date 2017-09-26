@@ -117,6 +117,20 @@ ATOMS
     font-size: 0.8125rem;
   }
 }
+.fs06 {
+  font-size: calc(1.5rem + 12 * ((100vw - 20rem) / 440));
+  line-height: 1.2;
+}
+@media screen and (min-width: 760px) {
+  .fs06 {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .fs06 {
+    font-size: 1.5rem;
+  }
+}
 .p50 {
   padding: 3.125rem 0;
 }
@@ -157,6 +171,7 @@ ATOMS
           flex-flow: row wrap;
 }
 .wrapper {
+  width: 100%;
   max-width: 64rem;
   margin: 0 0.625rem;
 }
@@ -249,6 +264,17 @@ HERO
 .involved-wrapper svg {
   max-width: 18.75rem;
 }
+.session-item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 @media (min-width: 1024px) {
   .location-wrapper .map {
     max-width: 41.66667%;
@@ -322,5 +348,18 @@ HERO
       grid-column: 1/2;
       grid-row: 2/3;
     }
+  }
+  .sessions-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 2.5rem;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }

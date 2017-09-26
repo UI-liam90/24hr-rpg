@@ -80,6 +80,11 @@ ATOMS
   font-range: 320px 760px;
   line-height: 1.2;
 }
+.fs06 {
+  font-size: responsive 24px 36px;
+  font-range: 320px 760px;
+  line-height: 1.2;
+}
 .p50 {
   padding: 50px 0;
 }
@@ -112,6 +117,7 @@ ATOMS
   flex-flow: row wrap;
 }
 .wrapper {
+  width: 100%;
   max-width: 1024px;
   margin: 0 10px;
 }
@@ -177,6 +183,11 @@ HERO
     max-width: 300px;
   }
 }
+.session-item {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
 @media (--large) {
   .location-wrapper .map {
     max-width: calc(5/12 * 100%);
@@ -236,5 +247,13 @@ HERO
         grid-row: 2/3;
       }
     }
+  }
+  .sessions-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    justify-content: center;
   }
 }
