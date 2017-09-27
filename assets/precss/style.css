@@ -23,7 +23,9 @@ p {
   margin-bottom: 20px;
   flex: 1 1 100%;
 }
-
+img {
+  max-width: 100%;
+}
 /*===================================================================
 ATOMS
 ===================================================================*/
@@ -127,10 +129,84 @@ ATOMS
 /*===================================================================
 HERO
 ===================================================================*/
+.desktop-menu, .mobile-navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: none;
+}
+.desktop-menu {
+  display: none;
+}
+.mobile-navigation {
+  flex-flow: row nowrap;
+  & h1 {
+    flex: 1 1 auto;
+    padding: 15px 20px;
+  }
+  & a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: var(--white);
+    text-decoration: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0 20px;
+  }
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  & li {
+    padding: 10px;
+  }
+  & li a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: var(--white);
+    text-decoration: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+.mobile-menu {
+  width: 50%;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  list-style: none;
+  background: var(--cs1);
+  margin: 0;
+  padding: 20px 0 0 20px;
+  transition: all 350ms ease;
+  &.active {
+    left: 0;
+  }
+  & li {
+    padding: 10px;
+    & h1 {
+      padding-top: 15px;
+    }
+  }
+  & li a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: var(--white);
+    text-decoration: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: row wrap;
   background-image: url('../img/hero.jpg');
   background-position: center;
   background-size: cover;
@@ -147,7 +223,6 @@ HERO
   align-items: center;
   & .about-us-wrapper {
     max-width: 850px;
-    margin: 0 auto;
   }
 }
 .location-wrapper {
@@ -192,6 +267,12 @@ HERO
   align-items: center;
 }
 @media (--large) {
+  .desktop-menu {
+    display: flex;
+  }
+  .mobile-navigation {
+    display: none;
+  }
   .location-wrapper .map {
     max-width: calc(5/12 * 100%);
     flex: 1 1 calc(5/12 * 100%);

@@ -15,7 +15,9 @@ p {
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
 }
-
+img {
+  max-width: 100%;
+}
 /*===================================================================
 ATOMS
 ===================================================================*/
@@ -181,6 +183,91 @@ ATOMS
 /*===================================================================
 HERO
 ===================================================================*/
+.desktop-menu, .mobile-navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: none;
+}
+.desktop-menu {
+  display: none;
+}
+.mobile-navigation {
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap
+}
+.mobile-navigation h1 {
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0.9375rem 1.25rem;
+}
+.mobile-navigation a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, .25);
+  padding: 0 1.25rem;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center
+}
+
+.menu li {
+  padding: 0.625rem;
+}
+
+.menu li a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, .25);
+}
+.mobile-menu {
+  width: 50%;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  list-style: none;
+  background: #04384A;
+  margin: 0;
+  padding: 1.25rem 0 0 1.25rem;
+  transition: all 350ms ease
+}
+.mobile-menu.active {
+  left: 0;
+}
+.mobile-menu li {
+  padding: 0.625rem;
+}
+.mobile-menu li h1 {
+  padding-top: 0.9375rem;
+}
+.mobile-menu li a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, .25);
+}
 .hero {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -191,6 +278,9 @@ HERO
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   background-image: url('../img/hero.jpg');
   background-position: center;
   background-size: cover;
@@ -214,7 +304,6 @@ HERO
 }
 .about-us .about-us-wrapper {
   max-width: 53.125rem;
-  margin: 0 auto;
 }
 .location-wrapper {
   display: -webkit-flex;
@@ -279,6 +368,14 @@ HERO
           align-items: center;
 }
 @media (min-width: 1024px) {
+  .desktop-menu {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .mobile-navigation {
+    display: none;
+  }
   .location-wrapper .map {
     max-width: 41.66667%;
     -webkit-flex: 1 1 41.66667%;
