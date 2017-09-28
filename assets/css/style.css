@@ -367,6 +367,32 @@ HERO
       -ms-flex-align: center;
           align-items: center;
 }
+#standings {
+  padding-top: 3.125rem;
+}
+.current-standings {
+  width: 100%;
+  margin: 0 0.625rem
+}
+.current-standings ul, .current-standings ol {
+  padding-left: 1.125rem;
+}
+@media (min-width: 760px) {
+  @supports ((display: -ms-grid) or (display: grid)) {
+    .current-standings {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (1fr)[2];
+          grid-template-columns: repeat(2, 1fr);
+      -ms-grid-rows: auto;
+          grid-template-rows: auto;
+      grid-column-gap: 1.25rem;
+      grid-row-gap: 1.875rem;
+      -ms-grid-column-align: center;
+          justify-items: center;
+    }
+  }
+}
 @media (min-width: 1024px) {
   .desktop-menu {
     display: -webkit-flex;
@@ -457,9 +483,13 @@ HERO
     -ms-grid-rows: auto;
         grid-template-rows: auto;
     grid-column-gap: 1.25rem;
-    grid-row-gap: 2.5rem;
+    grid-row-gap: 4.375rem;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .current-standings {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
   }
 }

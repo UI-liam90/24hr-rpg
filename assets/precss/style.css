@@ -266,6 +266,28 @@ HERO
   flex-flow: column;
   align-items: center;
 }
+#standings {
+  padding-top: 50px;
+}
+.current-standings {
+  width: 100%;
+  margin: 0 10px;
+  & ul, & ol {
+    padding-left: 18px;
+  }
+}
+@media (--medium) {
+  @supports (display: grid) {
+    .current-standings {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      grid-column-gap: 20px;
+      grid-row-gap: 30px;
+      justify-items: center;
+    }
+  }
+}
 @media (--large) {
   .desktop-menu {
     display: flex;
@@ -337,7 +359,10 @@ HERO
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 20px;
-    grid-row-gap: 40px;
+    grid-row-gap: 70px;
     justify-content: center;
+  }
+  .current-standings {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
