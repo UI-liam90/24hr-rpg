@@ -371,13 +371,37 @@ HERO
   padding-top: 3.125rem;
 }
 .current-standings {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   width: 100%;
   margin: 0 0.625rem
 }
 .current-standings ul, .current-standings ol {
   padding-left: 1.125rem;
 }
+.current-standings .current-standing {
+  width: 100%;
+  max-width: 100%;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding: 0 0.625rem;
+}
 @media (min-width: 760px) {
+  .current-standings .current-standing {
+    width: 50%;
+    max-width: 50%;
+    -webkit-flex: 1 1 50%;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
   @supports ((display: -ms-grid) or (display: grid)) {
     .current-standings {
       display: -ms-grid;
@@ -389,7 +413,15 @@ HERO
       grid-column-gap: 1.25rem;
       grid-row-gap: 1.875rem;
       -ms-grid-column-align: center;
-          justify-items: center;
+          justify-items: center
+    }
+    .current-standings .current-standing {
+      width: auto;
+      max-width: none;
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto;
+      padding: 0;
     }
   }
 }
@@ -413,6 +445,13 @@ HERO
     -webkit-flex: 1 1 58.33333%;
         -ms-flex: 1 1 58.33333%;
             flex: 1 1 58.33333%;
+  }
+  .current-standings .current-standing {
+    width: 25%;
+    max-width: 25%;
+    -webkit-flex: 1 1 25%;
+        -ms-flex: 1 1 25%;
+            flex: 1 1 25%;
   }
   @supports ((display: -ms-grid) or (display: grid)) {
     .location-wrapper {
@@ -490,6 +529,13 @@ HERO
   }
   .current-standings {
     -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr)
+  }
+  .current-standings .current-standing {
+    width: auto;
+    max-width: none;
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
   }
 }

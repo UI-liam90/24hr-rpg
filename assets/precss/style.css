@@ -270,13 +270,27 @@ HERO
   padding-top: 50px;
 }
 .current-standings {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
   width: 100%;
   margin: 0 10px;
   & ul, & ol {
     padding-left: 18px;
   }
+  & .current-standing {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+    padding: 0 10px;
+  }
 }
 @media (--medium) {
+  .current-standings .current-standing {
+    width: 50%;
+    max-width: 50%;
+    flex: 1 1 50%;
+  }
   @supports (display: grid) {
     .current-standings {
       display: grid;
@@ -285,6 +299,12 @@ HERO
       grid-column-gap: 20px;
       grid-row-gap: 30px;
       justify-items: center;
+      & .current-standing {
+        width: auto;
+        max-width: none;
+        flex: 1 1 auto;
+        padding: 0;
+      }
     }
   }
 }
@@ -302,6 +322,11 @@ HERO
   .location-wrapper .desciption {
     max-width: calc(7/12 * 100%);
     flex: 1 1 calc(7/12 * 100%);
+  }
+  .current-standings .current-standing {
+    width: 25%;
+    max-width: 25%;
+    flex: 1 1 25%;
   }
   @supports (display: grid) {
     .location-wrapper {
@@ -364,5 +389,10 @@ HERO
   }
   .current-standings {
     grid-template-columns: repeat(4, 1fr);
+    & .current-standing {
+      width: auto;
+      max-width: none;
+      flex: 1 1 auto;
+    }
   }
 }
