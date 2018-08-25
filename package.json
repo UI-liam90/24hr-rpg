@@ -18,6 +18,7 @@
     "iOS 7"
   ],
   "devDependencies": {
-    "postcss-pxtorem": "^4.0.1"
+    "postcss-pxtorem": "^4.0.1",
+    "tailwindcss": "^0.6.5"
   }
 }
