@@ -189,3 +189,12 @@ COMPONENTS
   grid-column: 3 / 5;
   grid-row: 2 / 5;
 }
+
+footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 20px;
+  & p {
+    margin: 0;
+  }
+}
