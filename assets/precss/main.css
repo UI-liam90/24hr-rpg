@@ -32,6 +32,9 @@ p {
 img {
   max-width: 100%;
 }
+figure {
+  margin: 0;
+}
 /*===================================================================
 COMPONENTS
 ===================================================================*/
@@ -64,7 +67,7 @@ COMPONENTS
   top: 0;
   bottom: 0;
   width: 250px;
-  z-index: 9000;
+  z-index: 1000;
   transform: translateX(-250px);
   transition: transform 250ms ease;
   &.active {
@@ -160,7 +163,9 @@ COMPONENTS
     grid-column-gap: 20px;
   }
 }
-
+.main-content {
+  margin-bottom: 40px;
+}
 .main-content p {
   font-size: 20px;
   line-height: 1.4;
@@ -179,7 +184,7 @@ COMPONENTS
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   grid-column-gap: 20px;
-  grid-row-gap: 10px; 
+  grid-row-gap: 20px; 
 }
 .img-1 {
  grid-column: 1 / 3;

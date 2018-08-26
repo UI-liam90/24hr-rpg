@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800,900|Roboto:400,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/simplebar.css">
+    <link rel="stylesheet" href="assets/css/photoswipe.css"> 
+    <link rel="stylesheet" href="assets/css/default-skin/default-skin.css"> 
     <link rel="stylesheet" href="assets/css/main.css">
     <title>24 hour RPG Challenge 2018 | About </title>
 </head>
@@ -50,14 +52,47 @@
                         <p>The players will bid/donate real money to take part in on of the adventures, with the highest bids/donations taking a place at one of the tables. It will need support refs as well as support from as many people as possible to make it as unique, special and worthwhile as possible.</p>
                         <p>On the day, if it is like our previous attempts, there will no doubt be a running commentary, photos, and a live stream to show the depths of stress we can get into as the night continues.</p>
                         <p>So, despite the fun we hope we'll have, it will most definitely be a feat of endurance, logistics, and skill.</p>
+
+                        <p>check out some of the photos from our past events <small>(Click an image to enlarge it)</small></p>
                     </div>
-                    <div class="image-grid">
-                        <img class="img-1" src="assets/img/past-photos/01.jpg" alt="">
-                        <img class="img-2" src="assets/img/past-photos/02.jpg" alt="">
-                        <img class="img-3" src="assets/img/past-photos/03.jpg" alt="">
-                        <img class="img-4" src="assets/img/past-photos/04.jpg" alt="">
-                        <img class="img-5" src="assets/img/past-photos/05.jpg" alt="">
-                        <img class="img-6" src="assets/img/past-photos/06.jpg" alt="">
+                    <div class="my-gallery image-grid" itemscope itemtype="http://schema.org/ImageGallery">
+
+                        <figure class="img-1" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="assets/img/past-photos/01_full.jpg" itemprop="contentUrl" data-size="1024x953">
+                                    <img src="assets/img/past-photos/01.jpg" alt="">
+                            </a>
+                            <!-- <figcaption itemprop="caption description">Image caption</figcaption> -->
+                        </figure>
+                        <figure class="img-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="assets/img/past-photos/02_full.jpg" itemprop="contentUrl" data-size="960x720">
+                                    <img src="assets/img/past-photos/02.jpg" alt="">
+                            </a>
+                            <!-- <figcaption itemprop="caption description">Image caption</figcaption> -->
+                        </figure>
+                        <figure class="img-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="assets/img/past-photos/03_full.jpg" itemprop="contentUrl" data-size="960x720">
+                                    <img src="assets/img/past-photos/03.jpg" alt="">
+                            </a>
+                            <!-- <figcaption itemprop="caption description">Image caption</figcaption> -->
+                        </figure>
+                        <figure class="img-4" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="assets/img/past-photos/04_full.jpg" itemprop="contentUrl" data-size="960x720">
+                                    <img src="assets/img/past-photos/04.jpg" alt="">
+                            </a>
+                            <!-- <figcaption itemprop="caption description">Image caption</figcaption> -->
+                        </figure>
+                        <figure class="img-5" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="assets/img/past-photos/05_full.jpg" itemprop="contentUrl" data-size="960x720">
+                                    <img src="assets/img/past-photos/05.jpg" alt="">
+                            </a>
+                            <!-- <figcaption itemprop="caption description">Image caption</figcaption> -->
+                        </figure>
+                        <figure class="img-6" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="assets/img/past-photos/06_full.jpg" itemprop="contentUrl" data-size="960x720">
+                                    <img src="assets/img/past-photos/06.jpg" alt="">
+                            </a>
+                            <!-- <figcaption itemprop="caption description">Image caption</figcaption> -->
+                        </figure>
                     </div>
                 </section>
                 <footer>
@@ -69,7 +104,75 @@
             </div>
         </div>
     </div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe. 
+            It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides. 
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div> 
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
     <script src="assets/js/simplebar.js"></script>
+    <script src="assets/js/photoswipe.min.js"></script> 
+    <script src="assets/js/photoswipe-ui-default.min.js"></script> 
     <script src="assets/js/script.js"></script>
 </body>
 </html>
