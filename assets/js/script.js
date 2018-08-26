@@ -3,7 +3,7 @@
 var menuToggle = document.querySelector('.open-menu');
 var menu = document.querySelector('.site-sidebar');
 var offcanvasClose = document.querySelector('.offcanvas-close');
-var menuItems = document.querySelectorAll('.site-sidebar > li');
+var menuItems = document.querySelectorAll('.main-menu > li');
 menuToggle.addEventListener("click", function( event ) {
     event.preventDefault();
     menu.classList.toggle('active');
@@ -19,6 +19,7 @@ offcanvasClose.addEventListener("click", function( event ) {
 for (var i = 0; i < menuItems.length; i++) {
   menuItems[i].addEventListener('click', function(event) {
     menu.classList.remove('active');
+    offcanvasClose.classList.remove('active');
   });
 }
 
