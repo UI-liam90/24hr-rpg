@@ -243,8 +243,8 @@ COMPONENTS
   .main {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 5fr 1fr;
-        grid-template-columns: 5fr 1fr;
+    -ms-grid-columns: 3fr 1fr;
+        grid-template-columns: 3fr 1fr;
     grid-column-gap: 1.25rem;
   }
 }
