@@ -133,10 +133,12 @@ COMPONENTS
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0);
   z-index: -100;
+  transition: background 250ms ease;
   &.active {
     z-index: 100;
+    background: rgba(255, 255, 255, 0.3);
   }
 }
 @media (--large) {
