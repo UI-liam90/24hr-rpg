@@ -22,6 +22,36 @@ img {
 figure {
   margin: 0;
 }
+.button {
+  background: #0B90AA;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.625rem;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  font-size: 1.125rem;
+  font-weight: 700
+}
+.button .just-giving-svg {
+  width: 1.875rem;
+  margin-right: 0.625rem;
+}
+.button:hover, .button:focus {
+  background: #007791;
+}
 /*===================================================================
 COMPONENTS
 ===================================================================*/
@@ -50,6 +80,12 @@ COMPONENTS
 .site-header img {
   max-height: 3.75rem;
 }
+.site-nav {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
 .open-menu {
   color: #FFFFFF;
   text-decoration: none;
@@ -59,7 +95,7 @@ COMPONENTS
 .site-sidebar {
   background: #04384A;
   width: 100%;
-  padding: 1.25rem 0.625rem;
+  padding: 1.25rem 0.9375rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

@@ -35,6 +35,26 @@ img {
 figure {
   margin: 0;
 }
+.button {
+  background: #0B90AA;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px;
+  transition: all 250ms ease;
+  font-size: 18px;
+  font-weight: 700;
+  & .just-giving-svg {
+    width: 30px;
+    margin-right: 10px;
+  }
+  &:hover, &:focus {
+    background: #007791;
+  }
+}
 /*===================================================================
 COMPONENTS
 ===================================================================*/
@@ -51,6 +71,9 @@ COMPONENTS
     max-height: 60px;
   }
 }
+.site-nav {
+  flex-grow: 2;
+}
 .open-menu {
   color: var(--white);
   text-decoration: none;
@@ -60,7 +83,7 @@ COMPONENTS
 .site-sidebar {
   background: var(--midnight-black);
   width: 100%;
-  padding: 20px 10px;
+  padding: 20px 15px;
   display: flex;
   flex-direction: column;
   position: fixed;
