@@ -273,6 +273,7 @@ COMPONENTS
   }
 }
 .image-grid {
+  margin-top: 1.875rem;
   -ms-grid-column-span: 2;
   grid-column: span 2;
   display: -ms-grid;

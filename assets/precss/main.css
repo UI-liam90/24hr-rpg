@@ -204,6 +204,7 @@ COMPONENTS
   margin-bottom: 30px;
 }
 .image-grid {
+  margin-top: 30px;
   grid-column: span 2;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
