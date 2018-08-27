@@ -124,6 +124,7 @@ COMPONENTS
 }
 .main-menu li > ul {
   list-style: none;
+  padding: 10px;
   & li {
     padding: 10px 0;
   }
@@ -320,6 +321,12 @@ footer {
     align-items: center;
   }
 }
+.adventure-thumb a {
+  text-decoration: none;
+  &:hover img,&:focus img {
+    transform: scale(1.05);
+  }
+}
 .adventure-thumb h5 {
   text-align: center;
   font-size: 24px;
@@ -331,4 +338,22 @@ footer {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   max-width: 300px;
   margin-bottom: 10px;
+  transform: scale(1);
+  transition: all 250ms ease;
+}
+@media (--large) {
+  .adventure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+  .adventure-single {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 20px;
+    align-items: center;
+  }
+  .adventure-thumb img {
+    max-width: 100%;
+  }
 }
