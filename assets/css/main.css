@@ -71,7 +71,7 @@ COMPONENTS
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; 
-  padding: 0.625rem
+  padding: 0.625rem 1.25rem
 }
 .site-header .logo {
   display: -webkit-box;
