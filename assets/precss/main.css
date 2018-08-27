@@ -28,6 +28,8 @@ h1,h2,h3,h4,h5,h6 {
 p {
   margin: 0;
   margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.4;
 }
 img {
   max-width: 100%;
@@ -120,7 +122,18 @@ COMPONENTS
     font-weight: 900;
   }
 }
-
+.main-menu li > ul {
+  list-style: none;
+  & li {
+    padding: 10px 0;
+  }
+  & li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
 .content-area {
   background: var(--canvas);
   min-height: 100vh;
@@ -148,7 +161,7 @@ COMPONENTS
   }
 }
 .hero {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--midnight-black) 100%), url('../img/hero-2018.jpg');
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--midnight-black) 100%), url('../img/hero-2018.jpg');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -159,6 +172,22 @@ COMPONENTS
   min-height: 300px;
   position: relative;
   padding: 20px;
+  &.hero--get-involved {
+    background-image: url('../img/hero.jpg');
+  }
+  &.hero--adventure {
+    background-image: url('../img/adventure-hero.jpg');
+  }
+  &.hero--dnd {
+    background-image: url('../img/dnd-hero.jpg');
+  }
+  &.hero--numenera {
+    background-image: url('../img/numenera-hero.jpg');
+    background-position: top 30% center;
+  }
+  &.hero--wfrp {
+    background-image: url('../img/wfrp-hero.jpg');
+  }
 }
 .hero__title {
   color: var(--white);
@@ -178,22 +207,51 @@ COMPONENTS
 }
 @media (--large) {
   .main {
-    padding: 60px;
-  }
-}
-@media (--large) {
-  .main {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-column-gap: 20px;
+    grid-column-gap: 40px;
+    padding: 60px;
+    &.main--get-involved {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 40px;
+      grid-row-gap: 20px;
+    }
+  }
+  .main--get-involved .span-all {
+    grid-column: 1/-1;
+  }
+  .main--get-involved .donate, .main--get-involved .sponser {
+    grid-column: 1/2;
+  }
+  .main--get-involved .donate-desciption, .main--get-involved .sponser-description {
+    grid-column: 2/5;
+  }
+  .main--get-involved .play {
+    grid-column: 4/5;
+    grid-row: 4/5;
+  }
+  .main--get-involved .play-description {
+    grid-column: 1/4;
+    grid-row: 4/5;
+  }
+  .main--get-involved .donate, .main--get-involved .sponser, .main--get-involved .play {
+    justify-content: flex-start;
+    margin-bottom: 0;
+    & svg {
+      width: auto;
+    }
+  }
+}
+.main--get-involved .donate, .main--get-involved .sponser, .main--get-involved .play {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  & svg {
+    width: 300px;
   }
 }
 .main-content {
   margin-bottom: 40px;
-}
-.main-content p {
-  font-size: 20px;
-  line-height: 1.4;
 }
 .main-content__title {
   color: var(--teal);
@@ -202,6 +260,25 @@ COMPONENTS
   font-range: 1024px 1920px;
   font-weight: 900;
   margin-bottom: 30px;
+}
+.main-content__title.main-content__title--small {
+  font-size: responsive 24px 48px;
+  font-range: 1024px 1920px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.main-list li {
+  margin-bottom: 10px;
+}
+.just-giving-widget {
+  margin-bottom: 30px;
+  & .jg-widget {
+    background: var(--white);
+  }
+}
+.main-gallery {
+ grid-column: span 2;
+ margin-top: 60px;
 }
 .image-grid {
   margin-top: 30px;
@@ -228,4 +305,30 @@ footer {
   & p {
     margin: 0;
   }
+}
+
+@media (--large) {
+  .adventure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+  .adventure-single {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 20px;
+    align-items: center;
+  }
+}
+.adventure-thumb h5 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--teal);
+}
+.adventure-thumb img {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  max-width: 300px;
+  margin-bottom: 10px;
 }
