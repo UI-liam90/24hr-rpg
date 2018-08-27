@@ -336,10 +336,17 @@ footer {
 .adventure-thumb img {
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  max-width: 300px;
   margin-bottom: 10px;
+  width: 100%;
+  max-width: 370px;
   transform: scale(1);
   transition: all 250ms ease;
+}
+.adventure-thumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 @media (--large) {
   .adventure-grid {
@@ -353,7 +360,7 @@ footer {
     grid-column-gap: 20px;
     align-items: center;
   }
-  .adventure-thumb img {
+  .adventure-thumb img{
     max-width: 100%;
   }
 }
