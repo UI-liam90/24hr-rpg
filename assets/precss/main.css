@@ -30,6 +30,9 @@ p {
   margin-bottom: 20px;
   font-size: 20px;
   line-height: 1.4;
+  & a {
+    color: var(--midnight-black);
+  }
 }
 img {
   max-width: 100%;

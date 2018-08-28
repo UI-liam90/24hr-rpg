@@ -16,7 +16,10 @@ p {
   margin: 0;
   margin-bottom: 1.25rem;
   font-size: 1.25rem;
-  line-height: 1.4;
+  line-height: 1.4
+}
+p a {
+  color: #04384A;
 }
 img {
   max-width: 100%;

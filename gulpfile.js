@@ -23,7 +23,8 @@ gulp.task('css', function () {
 
 gulp.task('watch', function () {
 	browserSync.init({
-		server: "./"
+		server: "./",
+		port: 8080
 	});
 	gulp.watch('./assets/precss/main.css', ['css']);
 	gulp.watch('*.html').on('change', browserSync.reload);
