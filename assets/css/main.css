@@ -233,6 +233,10 @@ COMPONENTS
 .hero.hero--wfrp {
   background-image: url('../img/wfrp-hero.jpg');
 }
+.hero.hero--gm {
+  background-image: url('../img/gm-hero.jpg');
+  background-position: top 15% center;
+}
 .hero__title {
   color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;

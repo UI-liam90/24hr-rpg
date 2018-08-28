@@ -192,6 +192,10 @@ COMPONENTS
   &.hero--wfrp {
     background-image: url('../img/wfrp-hero.jpg');
   }
+  &.hero--gm {
+    background-image: url('../img/gm-hero.jpg');
+    background-position: top 15% center;
+  }
 }
 .hero__title {
   color: var(--white);
