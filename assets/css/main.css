@@ -24,6 +24,9 @@ p a {
 img {
   max-width: 100%;
 }
+.main ul li {
+  margin-bottom: 0.625rem;
+}
 figure {
   margin: 0;
 }

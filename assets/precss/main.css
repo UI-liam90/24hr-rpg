@@ -37,6 +37,9 @@ p {
 img {
   max-width: 100%;
 }
+.main ul li {
+  margin-bottom: 10px;
+}
 figure {
   margin: 0;
 }
