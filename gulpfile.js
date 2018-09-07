@@ -15,6 +15,7 @@ gulp.task('css', function () {
 				propList: ['*'],
 				selectorBlackList: ['letter-spacing']
 			}),
+			require('postcss-data-uri'),
 			require('autoprefixer')({ grid: true, browsers: ["last 2 versions", "ie 9-11", "iOS 7"] })
 		]))
 		.pipe(gulp.dest('./assets/css/'))
