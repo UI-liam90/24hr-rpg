@@ -74,6 +74,11 @@ figure {
   fill: #04384A;
   margin-right: 0.625rem;
 }
+.run {
+  font-size: 1.875rem;
+  font-weight: 900;
+  color: #0B90AA;
+}
 .smaller-link {
   word-break: break-all;
 }
@@ -526,6 +531,7 @@ footer p {
       -ms-grid-columns: 1fr 1fr 1fr;
           grid-template-columns: 1fr 1fr 1fr;
       grid-column-gap: 1.25rem;
+      margin-bottom: 1.875rem;
     }
     .adventure-single {
       display: -ms-grid;

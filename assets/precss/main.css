@@ -74,6 +74,11 @@ figure {
     margin-right: 10px;
   }
 }
+.run {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--teal);
+}
 .smaller-link {
   word-break: break-all;
 }
@@ -384,6 +389,7 @@ footer {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-column-gap: 20px;
+      margin-bottom: 30px;
     }
     .adventure-single {
       display: grid;
