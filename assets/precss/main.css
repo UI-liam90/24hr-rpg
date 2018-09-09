@@ -75,7 +75,8 @@ figure {
   }
 }
 .run {
-  font-size: 30px;
+  font-size: responsive 20px 30px;
+  font-range: 1024px 1920px;
   font-weight: 900;
   color: var(--teal);
 }
@@ -382,6 +383,9 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+}
+.adventure-grid, .adventure-single {
+  margin-bottom: 30px;
 }
 @media (--large) {
   @supports (display: grid) {

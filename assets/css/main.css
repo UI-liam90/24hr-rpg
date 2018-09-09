@@ -75,9 +75,19 @@ figure {
   margin-right: 0.625rem;
 }
 .run {
-  font-size: 1.875rem;
+  font-size: calc(1.25rem + 10 * ((100vw - 64rem) / 896));
   font-weight: 900;
   color: #0B90AA;
+}
+@media screen and (min-width: 1920px) {
+  .run {
+    font-size: 1.875rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .run {
+    font-size: 1.25rem;
+  }
 }
 .smaller-link {
   word-break: break-all;
@@ -522,6 +532,9 @@ footer p {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 1.25rem;
+}
+.adventure-grid, .adventure-single {
+  margin-bottom: 1.875rem;
 }
 @media (min-width: 1024px) {
   @supports (display: grid) {
