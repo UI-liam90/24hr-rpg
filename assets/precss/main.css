@@ -188,7 +188,7 @@ COMPONENTS
   }
 }
 .hero {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--midnight-black) 100%), data-uri('assets/img/hero-2018.jpg');
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--midnight-black) 100%), url('../img/hero-2018.jpg');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -200,30 +200,30 @@ COMPONENTS
   position: relative;
   padding: 20px;
   &.hero--get-involved {
-    background-image: data-uri('assets/img/hero.jpg');
+    background-image: url('../img/hero.jpg');
   }
   &.hero--adventure {
-    background-image: data-uri('assets/img/adventure-hero.jpg');
+    background-image: url('../img/adventure-hero.jpg');
   }
   &.hero--dnd {
-    background-image: data-uri('assets/img/dnd-hero.jpg');
+    background-image: url('../img/dnd-hero.jpg');
   }
   &.hero--numenera {
-    background-image: data-uri('assets/img/numenera-hero.jpg');
+    background-image: url('../img/numenera-hero.jpg');
     background-position: top 30% center;
   }
   &.hero--wfrp {
-    background-image: data-uri('assets/img/wfrp-hero.jpg');
+    background-image: url('../img/wfrp-hero.jpg');
   }
   &.hero--gm {
-    background-image: data-uri('assets/img/gm-hero.jpg');
+    background-image: url('../img/gm-hero.jpg');
     background-position: top 15% center;
   }
   &.hero--blades {
-    background-image: data-uri('assets/img/blades-hero.jpg');
+    background-image: url('../img/blades-hero.jpg');
   }
   &.hero--woin {
-    background-image: data-uri('assets/img/woin-hero.jpg');
+    background-image: url('../img/woin-hero.jpg');
   }
 }
 .hero__title {
