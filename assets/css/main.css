@@ -562,3 +562,18 @@ footer p {
     }
   }
 }
+.social-icons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin-top: 1.25rem;
+}
+.social-icon svg {
+  width: 3.125rem;
+  height: 3.125rem;
+  fill: #FFFFFF;
+}
