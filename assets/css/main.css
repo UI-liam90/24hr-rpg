@@ -573,7 +573,12 @@ footer p {
   margin-top: 1.25rem;
 }
 .social-icon svg {
-  width: 3.125rem;
-  height: 3.125rem;
+  width: 2.8125rem;
+  height: 2.8125rem;
   fill: #FFFFFF;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.social-icon:hover svg, .social-icon:focus svg {
+  fill: #0B90AA;
 }
