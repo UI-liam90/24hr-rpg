@@ -225,6 +225,9 @@ COMPONENTS
   &.hero--woin {
     background-image: url('../img/woin-hero.jpg');
   }
+  &.hero--planescapes {
+    background-image: url('../img/planescapes-hero.jpg');
+  }
 }
 .hero__title {
   color: var(--white);
