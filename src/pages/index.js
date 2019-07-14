@@ -20,7 +20,7 @@ export default ({ data }) => {
   return(
     <Layout>
     <Application />
-    <Banner src={data.hero.childImageSharp.fixed} />
+    <Banner src={data.hero.childImageSharp.fluid} />
       <div className="intro-section">
         <h2 className="intro-section__title">About The Event</h2>
         <p>It’s time for our 5th 24 hour RPG challenge can you believe we have been doing this for 5 years now, that is crazy!!</p>
@@ -50,8 +50,8 @@ export const query = graphql`
   query {
     hero: file(relativePath: { eq: "pages/dnd.png" }) {
       childImageSharp {
-        fixed(width: 500, height: 500) {
-          ...GatsbyImageSharpFixed_withWebp
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

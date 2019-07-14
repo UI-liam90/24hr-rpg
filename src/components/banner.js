@@ -14,7 +14,7 @@ export default props => (
           </h4>
         </div>
         <div className={bannerStyles.bannerImg}>
-          <Img fixed={props.src}/>
+          <Img fluid={props.src}/>
         </div>
         
       </div>
