@@ -7,7 +7,7 @@ body {
 }
 main { 
   background-color: $canvas;
-  padding: rem(50px 0);
+  padding: rem(50px 15px);
 }
 p {
   @include rfs(20);
@@ -36,7 +36,7 @@ p {
   margin: rem(0 -15px);
   li {
     width: 100%;
-    margin: rem(0 15px);
+    margin: rem(15px);
     border:  rem(3px) solid $lblue;
     background-color: $blue;
     border-radius: rem(10px);
