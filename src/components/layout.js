@@ -15,11 +15,11 @@ export default ({ children }) => (
       <Link to="/" className={layoutStyles.logowrapper}>
         <img src={logo} alt="24 hour RPG" />
       </Link>
-      <ul className={layoutStyles.menu}>
+      {/* <ul className={layoutStyles.menu}>
         <ListLink to="/">Home</ListLink>
         <ListLink to="/about/">About</ListLink>
         <ListLink to="/contact/">Contact</ListLink>
-      </ul>
+      </ul> */}
     </header>
     { children }
     <footer className={layoutStyles.footer}>

@@ -13,7 +13,10 @@ export default props => (
               <span>At Prince of Wales Hotel Southport</span> 
           </h4>
         </div>
-        <Img fixed={props.src} />
+        <div className={bannerStyles.bannerImg}>
+          <Img fixed={props.src}/>
+        </div>
+        
       </div>
     </div>
   )
