@@ -1,5 +1,5 @@
 import React from "react"
-import bannerStyles from "./banner.module.css"
+import bannerStyles from "./banner.module.scss"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -7,9 +7,9 @@ export default () => {
   const data = useStaticQuery(
     graphql`
     query {
-      hero: file(relativePath: { eq: "pages/hero-2018.jpg" }) {
+      hero: file(relativePath: { eq: "pages/dnd.png" }) {
         childImageSharp {
-          fixed(width: 125, height: 125) {
+          fixed(width: 500, height: 500) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
@@ -19,7 +19,16 @@ export default () => {
   )
   return (
     <div className={bannerStyles.banner}>
-      <Img fixed={data.hero.childImageSharp.fixed} />
+      <div className={bannerStyles.bannerWrap}>
+        <div className={bannerStyles.bannerText}>
+          <h4>
+              28th - 29th September 2019 
+              <br/>
+              <span>At Prince of Wales Hotel Southport</span> 
+          </h4>
+        </div>
+        <Img fixed={data.hero.childImageSharp.fixed} />
+      </div>
     </div>
   )
 }

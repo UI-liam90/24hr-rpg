@@ -1,0 +1,12 @@
+@import "global";
+@import "variables";
+
+body {
+  font-family: $font1;
+  background: $white;
+}
+
+.intro-section {
+  max-width: $globalWidth;
+  margin: 0 auto;
+}
