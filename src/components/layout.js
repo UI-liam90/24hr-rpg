@@ -22,7 +22,7 @@ export default ({ children }) => (
       </ul>
     </header>
     { children }
-    <footer class={layoutStyles.footer}>
+    <footer className={layoutStyles.footer}>
       <p>&copy; 24hr RPG fundraising</p>
     </footer>
   </>

@@ -2,6 +2,7 @@ import React from "react"
 import Banner from "../components/banner"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
+import { graphql } from "gatsby"
 
 class Application extends React.Component {
   render() {
@@ -14,10 +15,12 @@ class Application extends React.Component {
     )
   }
 }
-export default () => (
-  <Layout>
+export default ({ data }) => {
+  console.log(data)
+  return(
+    <Layout>
     <Application />
-    <Banner />
+    <Banner src={data.hero.childImageSharp.fixed} />
       <div className="intro-section">
         <h2 className="intro-section__title">About The Event</h2>
         <p>It’s time for our 5th 24 hour RPG challenge can you believe we have been doing this for 5 years now, that is crazy!!</p>
@@ -41,4 +44,16 @@ export default () => (
         <p>Sponsors can also influence the outcome of the game. <a href="/getting-involved/#sponsor">Further details can be found here</a></p> 
       </div>
   </Layout>
-)
+  )
+}
+export const query = graphql`
+  query {
+    hero: file(relativePath: { eq: "pages/dnd.png" }) {
+      childImageSharp {
+        fixed(width: 500, height: 500) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
+  }
+  `

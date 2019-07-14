@@ -1,23 +1,9 @@
 import React from "react"
 import bannerStyles from "./banner.module.scss"
-import { useStaticQuery, graphql } from "gatsby"
+//import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-export default () => {
-  const data = useStaticQuery(
-    graphql`
-    query {
-      hero: file(relativePath: { eq: "pages/dnd.png" }) {
-        childImageSharp {
-          fixed(width: 500, height: 500) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
-    }
-    `
-  )
-  return (
+export default props => (
     <div className={bannerStyles.banner}>
       <div className={bannerStyles.bannerWrap}>
         <div className={bannerStyles.bannerText}>
@@ -27,8 +13,8 @@ export default () => {
               <span>At Prince of Wales Hotel Southport</span> 
           </h4>
         </div>
-        <Img fixed={data.hero.childImageSharp.fixed} />
+        <Img fixed={props.src} />
       </div>
     </div>
   )
-}
+
