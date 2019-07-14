@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "gatsby": "^2.13.18",
+    "gatsby-cli": "^2.7.14",
     "gatsby-image": "^2.2.6",
     "gatsby-plugin-manifest": "^2.2.3",
     "gatsby-plugin-offline": "^2.2.4",

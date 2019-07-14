@@ -5,8 +5,60 @@ body {
   font-family: $font1;
   background: $white;
 }
-
-.intro-section {
+main { 
+  background-color: $canvas;
+  padding: rem(50px 0);
+}
+p {
+  @include rfs(20);
+}
+.intro-section, .happening-section {
   max-width: $globalWidth;
   margin: 0 auto;
+}
+.intro-section__title {
+  color: $lblue;
+  @include rfs(50);
+  margin: rem(25px 0);
+}
+.happening-section__title {
+  color: $lblue;
+  @include rfs(45);
+  margin: rem(20px 0);
+}
+.gamemodes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  list-style: none;
+  padding: 0;
+  margin: rem(0 -15px);
+  li {
+    width: 100%;
+    margin: rem(0 15px);
+    border:  rem(3px) solid $lblue;
+    background-color: $blue;
+    border-radius: rem(10px);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: rem(30px 15px);
+    color: $white;
+    h5 {
+      @include rfs(30);
+      margin: rem(10px 0);
+    }
+    @media (min-width: 1024px) {
+      max-width: calc(1 / 3 * 100% - #{rem(30px)});
+      flex: 0 0 calc(1 / 3 * 100% - #{rem(30px)});
+    }
+  }
+  .gamemodes__icon {
+    width: rem(100px);
+    height: rem(75px);
+    fill: $white;
+    margin-bottom: rem(10px);
+  }
 }
