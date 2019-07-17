@@ -50,6 +50,13 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/blog`,
+      },
+    },
     `gatsby-plugin-sharp`, 
     `gatsby-transformer-sharp`
   ]

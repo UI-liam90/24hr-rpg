@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: UI-liam90/24hr-rpg
+  branch: dev
 
 media_folder: static/assets
 public_folder: assets
