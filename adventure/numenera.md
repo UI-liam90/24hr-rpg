@@ -5,6 +5,7 @@ date: 2019-07-20T10:52:41.587Z
 title: Numenera
 featuredimage: /assets/numenera.png
 gamemode: Pure
+runby: Ethan Brittain
 ---
 Numenera is an RPG set a billion years in the future of Earth.
 
