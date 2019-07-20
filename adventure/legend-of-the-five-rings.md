@@ -1,6 +1,6 @@
 ---
 templateKey: adventureTemplate
-path: legend-of-five-rings
+path: legend-of-the-five-rings
 date: 2019-07-20T10:40:12.270Z
 title: 'Legend of the Five Rings: Mask of the Oni'
 featuredimage: /assets/l5r01_feature.jpg
