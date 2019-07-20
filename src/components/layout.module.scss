@@ -26,3 +26,41 @@
   background: $black;
   color: $white;
 }
+.footerTop {
+  max-width: $globalWidth;
+  margin: 0 auto;
+  margin-bottom: rem(30px);
+  .footerTop__column {
+    max-width: 100%;
+    flex: 0 0 100%;
+    @media (min-width: 680px) {
+      max-width: calc(1 / 2 * 100% - #{rem(30px)});
+      flex: 0 0 calc(1 / 2 * 100% - #{rem(30px)});
+    }
+    h5 {
+      @include rfs(24);
+      color: $white;
+      margin: rem(20px 0 15px);
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      @include rfs(20);
+      a {
+        color: $white;
+        text-decoration: none;
+        &:hover, &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.footerBottom {
+  max-width: $globalWidth;
+  margin: 0 auto;
+}

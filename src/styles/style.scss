@@ -11,8 +11,9 @@ main {
 }
 p {
   @include rfs(20);
+  margin: 0 0 rem(30px);
 }
-.intro-section, .happening-section {
+.intro-section, .happening-section, .adventures-section {
   max-width: $globalWidth;
   margin: 0 auto;
 }
@@ -21,7 +22,7 @@ p {
   @include rfs(50);
   margin: rem(25px 0);
 }
-.happening-section__title {
+.happening-section__title, .adventures-section__title {
   color: $lblue;
   @include rfs(45);
   margin: rem(20px 0);
@@ -60,5 +61,41 @@ p {
     height: rem(75px);
     fill: $white;
     margin-bottom: rem(10px);
+  }
+}
+
+.adventures-section__wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  .adventures-section__block {
+    max-width: 100%;
+    flex: 0 0 100%;
+    @media (min-width: 680px) {
+      max-width: calc(1 / 2 * 100% - #{rem(30px)});
+      flex: 0 0 calc(1 / 2 * 100% - #{rem(30px)});
+    }
+    @media (min-width: 1024px) {
+      max-width: calc(1 / 3 * 100% - #{rem(30px)});
+      flex: 0 0 calc(1 / 3 * 100% - #{rem(30px)});
+    }
+    img {
+      clip-path: polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+      margin-bottom: rem(20px);
+    }
+    a {
+      color: $blue;
+      font-weight: 600;
+      text-decoration: none;
+      @include rfs(24);
+      &:hover, &:focus {
+        color: $lblue;
+      }
+      span {
+        margin: rem(10px 0);
+        display: block;
+      }
+    }
   }
 }

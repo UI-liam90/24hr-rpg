@@ -7,9 +7,8 @@ export default props => (
     <div className={bannerStyles.banner}>
       <div className={bannerStyles.bannerWrap}>
         <div className={bannerStyles.bannerText}>
-          <h4>
-              {props.text}
-          </h4>
+          <h1>{props.title}</h1>
+          <h2>{props.subTitle}</h2>
         </div>
         <div className={bannerStyles.bannerImg}>
           <Img fluid={props.src}/>

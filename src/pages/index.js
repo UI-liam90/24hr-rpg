@@ -1,6 +1,7 @@
 import React from "react"
 import Banner from "../components/banner"
 import Layout from "../components/layout"
+import PostLink from "../components/post-link"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 
@@ -15,12 +16,15 @@ class Application extends React.Component {
     )
   }
 }
+
 export default ({ data }) => {
   console.log(data)
+  const Adventures = data.adventures.edges
+    .map(edge => <PostLink key={edge.node.id} adventure={edge.node} />)
   return(
     <Layout>
     <Application />
-    <Banner text="28th - 29th September 2019 <br/><span>At Prince of Wales Hotel Southport</span>" src={data.hero.childImageSharp.fluid} />
+    <Banner title="28th - 29th September 2019" subTitle="At Prince of Wales Hotel Southport" src={data.hero.childImageSharp.fluid} />
     <main>
       <div className="intro-section">
         <h2 className="intro-section__title">About The Event</h2>
@@ -49,12 +53,38 @@ export default ({ data }) => {
         </ul>
         <p>More information such as how to donate to this years cause, the adventures that will be happening and how you can get involved will be available shortly.</p>
       </div>
+      <div className="adventures-section">
+        <h4 className="adventures-section__title">This Years Adventures</h4>
+        <div className="adventures-section__wrap">
+          {Adventures}
+        </div>
+      </div>
     </main>
   </Layout>
   )
 }
 export const query = graphql`
   query {
+    adventures: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "adventureTemplate"}}}, sort: { order: ASC, fields: [frontmatter___title] }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            path
+            title
+            gamemode
+            runby
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     hero: file(relativePath: { eq: "pages/dnd.png" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
