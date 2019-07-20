@@ -18,4 +18,5 @@ collections:
       - { name: title, label: Title }
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Game Mode", name: "gamemode"}
+      - {label: "Run by", name: "runby"}
       - { name: body, label: Body, widget: markdown }
