@@ -5,6 +5,7 @@ date: 2019-07-20T10:40:12.270Z
 title: 'Legend of the Five Rings: Mask of the Oni'
 featuredimage: /assets/l5r01_feature.jpg
 gamemode: Rush
+runby: Chris Hart
 ---
 Mask of the Oni. An Adventure in the Shadowlands. Legend of the Five Rings Role-Playing. 
 
