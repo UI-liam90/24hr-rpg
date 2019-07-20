@@ -15,8 +15,10 @@ exports.createPages = ({ actions, graphql }) => {
       ) {
         edges {
           node {
+            id
             frontmatter {
               path
+              templateKey
             }
           }
         }
@@ -30,8 +32,11 @@ exports.createPages = ({ actions, graphql }) => {
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
-        component: blogPostTemplate,
-        context: {}, // additional data can be passed via context
+        component: path.resolve(
+          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`,
+        context: {
+          id,
+        }, // additional data can be passed via context
       })
     })
   })

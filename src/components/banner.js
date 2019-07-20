@@ -8,9 +8,7 @@ export default props => (
       <div className={bannerStyles.bannerWrap}>
         <div className={bannerStyles.bannerText}>
           <h4>
-              28th - 29th September 2019 
-              <br/>
-              <span>At Prince of Wales Hotel Southport</span> 
+              {props.text}
           </h4>
         </div>
         <div className={bannerStyles.bannerImg}>

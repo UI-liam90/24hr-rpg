@@ -20,7 +20,7 @@ export default ({ data }) => {
   return(
     <Layout>
     <Application />
-    <Banner src={data.hero.childImageSharp.fluid} />
+    <Banner text="28th - 29th September 2019 <br/><span>At Prince of Wales Hotel Southport</span>" src={data.hero.childImageSharp.fluid} />
     <main>
       <div className="intro-section">
         <h2 className="intro-section__title">About The Event</h2>
