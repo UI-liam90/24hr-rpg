@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Banner from "../components/banner"
 import Layout from "../components/layout"
+import Container from "../components/Container"
 import { Helmet } from "react-helmet"
 
 // class Application extends React.Component {
