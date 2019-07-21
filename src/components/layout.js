@@ -1,14 +1,10 @@
 import React from "react"
-import layoutStyles from "./layout.module.scss"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import logo from "../images/d20.svg"
 import FooterPostLink from "./footer-post-link"
+import HeaderMenu from "./header-menu"
 
-// const ListLink = props => (
-//   <li className={layoutStyles.menuitem}>
-//     <Link to={props.to}>{props.children}</Link>
-//   </li>
-// )
+
 
 export default ({ children }) => {
   const data = useStaticQuery(
@@ -41,20 +37,18 @@ export default ({ children }) => {
     .map(edge => <FooterPostLink key={edge.node.id} footerAdventure={edge.node} />)
   return(
     <>
-    <header className={layoutStyles.header}>
-      <Link to="/" className={layoutStyles.logowrapper}>
+    <header className="header">
+    <div className="header__wrap">
+      <Link to="/" className="logowrapper">
         <img src={logo} alt="24 hour RPG" />
       </Link>
-      {/* <ul className={layoutStyles.menu}>
-        <ListLink to="/">Home</ListLink>
-        <ListLink to="/about/">About</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
-      </ul> */}
+      <HeaderMenu />
+    </div>
     </header>
     { children }
-    <footer className={layoutStyles.footer}>
-      <div className={layoutStyles.footerTop}>
-        <div className={layoutStyles.footerTop__column}>
+    <footer className="footer">
+      <div className="footerTop">
+        <div className="footerTop__column">
           <h5>Adventures</h5>
           <ul>
             { FooterAdventures }
@@ -62,7 +56,7 @@ export default ({ children }) => {
         </div>
 
       </div>
-      <div className={layoutStyles.footerBottom}>
+      <div className="footerBottom">
         <p>&copy; 24hr RPG fundraising</p>
       </div>
     </footer>
