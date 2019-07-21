@@ -43,6 +43,7 @@ class HeaderMenu extends React.Component {
         </span>
         <ul className="menu">
           <ListLink to="/">Home</ListLink>
+          <ListLink to="/getting-involved">Get involved</ListLink>
         </ul>
       </nav>
     );

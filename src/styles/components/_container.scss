@@ -1,4 +1,5 @@
 .container {
+  max-width: $globalWidth;
   margin: 0 auto;
-  max-width: rem(1200px);
+  padding: 0 rem(30px);
 }

@@ -1,28 +1,70 @@
 body {
   font-family: $font1;
   background: $white;
+  color: $black;
+}
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: $font2;
+  font-weight: 400;
+  letter-spacing: calc-letter-spacing(100);
 }
 main { 
   background-color: $canvas;
-  padding: rem(50px 15px);
+  padding: rem(50px) 0;
 }
-p {
+p, li {
   @include rfs(20);
   margin: 0 0 rem(30px);
+  font-weight: 500;
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+li {
+  margin: 0 0 rem(15px);
 }
 .intro-section, .happening-section, .adventures-section {
-  max-width: $globalWidth;
-  margin: 0 auto;
+  padding: rem(30px 0 50px);
 }
-.intro-section__title {
+
+.happening-section, .donate-desciption {
+  color: $white;
+  background: $lblue;
+  transform: skewY(3deg);
+  padding: rem(40px 0 60px);
+  > .container {
+    transform: skewY(-3deg);
+  }
+}
+.play-description {
+  padding: rem(100px 0);
+}
+.sponsor-description {
+  background: $green;
+  color: $white;
+  transform: skewY(-3deg);
+  padding: rem(60px 0 100px);
+  margin-bottom: rem(-95px);
+  > .container {
+    transform: skewY(3deg);
+  }
+}
+.title--1 {
   color: $lblue;
   @include rfs(50);
   margin: rem(25px 0);
 }
-.happening-section__title, .adventures-section__title {
+.title--2 {
   color: $lblue;
   @include rfs(45);
   margin: rem(20px 0);
+}
+.title--white {
+  color: $white;
 }
 .gamemodes {
   display: flex;
@@ -35,7 +77,7 @@ p {
   li {
     width: 100%;
     margin: rem(15px);
-    border:  rem(3px) solid $lblue;
+    border:  rem(3px) solid $white;
     background-color: $blue;
     border-radius: rem(10px);
     display: flex;

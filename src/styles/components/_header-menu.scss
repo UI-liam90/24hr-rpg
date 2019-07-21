@@ -37,6 +37,7 @@ svg.hamburger-icon {
   width: 100%;
   margin: 0;
   padding: 0;
+  z-index: 1000;
   @media (min-width: 1024px) {
     position: static;
     display: flex;
@@ -45,7 +46,8 @@ svg.hamburger-icon {
   }
   li {
     list-style: none;
-    padding: 10px;
+    padding: rem(10px);
+    margin: 0;
     @include rfs(20);
     a {
       color: $white;

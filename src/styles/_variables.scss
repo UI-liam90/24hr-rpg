@@ -10,6 +10,10 @@ $black: #1d1d1d;
 
 
 $font1: 'Roboto', sans-serif;
-$font2: 'Roboto Slab', serif;
+$font2: 'Bangers', cursive;
 
 $globalWidth: rem(1200px);
+
+@function calc-letter-spacing($kerningValue) {
+  @return #{$kerningValue / 1000}em;
+}
