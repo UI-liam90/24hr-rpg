@@ -34,7 +34,7 @@ export default ({ data }) => {
         <Container>
             <h4 className="title title--2 title--white">By Donating</h4>
             <p>
-                We Are still finalising the best way to donate to Galloway's Society For the Blind. Please check back soon for more information on how you can donate.
+                We are currently finalising the methods by which you will be able to donate to Galloway's Society for the Blind. We apologise for any inconvenience this may cause and we expect to be able to start accepting donations by 1st August.
             </p>
         </Container>
       </div>
