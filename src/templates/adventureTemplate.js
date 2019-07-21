@@ -29,10 +29,12 @@ export default function Template({
       </Helmet>
       <Banner title={frontmatter.title} subTitle={subTitle} src={frontmatter.featuredimage.childImageSharp.fluid} />
       <main>
+       <Container>
         <div className="adventures-section">
           <p><strong>Game Mode:</strong> {frontmatter.gamemode}</p>
           <div className="adventure-content" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
+       </Container>
       </main>
       <div className="blog-post-container">
       </div>
