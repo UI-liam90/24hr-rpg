@@ -198,9 +198,12 @@ li {
       width: 100%;
       border: 1px solid $blue;
       height: rem(40px);
+      padding: 0 rem(15px);
     }
     textarea {
       height: rem(200px);
+      padding-top: rem(15px);
+      padding-bottom: rem(15px);
     }
     input[type="checkbox"], input[type="radio"] {
       width: auto;
