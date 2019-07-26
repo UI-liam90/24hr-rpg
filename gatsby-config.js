@@ -20,7 +20,7 @@ module.exports = {
         icon: `src/images/icons/icon.png`,
       },
     },
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-sass`,
