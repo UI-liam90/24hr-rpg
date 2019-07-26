@@ -38,7 +38,7 @@ export default function Template({
           </div>
           <div className="sidebar">
             <div className="contact-form">
-              <form name="contact" action="POST" data-netlify="true">
+              <form name="contact" action="/" data-netlify="true">
                 <div className="form-element">
                   <label for="name">Name</label>
                   <input id="name" type="text" name="name" />
