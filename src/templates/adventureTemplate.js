@@ -23,6 +23,7 @@ export default function Template({
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
   let subTitle = `by ${frontmatter.runby}`
+  let formSubject = `I want to play ${frontmatter.title}`
   return (
     <Layout>
       <Helmet>
@@ -38,8 +39,10 @@ export default function Template({
           </div>
           <div className="sidebar">
             <div className="contact-form">
-              <form name="contact" method="post" action="/success/" data-netlify="true" data-netlify-honeypot="bot-field">
+              <form name="I-want-to-play" method="post" action="/success/" data-netlify="true" data-netlify-honeypot="bot-field">
               <input type="hidden" name="bot-field"/>
+              <input type="hidden" name="form-name" value="I-want-to-play" />
+              <input type="hidden" name="subject" value={formSubject} />
                 <div className="form-element">
                   <label htmlFor="name">Name</label>
                   <input id="name" type="text" name="name" />
