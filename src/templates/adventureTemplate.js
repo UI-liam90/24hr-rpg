@@ -38,13 +38,14 @@ export default function Template({
           </div>
           <div className="sidebar">
             <div className="contact-form">
-              <form name="contact" action="/" data-netlify="true">
+              <form name="contact" method="post" action="/success" data-netlify="true" data-netlify-honeypot="bot-field">
+              <input type="hidden" name="bot-field"/>
                 <div className="form-element">
-                  <label for="name">Name</label>
+                  <label htmlFor="name">Name</label>
                   <input id="name" type="text" name="name" />
                 </div>
                 <div className="form-element">
-                  <label for="email">Email</label>
+                  <label htmlFor="email">Email</label>
                   <input id="email" type="email" name="email" />
                 </div>
                 <p>
