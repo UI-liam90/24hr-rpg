@@ -27,7 +27,7 @@ export default ({ data }) => {
       <div className="intro-section">
         <Container>
           <h2 className="title title--1">Success!</h2>
-          <p>Form Submitted Successfully</p>
+          <p>Thank you for your submission. Someone will be in touch shortly to answer your question or to advise on your bid.</p>
         </Container>
       </div>
     </main>
