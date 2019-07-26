@@ -47,18 +47,18 @@ export default function Template({
               <input type="hidden" name="subject" value={formSubject} />
                 <div className="form-element">
                   <label htmlFor="name">Name</label>
-                  <input id="name" type="text" name="name" />
+                  <input id="name" type="text" name="name" required/>
                 </div>
                 <div className="form-element">
                   <label htmlFor="email">Email</label>
-                  <input id="email" type="email" name="email" />
+                  <input id="email" type="email" name="email" required />
                 </div>
                 <div className="form-element">
                   <label htmlFor="bid">Bid Amount</label>
-                  <input id="bid" type="number" name="bid" />
+                  <input id="bid" type="number" name="bid" required />
                 </div>
                 <div className="form-element">
-                  <input id="gdpr" type="checkbox" name="GDPR" />
+                  <input id="gdpr" type="checkbox" name="GDPR" required />
                   <label htmlFor="gdpr">I agree to be contacted by 24hr RPG regarding my bid. 24hr RPG will not pass your details onto any third parties.</label>
                 </div>
                 <p>
