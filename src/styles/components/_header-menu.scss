@@ -76,3 +76,28 @@ svg.hamburger-icon {
     }
   }
 }
+.child-menu {
+  color: $white;
+  position: relative;
+  span:hover, span:focus {
+    cursor: pointer;
+    text-decoration: underline;
+    color: $canvas;
+  }
+  @media screen and (min-width:1024px){
+    .sub-menu {
+      display: none;
+      position: absolute;
+      z-index: 100;
+      width: rem(300px);
+      background: $lblue;
+      right: 0;
+      padding: rem(5px);
+      border-radius: rem(10px);
+    }
+    &.submenu--active .sub-menu {
+      display: block;
+    }
+  }
+  
+}

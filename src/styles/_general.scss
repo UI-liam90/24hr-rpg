@@ -17,6 +17,7 @@ p, li {
   @include rfs(20);
   margin: 0 0 rem(30px);
   font-weight: 500;
+  line-height: 1.4;
   a {
     color: inherit;
     text-decoration: none;
@@ -36,7 +37,7 @@ li {
   color: $white;
   background: $lblue;
   background-image: url('../images/comic.svg');
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   transform: skewY(3deg);
@@ -49,8 +50,12 @@ li {
   padding: rem(100px 0);
 }
 .sponsor-description {
-  background: $green;
   color: $white;
+  background: $lblue;
+  background-image: url('../images/comic.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   transform: skewY(-3deg);
   padding: rem(60px 0 100px);
   margin-bottom: rem(-95px);
@@ -163,30 +168,65 @@ li {
 }
 .contact-form {
   background-color: $lblue;
-  background-image: url('../images/comic.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   padding: rem(30px);
-  font-family: $font2;
+  color: $white;
+  border-radius: rem(10px);
+  h5 {
+    @include rfs(24);
+    margin: 0 0 rem(15px);
+  }
+  p {
+    font-size: rem(16px);
+  }
+  &.contact-form--transparent {
+    background: none;
+    padding: 0;
+  }
   form {
     width: 100%;
+    .form-element {
+      position: relative;
+      margin-bottom: rem(15px);
+    }
     label {
       color: $white;
       font-size: rem(20px);
+      font-family: $font2;
+      letter-spacing: calc-letter-spacing(100);
     }
-    input {
+    input, textarea {
       width: 100%;
       border: 1px solid $blue;
       height: rem(40px);
     }
+    textarea {
+      height: rem(200px);
+    }
+    input[type="checkbox"], input[type="radio"] {
+      width: auto;
+      height: auto;
+      margin-right: rem(5px);
+      + label {
+        font-size: rem(16px);
+        font-family: $font1;
+        letter-spacing: 0;
+        font-weight: 600;
+      }
+    }
     button {
+      font-family: $font2;
       background: $green;
       color: $white;
-      font-size: rem(20);
+      @include rfs(22);
       border: none;
       border-radius: rem(3px);
       padding: rem(10px 20px);
+      letter-spacing: calc-letter-spacing(100);
+      transition: all 250ms ease;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      &:hover, &:focus {
+        background: darken($green, 10%);
+      }
     }
   }
 }

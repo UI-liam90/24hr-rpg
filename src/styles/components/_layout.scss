@@ -8,18 +8,58 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: rem(30px 30px 0);
+    padding: rem(15px 15px 0);
+    @media screen and (min-width:680px) {
+      padding: rem(30px 30px 0);
+    }
   }
   .logowrapper {
     padding-right: rem(15px);
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width:1023px) {
+      max-width: rem(200px);
+    }
     img {
       max-width: 100%;
+    }
+  }
+  .header__nav {
+    order: 2;
+    padding-left: rem(10px);
+  }
+  @media screen and (min-width:1024px) {
+    .header__nav {
+      order:initial;
+      padding-left: 0;
+      padding-top: rem(20px);
+    }
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 rem(90px);
+    padding-left: rem(10px);
+    padding-top: rem(8px);
+    @media screen and (min-width:1024px) {
+      padding-top: rem(28px);
+    }
+    .social-icon svg {
+      fill: $white;
+      height: rem(35px);
+      transition: all .25s ease;
+      width: rem(35px);
+      &:hover, &:focus {
+        fill: $lblue;
+      }
     }
   }
 }
 .footer {
   width: 100%;
-  padding: rem(25px 10px);
+  padding: 0;
   background: $black;
   color: $white;
   position: relative;
@@ -28,13 +68,24 @@
 .footerTop {
   max-width: $globalWidth;
   margin: 0 auto;
-  margin-bottom: rem(30px);
+  padding: rem(25px 30px);
+  .footerTop__grid {
+    display: flex;
+    flex-flow: row wrap;
+  }
   .footerTop__column {
     max-width: 100%;
     flex: 0 0 100%;
+    padding: rem(15px);
     @media (min-width: 680px) {
-      max-width: calc(1 / 2 * 100% - #{rem(30px)});
-      flex: 0 0 calc(1 / 2 * 100% - #{rem(30px)});
+      &.footerTop__column--one {
+        max-width: calc(1 / 3 * 100%);
+        flex: 0 0 calc(1 / 3 * 100%);
+      }
+      &.footerTop__column--two {
+        max-width: calc(2 / 3 * 100%);
+        flex: 0 0 calc(2 / 3 * 100%);
+      }
     }
     h5 {
       @include rfs(24);
@@ -60,6 +111,13 @@
 }
 
 .footerBottom {
-  max-width: $globalWidth;
-  margin: 0 auto;
+  background-color: #000;
+  padding: rem(15px 30px);
+  .footerBottom__wrap {
+    max-width: $globalWidth;
+    margin: 0 auto;
+    p {
+      margin: 0;
+    }
+  }
 }

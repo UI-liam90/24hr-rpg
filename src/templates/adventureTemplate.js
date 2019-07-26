@@ -39,6 +39,8 @@ export default function Template({
           </div>
           <div className="sidebar">
             <div className="contact-form">
+              <h5>Want to get involved in this adventure?</h5>
+              <p> Please use the form below to register your interest or email <a href="mailto:kinoandhermes@gmail.com?subject=24%20hour%20RPG">kinoandhermes@gmail.com</a> directly.</p>
               <form name="I-want-to-play" method="post" action="/success/" data-netlify="true" data-netlify-honeypot="bot-field">
               <input type="hidden" name="bot-field"/>
               <input type="hidden" name="form-name" value="I-want-to-play" />
@@ -50,6 +52,14 @@ export default function Template({
                 <div className="form-element">
                   <label htmlFor="email">Email</label>
                   <input id="email" type="email" name="email" />
+                </div>
+                <div className="form-element">
+                  <label htmlFor="bid">Bid Amount</label>
+                  <input id="bid" type="number" name="bid" />
+                </div>
+                <div className="form-element">
+                  <input id="gdpr" type="checkbox" name="GDPR" />
+                  <label htmlFor="gdpr">I agree to be contacted by 24hr RPG regarding my bid. 24hr RPG will not pass your details onto any third parties.</label>
                 </div>
                 <p>
                   <button type="submit">Send</button>

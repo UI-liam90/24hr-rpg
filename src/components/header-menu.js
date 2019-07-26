@@ -16,15 +16,16 @@ const MenuIcon = () =>
     <path class="hamburger-icon__line hamburger-icon__bottom" d="M28,22H4c-1.1,0-2,0.9-2,2s0.9,2,2,2h24c1.1,0,2-0.9,2-2S29.1,22,28,22z"/>
   </g>
 </svg>
-
 class HeaderMenu extends React.Component {
 
   constructor(props) {
     super(props);
     
     this.menuClick = this.menuClick.bind(this);
+    this.submenuClick = this.submenuClick.bind(this);
     this.state = {
       menuClass: '',
+      submenuClass: '',
     }
   }
   
@@ -32,10 +33,15 @@ class HeaderMenu extends React.Component {
     const menuClass = this.state.menuClass === '' ? 'menu--active' : '';
     this.setState({ menuClass });
   }
-  
+  submenuClick(e) {
+    const submenuClass = this.state.submenuClass === '' ? 'submenu--active' : '';
+    this.setState({ submenuClass });
+  }
   render() {
     const menuClassName = `header__nav ${this.state.menuClass}`;
-    
+    const submenuClassName = `child-menu ${this.state.submenuClass}`;
+    const Adventures = this.props.adventureData
+    .map(edge => <ListLink to={edge.node.frontmatter.path}>{edge.node.frontmatter.title}</ListLink>)
     return (
       <nav className={menuClassName}>
         <span className="menu-icon nav-toggle" onClick={this.menuClick}>
@@ -44,6 +50,12 @@ class HeaderMenu extends React.Component {
         <ul className="menu">
           <ListLink to="/">Home</ListLink>
           <ListLink to="/getting-involved">Get involved</ListLink>
+          <li className={submenuClassName}>
+            <span onClick={this.submenuClick}>Adventures</span>
+            <ul className="sub-menu">
+              { Adventures }
+            </ul>
+          </li>
         </ul>
       </nav>
     );
