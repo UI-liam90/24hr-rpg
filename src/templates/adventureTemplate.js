@@ -31,10 +31,30 @@ export default function Template({
       <Banner title={frontmatter.title} subTitle={subTitle} src={frontmatter.featuredimage.childImageSharp.fluid} />
       <main>
        <Container>
-        <div className="adventures-section">
-          <p><strong>Game Mode:</strong> {frontmatter.gamemode}</p>
-          <div className="adventure-content" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="main-content-grid">
+          <div className="main-area adventures-section">
+            <p><strong>Game Mode:</strong> {frontmatter.gamemode}</p>
+            <div className="adventure-content" dangerouslySetInnerHTML={{ __html: html }} />
+          </div>
+          <div className="sidebar">
+            <div className="contact-form">
+              <form name="contact" netlify>
+                <div className="form-element">
+                  <label for="name">Name</label>
+                  <input id="name" type="text" name="name" />
+                </div>
+                <div className="form-element">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" name="email" />
+                </div>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
+            </div>
+          </div>
         </div>
+
        </Container>
       </main>
       <div className="blog-post-container">
