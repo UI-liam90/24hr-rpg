@@ -22,7 +22,7 @@ export default ({ data }) => {
   return(
     <Layout>
     <Application />
-    <Banner title="Getting Involved" src={data.hero.childImageSharp.fluid} />
+    <Banner title="Form Submission Success" src={data.hero.childImageSharp.fluid} />
     <main>
       <div className="intro-section">
         <Container>
