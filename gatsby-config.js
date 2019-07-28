@@ -20,7 +20,6 @@ module.exports = {
         icon: `src/images/icons/icon.png`,
       },
     },
-    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-sass`,
@@ -99,6 +98,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`, 
-    `gatsby-transformer-sharp`
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-offline`
   ]
 }
