@@ -9,18 +9,11 @@ runby: Ethan Brittain
 ---
 Numenera is an RPG set a billion years in the future of Earth.
 
-The past isn't important. What you do now is.
+This year's adventure will push you and your team to the brink of their athletic ability, as you all strive to compete in a world tournament against bizarre and formidable opponents. All in pursuit of the ultimate prize... 
 
-On this decade-long adventure, you'll try to make a safe home for humanity amongst the ruins of a hundred previous civilisations.
+You are not likely to succeed.\
+You are not tough enough alone...but you just might be tough enough together.
 
-You are not likely to succeed.
+\*\*\*\*\*\*\*\*\*\*
 
-Against you are the weirdest, most alien opponents that a billion years could bring to Earth.
-
-You're not tough enough alone. 
-
-But you might be tough enough together.
-
-. . .
-
-Pick Numenera for fantasy-sci-fi adventure focussed on making a community, building character and the weird of the world.
+Choose Numenera for a fantasy/sci-fi adventure focused upon making a flourishing community, building a character and experiencing the weird of the world.
