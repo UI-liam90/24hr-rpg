@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: UI-liam90/24hr-rpg
+  branch: release/2019
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: adventure
+    label: Adventure
+    folder: adventure
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "adventureTemplate"}
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Game Mode", name: "gamemode"}
+      - {label: "Run by", name: "runby"}
+      - { name: body, label: Body, widget: markdown }

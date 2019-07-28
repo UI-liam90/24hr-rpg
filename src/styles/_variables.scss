@@ -1,0 +1,19 @@
+@import '../../node_modules/sass-rem/rem';
+@import "../../node_modules/rfs/scss";
+
+$blue: #04384A;
+$lblue: #0B90AA;
+$canvas: #EFEBD9;
+$green: #B1B336;
+$white: #fefefe;
+$black: #1d1d1d;
+
+
+$font1: 'Roboto', sans-serif;
+$font2: 'Bangers', cursive;
+
+$globalWidth: rem(1200px);
+
+@function calc-letter-spacing($kerningValue) {
+  @return #{$kerningValue / 1000}em;
+}

@@ -1,0 +1,235 @@
+/* autoprefixer grid: on */
+body {
+  font-family: $font1;
+  background: $white;
+  color: $black;
+}
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: $font2;
+  font-weight: 400;
+  letter-spacing: calc-letter-spacing(100);
+}
+main { 
+  background-color: $canvas;
+  padding: rem(50px) 0;
+}
+p, li {
+  @include rfs(20);
+  margin: 0 0 rem(30px);
+  font-weight: 500;
+  line-height: 1.4;
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+li {
+  margin: 0 0 rem(15px);
+}
+.intro-section, .happening-section, .adventures-section {
+  padding: rem(30px 0 50px);
+}
+
+.happening-section, .donate-desciption {
+  color: $white;
+  background: $lblue;
+  background-image: url('../images/comic.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: skewY(3deg);
+  padding: rem(40px 0 60px);
+  > .container {
+    transform: skewY(-3deg);
+  }
+}
+.play-description {
+  padding: rem(100px 0);
+}
+.sponsor-description {
+  color: $white;
+  background: $lblue;
+  background-image: url('../images/comic.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: skewY(-3deg);
+  padding: rem(60px 0 100px);
+  margin-bottom: rem(-95px);
+  > .container {
+    transform: skewY(3deg);
+  }
+}
+.title--1 {
+  color: $lblue;
+  @include rfs(50);
+  margin: rem(25px 0);
+}
+.title--2 {
+  color: $lblue;
+  @include rfs(45);
+  margin: rem(20px 0);
+}
+.title--white {
+  color: $white;
+}
+.gamemodes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  list-style: none;
+  padding: 0;
+  margin: rem(0 -15px);
+  li {
+    width: 100%;
+    margin: rem(15px);
+    border:  rem(3px) solid $white;
+    background-color: $blue;
+    border-radius: rem(10px);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: rem(30px 15px);
+    color: $white;
+    h5 {
+      @include rfs(30);
+      margin: rem(10px 0);
+    }
+    @media (min-width: 1024px) {
+      max-width: calc(1 / 3 * 100% - #{rem(30px)});
+      flex: 0 0 calc(1 / 3 * 100% - #{rem(30px)});
+    }
+  }
+  .gamemodes__icon {
+    width: rem(100px);
+    height: rem(75px);
+    fill: $white;
+    margin-bottom: rem(10px);
+  }
+}
+
+.adventures-section__wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  .adventures-section__block {
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin: rem(15px);
+    @media (min-width: 680px) {
+      max-width: calc(1 / 2 * 100% - #{rem(30px)});
+      flex: 0 0 calc(1 / 2 * 100% - #{rem(30px)});
+    }
+    @media (min-width: 1024px) {
+      max-width: calc(1 / 3 * 100% - #{rem(30px)});
+      flex: 0 0 calc(1 / 3 * 100% - #{rem(30px)});
+    }
+    img {
+      clip-path: polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+      margin-bottom: rem(20px);
+    }
+    a {
+      color: $blue;
+      font-weight: 600;
+      text-decoration: none;
+      @include rfs(24);
+      &:hover, &:focus {
+        color: $lblue;
+      }
+      span {
+        margin: rem(10px 0);
+        display: block;
+      }
+    }
+  }
+}
+
+.main-content-grid {
+  display: flex;
+  flex-flow: row wrap;
+  .main-area, .sidebar {
+    flex: 0 0 calc(100% - #{rem(20px)});
+    margin: rem(30px 10px);
+  }
+  @media screen and (min-width: 900px) {
+    .main-area {
+      flex: 0 0 calc(2 / 3 * 100% - #{rem(20px)});
+    }
+    .sidebar {
+      flex: 0 0 calc(1 / 3 * 100% - #{rem(20px)});
+    }
+  }
+}
+.contact-form {
+  background-color: $lblue;
+  padding: rem(30px);
+  color: $white;
+  border-radius: rem(10px);
+  h5 {
+    @include rfs(24);
+    margin: 0 0 rem(15px);
+  }
+  p {
+    font-size: rem(16px);
+  }
+  &.contact-form--transparent {
+    background: none;
+    padding: 0;
+  }
+  form {
+    width: 100%;
+    .form-element {
+      position: relative;
+      margin-bottom: rem(15px);
+    }
+    label {
+      color: $white;
+      font-size: rem(20px);
+      font-family: $font2;
+      letter-spacing: calc-letter-spacing(100);
+    }
+    input, textarea {
+      width: 100%;
+      border: 1px solid $blue;
+      height: rem(40px);
+      padding: 0 rem(15px);
+    }
+    textarea {
+      height: rem(200px);
+      padding-top: rem(15px);
+      padding-bottom: rem(15px);
+    }
+    input[type="checkbox"], input[type="radio"] {
+      width: auto;
+      height: auto;
+      margin-right: rem(5px);
+      + label {
+        font-size: rem(16px);
+        font-family: $font1;
+        letter-spacing: 0;
+        font-weight: 600;
+      }
+    }
+    button {
+      font-family: $font2;
+      background: $green;
+      color: $white;
+      @include rfs(22);
+      border: none;
+      border-radius: rem(3px);
+      padding: rem(10px 20px);
+      letter-spacing: calc-letter-spacing(100);
+      transition: all 250ms ease;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      &:hover, &:focus {
+        background: darken($green, 10%);
+      }
+    }
+  }
+}
