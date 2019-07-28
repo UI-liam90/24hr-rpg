@@ -44,9 +44,9 @@ export default ({ children }) => {
       </Link>
       <HeaderMenu adventureData={data.adventures.edges} />
       <div class="social-icons">
-        <a class="social-icon social-icon--facebook" href="https://www.facebook.com/events/248989785821596/">
+        {/* <a class="social-icon social-icon--facebook" href="https://www.facebook.com/events/248989785821596/">
             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.9 43.76"><title>Facebook</title><path d="M19,0,0,10.94V32.82L19,43.76l19-10.94V10.94Zm5.66,15.2H21.73c-.93,0-1.12.38-1.12,1.33V18.2h4l-.36,4H20.61v12h-5v-12h-3v-4h3V14.81c0-3,1.6-4.61,5.19-4.61h3.81Z"></path></svg>
-        </a>
+        </a> */}
         <a class="social-icon social-icon--twitter" href="https://twitter.com/24hr_rpg">
             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.9 43.76"><title>Twitter</title><path d="M19,0,0,10.94V32.82L19,43.76l19-10.94V10.94Zm9.54,17A14,14,0,0,1,7,29.42a9.91,9.91,0,0,0,7.29-2A4.92,4.92,0,0,1,9.64,24a4.86,4.86,0,0,0,2.22-.08A4.93,4.93,0,0,1,7.92,19a4.79,4.79,0,0,0,2.22.61A4.93,4.93,0,0,1,8.62,13a14,14,0,0,0,10.15,5.14,4.93,4.93,0,0,1,8.39-4.49,10,10,0,0,0,3.13-1.19,4.94,4.94,0,0,1-2.17,2.72A9.87,9.87,0,0,0,31,14.44,9.94,9.94,0,0,1,28.49,17Z"></path></svg>
         </a>

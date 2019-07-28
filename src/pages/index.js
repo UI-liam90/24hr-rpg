@@ -37,6 +37,8 @@ export default ({ data }) => {
       <div className="happening-section">
         <Container>
           <h4 className="title title--2 title--white">What's happening</h4>
+          <p>Just like previous year we will be running a number of RPG campaigns which players will be able to take.</p>
+          <p>The players will bid real money to take part, with the highest bids/donations taking a place at one of the tables, you can read more about becoming a player <a href="/getting-involved/#players">here</a>. It will also need support refs as well as support from as many people as possible to make it as unique, special and worthwhile as it can be like previous years.</p>
           <p>Due to the popularity of last year's format of running 3 different types of adventure in we will be doing the same again this year with the hope of getting as many people involved that we can, find out more about the formats below:</p>
           <ul className="gamemodes">
               <li>

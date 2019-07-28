@@ -34,11 +34,11 @@ export default ({ data }) => {
         <Container>
             <h4 className="title title--2 title--white">By Donating</h4>
             <p>
-                This is year we are collecting donation via wonderful. We have chosen wonderful this year to make sure Galloway's Society For the Blind received 100% of the money raised without any administration fees or third party cuts. You can donate via this Link.
+              We are currently finalising the methods by which you will be able to donate to Galloway's Society for the Blind. We apologise for any inconvenience this may cause and we expect to be able to start accepting donations by 1st August.
             </p>
         </Container>
       </div>
-      <div className="play-description">
+      <div id="players" className="play-description">
         <Container>
             <h4 className="title title--2">By Becoming a Player</h4>
             <p>
@@ -53,7 +53,7 @@ export default ({ data }) => {
             <ul className="main-list">
                 <li>You will need to pay your bid before the date of the event.</li>
                 <li>You will be expected to play in your chosen campaign for the full allotted time.</li>
-                <li>You will need to be available for character creation before the event; your GM will be in touch to arrange this from 1st Nov.</li>
+                <li>You will need to be available for character creation before the event; your GM will be in touch to arrange this from September 1st.</li>
                 <li>If you can't make the event after being successful in your bid please let us know ASAP, as we will have plenty of players who would love to have your place.</li>
                 <li>This is a charity event, so all bids paid are non refundable.</li>
             </ul>
