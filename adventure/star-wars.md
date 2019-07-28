@@ -4,7 +4,7 @@ path: star-wars
 date: 2019-07-20T14:51:12.526Z
 title: Star Wars
 featuredimage: /assets/starwareoe.jpg
-gamemode: Mellow
+gamemode: 2 X 12 Hours (Mellow Mode)
 runby: Liam Wright
 ---
 A long time ago, in a galaxy far far away...

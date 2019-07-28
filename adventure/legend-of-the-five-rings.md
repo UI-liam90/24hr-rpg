@@ -4,7 +4,7 @@ path: legend-of-the-five-rings
 date: 2019-07-21T15:23:47.294Z
 title: Legend of the Five Rings
 featuredimage: /assets/l05r.jpg
-gamemode: Rush
+gamemode: 12 Hours (Rush Mode)
 runby: Chris Hart
 ---
 Mask of the Oni. An Adventure in the Shadowlands. 

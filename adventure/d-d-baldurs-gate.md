@@ -4,7 +4,7 @@ path: baldurs-gate
 date: 2019-07-20T10:50:51.984Z
 title: 'D&D: Baldur''s Gate'
 featuredimage: /assets/dnddescentkeyartjpg.jpeg
-gamemode: Pure
+gamemode: 24 Hours (Pure Mode)
 runby: Pete Abel
 ---
 Diabolical dangers await in this adventure for the world’s greatest roleplaying game.

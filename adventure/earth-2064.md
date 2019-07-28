@@ -4,7 +4,7 @@ path: earth-2064
 date: 2019-07-26T22:12:26.193Z
 title: Earth 2064
 featuredimage: /assets/earth2064.jpg
-gamemode: Mellow
+gamemode: 2 X 12 Hours (Mellow Mode)
 runby: Tim Brittain
 ---
 Earth 2064. Mankind has been inspired and aided by the A.l. "Nár", and continues to grow in knowledge and technology under its supervision. 
