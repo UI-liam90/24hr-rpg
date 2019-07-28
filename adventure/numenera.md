@@ -4,7 +4,7 @@ path: numenera
 date: 2019-07-20T10:52:41.587Z
 title: Numenera
 featuredimage: /assets/numenera.png
-gamemode: 24 Hours (Pure mode)
+gamemode: 24 Hours (Pure Mode)
 runby: Ethan Brittain
 ---
 Numenera is an RPG set a billion years in the future of Earth.
