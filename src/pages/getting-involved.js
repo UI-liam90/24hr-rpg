@@ -37,7 +37,7 @@ export default ({ data }) => {
                 One way you can get involved is by donating to our Virgin Money Giving page. By doing this you are showing your support for the poor saps who are role-playing as well as raising much deserved money for Galloway's Society for the Blind. 
             </p>
             <p>
-                You can donate directly to our Virgin Money Giving page here: <a href="https://uk.virginmoneygiving.com/24-hour-rpg-5">https://uk.virginmoneygiving.com/24-hour-rpg-5</a>.
+                You can donate directly to our Virgin Money Giving page here: <a href="https://uk.virginmoneygiving.com/Team/24HourRPG">https://uk.virginmoneygiving.com/Team/24HourRPG</a>.
             </p>
         </Container>
       </div>
