@@ -34,7 +34,10 @@ export default ({ data }) => {
         <Container>
             <h4 className="title title--2 title--white">By Donating</h4>
             <p>
-              We are currently finalising the methods by which you will be able to donate to Galloway's Society for the Blind. We apologise for any inconvenience this may cause and we expect to be able to start accepting donations by 1st August.
+                One way you can get involved is by donating to our Virgin Money Giving page. By doing this you are showing your support for the poor saps who are role-playing as well as raising much deserved money for Galloway's Society for the Blind. 
+            </p>
+            <p>
+                You can donate directly to our Virgin Money Giving page here: <a href="https://uk.virginmoneygiving.com/Team/24HourRPG">https://uk.virginmoneygiving.com/Team/24HourRPG</a>.
             </p>
         </Container>
       </div>
