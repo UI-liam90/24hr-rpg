@@ -31,7 +31,7 @@ export default ({ data }) => {
         <Container>
           <h2 className="title title--1">About The Event</h2>
           <p>It’s time for our 5th 24 hour RPG challenge! Can you believe we have been doing this for 5 years now, that is crazy!!</p>
-          <p>This year we have chosen to raise money for Galloway's Society For the Blind. Galloway’s Society for the Blind was established in 1867 and has since grown to provide a range of services to over 7000 Blind and Partially Sighted people across Lancashire and Sefton area. They need to raise over £1 million each year to meet the cost of its existing services and we want to help them anyway we can to reach that goal this year!</p>
+          <p>This year we have chosen to raise money for Galloway's Society for the Blind, who provide excellent advice and support for those of us who are blind or partially-sighted. Sight loss affects people of all ages, and as we grow older we are increasingly likely to experience sight loss. Galloway’s Society for the Blind provide a range of services to over 7000 Blind and Partially Sighted people across Lancashire and Sefton area. They need to raise over £1 million each year to meet the cost of its existing services and we want to help them anyway we can to reach that goal this year!</p>
         </Container>
       </div>
       <div className="happening-section">
