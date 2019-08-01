@@ -52,8 +52,15 @@ svg.hamburger-icon {
     a {
       color: $white;
       text-decoration: none;
+      display: inline-block;
+      width: 100%;
       &:hover, &:focus {
         color: $canvas;
+      }
+      @media (min-width: 1024px) {
+        &.button {
+          margin-top: rem(-11px);
+        }
       }
     }
   }

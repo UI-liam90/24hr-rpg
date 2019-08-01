@@ -56,6 +56,9 @@ class HeaderMenu extends React.Component {
               { Adventures }
             </ul>
           </li>
+          <li className="menuitem">
+            <a className="button" href="https://uk.virginmoneygiving.com/Team/24HourRPG" target="_BLANK" rel="noopener noreferrer">Donate</a>
+          </li>
         </ul>
       </nav>
     );
