@@ -24,10 +24,22 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   let subTitle = `by ${frontmatter.runby}`
   let formSubject = `I want to play ${frontmatter.title}`
+  let pagePath = `https://24hr-rpg.fyi/${frontmatter.path}`
+  let imagePath = `https://24hr-rpg.fyi${frontmatter.featuredimage.childImageSharp.fixed.src}`
   return (
     <Layout>
       <Helmet>
         <title>24 hour RPG Challenge 2019 | {frontmatter.title}</title>
+        <meta property="og:image" content={imagePath}/>
+        <meta property="og:title" content="24 hour RPG Challenge 2019"/>
+        <meta property="og:url" content={pagePath}/>
+        <meta property="og:site_name" content="24 hour RPG Challenge"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="24 hour RPG Challenge"/>
+        <meta name="twitter:title" content="24 hour RPG Challenge 2019"/>
+        <meta name="twitter:description" content="24 hour RPG Challenge 2019 for Galloway's Society for the Blind"/>
+        <meta name="twitter:image:src" content={imagePath}/>
+        <meta name="twitter:domain" content="24hr-rpg.fyi"/>
       </Helmet>
       <Banner title={frontmatter.title} subTitle={subTitle} src={frontmatter.featuredimage.childImageSharp.fluid} />
       <main>
@@ -91,6 +103,9 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 500) {
               ...GatsbyImageSharpFluid_withWebp
+            }
+            fixed(width: 500) {
+              src
             }
           }
         }

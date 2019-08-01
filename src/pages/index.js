@@ -12,6 +12,14 @@ class Application extends React.Component {
       <div className="application">
         <Helmet>
           <title>24 hour RPG Challenge 2019 | About The Event</title>
+          <meta property="og:title" content="24 hour RPG Challenge 2019"/>
+          <meta property="og:url" content="https://24hr-rpg.fyi"/>
+          <meta property="og:site_name" content="24 hour RPG Challenge"/>
+          <meta name="twitter:card" content="summary_large_image"/>
+          <meta name="twitter:site" content="24 hour RPG Challenge"/>
+          <meta name="twitter:title" content="24 hour RPG Challenge 2019"/>
+          <meta name="twitter:description" content="24 hour RPG Challenge 2019 for Galloway's Society for the Blind"/>
+          <meta name="twitter:domain" content="24hr-rpg.fyi"/>
         </Helmet>
       </div>
     )
