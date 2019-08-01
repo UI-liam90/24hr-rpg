@@ -11,7 +11,7 @@ class Application extends React.Component {
     return (
       <div className="application">
         <Helmet>
-          <title>24 hour RPG Challenge 2018 | About The Event</title>
+          <title>24 hour RPG Challenge 2019 | About The Event</title>
         </Helmet>
       </div>
     )
