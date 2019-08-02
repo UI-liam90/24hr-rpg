@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import logo from "../images/d20.svg"
+import logo from "../images/24hrlogo.svg"
 import FooterPostLink from "./footer-post-link"
 import HeaderMenu from "./header-menu"
 
