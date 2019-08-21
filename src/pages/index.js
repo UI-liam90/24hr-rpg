@@ -27,7 +27,7 @@ export default ({ data }) => {
       <meta name="twitter:image:src" content={imagePath}/>
       <meta name="twitter:domain" content="24hr-rpg.fyi"/>
     </Helmet>
-    <Banner title="28th - 29th September 2019" subTitle="At Prince of Wales Hotel Southport" src={data.hero.childImageSharp.fluid} />
+    <Banner title="28th - 29th September 2019" subTitle="Scarisbrick Hotel Southport" src={data.hero.childImageSharp.fluid} />
     <main>
       <div className="intro-section">
         <Container>
