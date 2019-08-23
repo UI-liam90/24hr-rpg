@@ -7,7 +7,6 @@ featuredimage: /assets/numenera.png
 gamemode: 24 Hours (Pure Mode)
 runby: Ethan Brittain
 ---
-**Current Player Count: 6 / 6**
 
 Numenera is an RPG set a billion years in the future of Earth.
 
