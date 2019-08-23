@@ -7,7 +7,7 @@ featuredimage: /assets/rogue_trader.jpg
 gamemode: Pure
 runby: Ste Norburn
 ---
-**Current Player Count: 4 / 6**
+**Current Player Count: 0 / 15**
 
 A journey through the terrors of the grim darkness awaits players as they try and make their way to true infamy. 
 
