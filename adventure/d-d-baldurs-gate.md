@@ -7,7 +7,6 @@ featuredimage: /assets/dnddescentkeyartjpg.jpeg
 gamemode: 24 Hours (Pure Mode)
 runby: Pete Abel
 ---
-**Current Player Count: 3 / 6**
 
 Diabolical dangers await in this adventure for the world’s greatest roleplaying game.
 
