@@ -7,6 +7,8 @@ featuredimage: /assets/l05r.jpg
 gamemode: 12 Hours (Rush Mode)
 runby: Chris Hart
 ---
+**Current Player Count: 4 / 6**
+
 Mask of the Oni. An Adventure in the Shadowlands. 
 
 Legend of the Five Rings Role-Playing. Face the evils of Jikoku and discover the fate of the Hiruma family. You will play samurai who must overcome threats to both body and soul if you are to halt a wicked plot that could bring about the doom of the Empire. 
