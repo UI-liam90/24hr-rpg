@@ -7,6 +7,8 @@ featuredimage: /assets/dnddescentkeyartjpg.jpeg
 gamemode: 24 Hours (Pure Mode)
 runby: Pete Abel
 ---
+**Current Player Count: 3 / 6**
+
 Diabolical dangers await in this adventure for the world’s greatest roleplaying game.
 
 Welcome to Baldur's Gate, a city of ambition and corruption. You’ve just started your adventuring career, but already find yourself embroiled in a plot that sprawls from the shadows of Baldur's Gate to the front lines of the planes-spanning Blood War! Do you have what it takes to turn infernal war machines and nefarious contracts against the archdevil Zariel and her diabolical hordes? And can you ever hope to find your way home safely when pitted against the infinite evils of the Nine Hells?
