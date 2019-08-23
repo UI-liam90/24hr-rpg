@@ -7,7 +7,6 @@ featuredimage: /assets/earth2064.jpg
 gamemode: 2 X 12 Hours (Mellow Mode)
 runby: Tim Brittain
 ---
-**Current Player Count: 1 / 6**
 
 Earth 2064. Mankind has been inspired and aided by the A.l. "Nár", and continues to grow in knowledge and technology under its supervision. 
 
