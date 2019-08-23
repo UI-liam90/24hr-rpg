@@ -7,7 +7,6 @@ featuredimage: /assets/l05r.jpg
 gamemode: 12 Hours (Rush Mode)
 runby: Chris Hart
 ---
-**Current Player Count: 4 / 6**
 
 Mask of the Oni. An Adventure in the Shadowlands. 
 
