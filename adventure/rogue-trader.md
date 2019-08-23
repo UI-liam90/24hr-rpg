@@ -3,7 +3,7 @@ templateKey: adventureTemplate
 path: rogue-trader
 date: 2019-08-23T16:49:13.427Z
 title: Rogue Trader
-featuredimage: /assets/rogue-trader.jpg
+featuredimage: /assets/rogue_trader.jpg
 gamemode: Pure
 runby: Ste Norburn
 ---
