@@ -6,6 +6,9 @@ title: Legend of the Five Rings
 featuredimage: /assets/l05r.jpg
 gamemode: 12 Hours (Rush Mode)
 runby: Chris Hart
+players:
+  - test
+  - test 2
 ---
 
 Mask of the Oni. An Adventure in the Shadowlands. 
