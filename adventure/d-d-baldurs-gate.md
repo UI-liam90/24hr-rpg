@@ -6,6 +6,9 @@ title: 'D&D: Baldur''s Gate'
 featuredimage: /assets/dnddescentkeyartjpg.jpeg
 gamemode: 24 Hours (Pure Mode)
 runby: Pete Abel
+players:
+  - test
+  - test 2
 ---
 
 Diabolical dangers await in this adventure for the world’s greatest roleplaying game.
