@@ -6,13 +6,6 @@ title: 'D&D: Baldur''s Gate'
 featuredimage: /assets/dnddescentkeyartjpg.jpeg
 gamemode: 24 Hours (Pure Mode)
 runby: Pete Abel
-players: |-
-  * Callum Gillett
-  * Stephanie Millar
-  * Patrick McNeany
-  * John Mcnulty
-  * Bryce Gillett
-  * Iain Hill
 ---
 
 Diabolical dangers await in this adventure for the world’s greatest roleplaying game.
