@@ -20,6 +20,3 @@ collections:
       - {label: "Game Mode", name: "gamemode"}
       - {label: "Run by", name: "runby"}
       - { name: body, label: Body, widget: markdown }
-      - label: "Players"
-        name: "players"
-        widget: "list"
