@@ -6,13 +6,6 @@ title: Numenera
 featuredimage: /assets/numenera.png
 gamemode: 24 Hours (Pure Mode)
 runby: Ethan Brittain
-players: |-
-  * Sean Heslin
-  * Robert Barton
-  * Holly Jenkins
-  * Charlie Reavette
-  * Cheryl Bennet
-  * Josh Redcliffe
 ---
 
 Numenera is an RPG set a billion years in the future of Earth.
