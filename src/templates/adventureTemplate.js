@@ -26,6 +26,8 @@ export default function Template({
   let formSubject = `I want to play ${frontmatter.title}`
   let pagePath = `https://24hr-rpg.fyi/${frontmatter.path}`
   let imagePath = `https://24hr-rpg.fyi${frontmatter.featuredimage.childImageSharp.fixed.src}`
+  const adventurePlayers = frontmatter.players
+    .map(value => <li>{value}</li>)
   return (
     <Layout>
       <Helmet>
@@ -50,6 +52,12 @@ export default function Template({
             <div className="adventure-content" dangerouslySetInnerHTML={{ __html: html }} />
           </div>
           <div className="sidebar">
+            <div className="players-list">
+              <h3>Players:</h3>
+              <ul >
+                {adventurePlayers}
+              </ul>
+            </div>
             <div className="contact-form">
               <h5>Want to get involved in this adventure?</h5>
               <p> Please use the form below to register your interest or email <a href="mailto:kinoandhermes@gmail.com?subject=24%20hour%20RPG">kinoandhermes@gmail.com</a> directly.</p>
@@ -99,6 +107,7 @@ export const pageQuery = graphql`
         title
         gamemode
         runby
+        players
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 500) {
