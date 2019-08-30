@@ -13,11 +13,10 @@ collections:
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "adventureTemplate"}
-      - {name: path, label: Path}
-      - {name: date, label: Date, widget: date}
-      - {name: title, label: Title}
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Game Mode", name: "gamemode"}
       - {label: "Run by", name: "runby"}
-      - {name: body, label: Body, widget: markdown}
-      - {name: players, label: Players, widget: markdown}
+      - { name: body, label: Body, widget: markdown }
