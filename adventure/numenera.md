@@ -6,6 +6,9 @@ title: Numenera
 featuredimage: /assets/numenera.png
 gamemode: 24 Hours (Pure Mode)
 runby: Ethan Brittain
+players:
+  - test
+  - test 2
 ---
 
 Numenera is an RPG set a billion years in the future of Earth.
