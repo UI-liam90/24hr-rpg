@@ -99,6 +99,7 @@ export const pageQuery = graphql`
         title
         gamemode
         runby
+        players
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 500) {
