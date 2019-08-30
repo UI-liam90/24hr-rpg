@@ -7,8 +7,7 @@ featuredimage: /assets/rogue_trader.jpg
 gamemode: Pure
 runby: Ste Norburn
 players:
-  - test
-  - test 2
+  - Angela Simpson
 ---
 
 A journey through the terrors of the grim darkness awaits players as they try and make their way to true infamy. 
