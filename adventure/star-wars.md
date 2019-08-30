@@ -6,6 +6,9 @@ title: Star Wars
 featuredimage: /assets/starwareoe.jpg
 gamemode: 2 X 12 Hours (Mellow Mode)
 runby: Liam Wright
+players:
+  - test
+  - test 2
 ---
 
 A long time ago, in a galaxy far far away...
