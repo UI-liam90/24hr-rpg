@@ -8,6 +8,8 @@ gamemode: 2 X 12 Hours (Mellow Mode)
 runby: Tim Brittain
 players:
   - Simon Hawkins
+  - Alex Freeman
+  - Mark Tendon
   - Jacob Smith
 ---
 
