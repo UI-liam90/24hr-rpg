@@ -9,7 +9,7 @@ runby: Tim Brittain
 players:
   - Simon Hawkins
   - Alex Freeman
-  - Mark Tendon
+  - Mark Yensen
   - Jacob Smith
 ---
 
