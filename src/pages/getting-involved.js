@@ -76,71 +76,8 @@ export default ({ data }) => {
                 For £5 a pop, you will be able to help or hinder a player of your choice via a Friend or Foe sponsorship. If you choose to sponsor them as a Friend then you will give the player a free re-roll for the session, to tweak their fate for the better. If you choose Foe however, you will give the player's GM a re-roll to use against the hapless fool! 
             </p>
             <p>
-                Sponsorship forms will be available to download soon.
+                Sponsorship forms can be downloaded by <a href="assets/24hr-rpg-sponsor-form-2019.pdf">Click Here</a>
             </p>
-        </Container>
-      </div>
-      <div id="players" className="play-description">
-        <Container>
-        <div className="main-content-grid main-content-grid-50">
-          <div className="main-area">
-            <h4 className="title title--2">By Becoming a GM</h4>
-            <p>
-              Got your own group or are an aspiring GM that would like to get involved?
-            </p>
-            <p>
-              We are always looking to add fresh blood to our events and to get as many people involved as possible.
-            </p>
-            <p>
-              For a limited time only, we are accepting applications to become a GM for one of the sessions. You can pick any game system you like and will liaise with the existing GM’s to help make a cohesive experience for everyone involved.
-            </p>
-            <p>
-              Please get in touch with us as soon as possible using the form or by emailing <a href="mailto:kinoandhermes@gmail.com?subject=24%20hour%20RPG">kinoandhermes@gmail.com.</a>
-            </p>
-            
-          </div>
-          <div className="sidebar">
-            <div className="contact-form">
-              <h5>Enquire about GM Spot</h5>
-              <form name="I-want-to-be-a-gm" method="post" action="/success/" data-netlify="true" data-netlify-honeypot="bot-field">
-              <input type="hidden" name="bot-field"/>
-              <input type="hidden" name="form-name" value="I-want-to-be-a-gm" />
-              <input type="hidden" name="subject" value="I'm Interested in being a GM" />
-                <div className="form-element">
-                  <label htmlFor="name">Name</label>
-                  <input id="name" type="text" name="name" required/>
-                </div>
-                <div className="form-element">
-                  <label htmlFor="email">Email</label>
-                  <input id="email" type="email" name="email" required />
-                </div>
-                <div className="form-element">
-                  <label htmlFor="preferred-game-system">Preferred game system</label>
-                  <input id="preferred-game-system" type="text" name="Preferred game system" />
-                </div>
-                <div className="form-element">
-                  <label htmlFor="group-size">Group Size </label><small>(Number of Player you could bring)</small>
-                  <input id="group-size" type="number" name="Group Size" />
-                </div>
-                <div className="form-element">
-                  <label htmlFor="max-group-size">Max Group Size </label><small>(Number of Player you could handle)</small>
-                  <input id="max-group-size" type="number" name="Max Group Size" />
-                </div>
-                <div className="form-element">
-                  <label htmlFor="other">Any Other Information? </label><small>(Level of experience, Funny moments, etc.)</small>
-                  <textarea id="other" name="other"></textarea>
-                </div>
-                <div className="form-element">
-                  <input id="gdpr" type="checkbox" name="GDPR" required />
-                  <label htmlFor="gdpr">I agree to be contacted by 24hr RPG regarding my bid. 24hr RPG will not pass your details onto any third parties.</label>
-                </div>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
-              </form>
-            </div>
-          </div>
-        </div>
         </Container>
       </div>
     </main>
