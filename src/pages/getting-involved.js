@@ -76,7 +76,7 @@ export default ({ data }) => {
                 For £5 a pop, you will be able to help or hinder a player of your choice via a Friend or Foe sponsorship. If you choose to sponsor them as a Friend then you will give the player a free re-roll for the session, to tweak their fate for the better. If you choose Foe however, you will give the player's GM a re-roll to use against the hapless fool! 
             </p>
             <p>
-                Sponsorship forms can be downloaded by <a href="assets/24hr-rpg-sponsor-form-2019.pdf">Click Here</a>
+                Sponsorship forms can be downloaded by <a href="/assets/24hr-rpg-sponsor-form-2019.pdf">Click Here</a>
             </p>
         </Container>
       </div>
