@@ -12,6 +12,7 @@ players:
   - Jarn
   - Steven Blyth
   - James Fawcett
+  - William Cain
 ---
 
 Mask of the Oni. An Adventure in the Shadowlands. 
