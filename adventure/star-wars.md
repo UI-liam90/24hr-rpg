@@ -7,11 +7,9 @@ featuredimage: /assets/starwareoe.jpg
 gamemode: 2 X 12 Hours (Mellow Mode)
 runby: Liam Wright
 players:
-  - Jamie Taubman
-  - William Cain
-  - Jeremy Short
+  - ''
 ---
-A long time ago, in a galaxy far far away...
+~A long time ago, in a galaxy far far away...~
 
 The Empire controls most of the galaxy. There are rumours of giant weapons that can destroy entire planets. The rebels are doing all they can to stop these weapons before it is too late.
 
