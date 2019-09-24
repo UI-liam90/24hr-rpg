@@ -9,7 +9,9 @@ runby: Liam Wright
 players:
   - ''
 ---
-~A long time ago, in a galaxy far far away...~
+**Unfortunately, due to unforeseen circumstance this adventure has now been cancelled.  Sorry to those who may have been interested in this adventure.**
+
+A long time ago, in a galaxy far far away...
 
 The Empire controls most of the galaxy. There are rumours of giant weapons that can destroy entire planets. The rebels are doing all they can to stop these weapons before it is too late.
 
