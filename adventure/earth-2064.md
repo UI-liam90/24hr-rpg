@@ -11,6 +11,7 @@ players:
   - Alex Freeman
   - Mark Yensen
   - Jacob Smith
+  - Liam Wright
 ---
 
 Earth 2064. Mankind has been inspired and aided by the A.l. "Nár", and continues to grow in knowledge and technology under its supervision. 
