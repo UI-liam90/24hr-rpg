@@ -8,6 +8,10 @@ gamemode: Pure
 runby: Ste Norburn
 players:
   - Angela Simpson
+  - Jamie Taubman
+  - Sam Dean
+  - Haydn Dean
+  - James Caldwell
 ---
 
 A journey through the terrors of the grim darkness awaits players as they try and make their way to true infamy. 
