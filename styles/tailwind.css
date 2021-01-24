@@ -83,6 +83,7 @@ img {
 }
 .main {
   grid-area: 'main';
+  word-break: break-all;
 }
 
 .main h1 {
