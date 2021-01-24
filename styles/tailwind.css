@@ -82,8 +82,8 @@ img {
 }
 @media screen and (min-width: 1180px) {
   .page {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   .front-header {
     grid-template-columns: 1fr 30%;
