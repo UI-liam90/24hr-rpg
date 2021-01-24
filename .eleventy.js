@@ -6,6 +6,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
   
   eleventyConfig.addPassthroughCopy("img");
+  
+  eleventyConfig.addPassthroughCopy("manifest.json");
 
 
   eleventyConfig.addShortcode("version", function () {
