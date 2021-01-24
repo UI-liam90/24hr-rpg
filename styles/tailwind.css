@@ -83,7 +83,6 @@ img {
 }
 .main {
   grid-area: 'main';
-  margin-right: 30px;
 }
 .main .article {
   columns: 2;
@@ -164,6 +163,9 @@ span.strike {
     'main date';
   }
   .head-main {
+    margin-right: 30px;
+  }
+  .main {
     margin-right: 30px;
   }
 }
