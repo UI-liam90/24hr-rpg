@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      {% block title %}Does it work?{% endblock %}
+    </title>
+    <meta charset="UTF-8"/>
+    {% if description %}
+      <meta name="description" content="{{description}}"/>
+    {% endif %}
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/style.css?v={% version %}"/>
+    {% block head %}{% endblock %}
+  </head>
+  <body class="bg-parchment">
+    <div class="page">
+      {% block header %}
+        {{ header | safe }}
+      {% endblock %}
+      {% block content %}
+        {{ content | safe }}
+      {% endblock %}
+    </div>
+  </body>
+</html>
