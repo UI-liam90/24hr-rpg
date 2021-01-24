@@ -84,9 +84,7 @@ img {
 .main {
   grid-area: 'main';
 }
-.main .article {
-  columns: 2;
-}
+
 .main h1 {
   font-size: rfs(100px);
   font-weight: 900;
@@ -154,6 +152,9 @@ span.strike {
 @media screen and (min-width: 570px) {
   .head-date {
     padding: 20px 30px;
+  }
+  .main .article {
+    columns: 2;
   }
 }
 @media screen and (min-width: 990px) {
