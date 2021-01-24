@@ -83,9 +83,10 @@ img {
 }
 .main {
   grid-area: 'main';
+}
+.main a {
   word-break: break-all;
 }
-
 .main h1 {
   font-size: rfs(100px);
   font-weight: 900;
