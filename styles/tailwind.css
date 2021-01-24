@@ -77,7 +77,8 @@ img {
   display: grid;
   grid-template-columns: 1fr 40%;
   grid-template-areas:
-  'main side';
+  'main' 
+  'side';
   padding-top: 50px;
 }
 .main {
@@ -175,6 +176,11 @@ span.strike {
     grid-template-columns: 1fr 30%;
     grid-template-areas:
     'main date';
+  }
+  .main-area {
+    grid-template-columns: 1fr 40%;
+    grid-template-areas:
+    'main side';
   }
   .event-date .days, .event-date .month, .event-date .year {
     display: block;
