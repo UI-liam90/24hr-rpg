@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>
-      {% block title %}Does it work?{% endblock %}
+      {{ title }}
     </title>
     <meta charset="UTF-8"/>
     {% if description %}
@@ -42,16 +42,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;900&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/732ee7a79a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css?v={% version %}"/>
-    {% block head %}{% endblock %}
   </head>
   <body class="bg-parchment">
     <div class="page">
-      {% block header %}
-        {{ header | safe }}
-      {% endblock %}
-      {% block content %}
         {{ content | safe }}
-      {% endblock %}
     </div>
   </body>
 </html>

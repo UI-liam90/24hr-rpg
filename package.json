@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "eleventy --serve",
     "postcss_build": "postcss styles/tailwind.css --o _tmp/style.css --watch",
-    "start": "npm-run-all --parallel serve postcss_build",
+    "start": "postcss_build & eleventy --serve",
+    "all": "run-p postcss_build serve",
     "build": "cross-env ELEVENTY_PRODUCTION=true eleventy && cross-env NODE_ENV=production postcss styles/tailwind.css --o _site/style.css"
   },
   "repository": {

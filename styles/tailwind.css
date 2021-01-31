@@ -18,7 +18,12 @@ body {
 }
 p {
   margin: 0 0 30px;
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+li {
+  font-size: 18px;
+  line-height: 1.4;
 }
 a {
   font-weight: 500;
@@ -73,18 +78,38 @@ img {
   font-weight: 900;
   text-transform: uppercase;
 }
+.newsline {
+  border-top: 5px solid var(--black);
+  border-bottom: 5px solid var(--black);
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.social-icons li {
+  font-size: rfs(30px);
+  padding: 0 10px;
+}
 .main-area {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
   'main' 
   'side';
-  padding-top: 50px;
+  padding-top: 10px;
 }
 .main {
   grid-area: 'main';
 }
-.main a {
+.main a[href^="http"] {
   word-break: break-all;
 }
 .main h1 {
@@ -151,6 +176,64 @@ span.strike {
   background: var(--black);
   color: var(--parchment);
 }
+
+.list li {
+  margin-bottom: 15px;
+}
+
+.extras {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 30px;
+}
+.side-heading {
+  display: inline-block;
+  font-size: rfs(40px);
+  color: var(--parchment);
+  background: var(--black);
+  padding: 10px;
+  margin: 0 0 15px;
+}
+.adventure {
+  margin: 5px;
+  border-top: 2px solid var(--black);
+  padding: 0 15px 15px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.adventure:last-of-type {
+  border-top: 2px solid var(--black);
+}
+.adventure__image {
+  padding: 0;
+  margin: 20px 0 0;
+}
+.adventure__image figcaption {
+  font-size: 12px;
+  font-style: italic;
+}
+.adventure__title {
+  font-size: rfs(30px);
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-weight: 900;
+}
+.adventure__author {
+  font-size: 16px;
+  font-style: italic;
+  margin: 0 0 15px;
+}
+.adventure__link {
+  display: block;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+.adventure__link a {
+  background: var(--black);
+  color: var(--parchment);
+  display: inline-block;
+  padding: 5px;
+}
 @media screen and (min-width: 570px) {
   .head-date {
     padding: 20px 30px;
@@ -165,10 +248,17 @@ span.strike {
     grid-template-areas:
     'main date';
   }
+  .extras {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
   .head-main {
     margin-right: 30px;
   }
   .main {
+    margin-right: 30px;
+  }
+  .get-involved {
     margin-right: 30px;
   }
 }
