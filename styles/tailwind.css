@@ -248,9 +248,10 @@ span.strike {
     grid-template-areas:
     'main date';
   }
-  .extras {
+  .get-involved {
     display: grid;
     grid-template-columns: 50% 50%;
+    padding: 40px;
   }
   .head-main {
     margin-right: 30px;
@@ -258,9 +259,10 @@ span.strike {
   .main {
     margin-right: 30px;
   }
-  .get-involved {
+  .get-involved__blurb {
     margin-right: 30px;
   }
+  
 }
 @media screen and (min-width: 1180px) {
   .page {
@@ -277,6 +279,7 @@ span.strike {
     grid-template-areas:
     'main side';
   }
+  
   .event-date .days, .event-date .month, .event-date .year {
     display: block;
   }
