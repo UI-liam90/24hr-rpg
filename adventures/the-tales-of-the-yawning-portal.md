@@ -1,4 +1,5 @@
 ---
+date: 2021-01-01
 title: The Tales of the Yawning Portal
 tags: adventures
 gm: Robert B

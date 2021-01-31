@@ -73,7 +73,7 @@
             <h5 class="adventure__author">By {{post.data.gm}}</h5>
             {{ post.templateContent | safe | truncate(200) }}
             <div class="adventure__link">
-              <a href="{{ post.url }}">Read more on {{ post.data.pageNo }} ></a>
+              <a href="{{ post.url }}">Read more on Page {{ post.data.pageNo }} ></a>
             </div>
           </div>
         {%- endfor -%}

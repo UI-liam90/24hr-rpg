@@ -1,4 +1,5 @@
 ---
+date: 2021-01-03
 title: The Thinnest Veil
 tags: adventures
 gm: Sean H
