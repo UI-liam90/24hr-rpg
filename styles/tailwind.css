@@ -110,6 +110,15 @@ img {
 .main {
   grid-area: 'main';
 }
+.main__image {
+  margin: 0;
+}
+.charity-image {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid var(--black);
+  padding: 15px;
+}
 .main a[href^="http"] {
   word-break: break-all;
 }
