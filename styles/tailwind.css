@@ -83,7 +83,7 @@ img {
   border-bottom: 5px solid var(--black);
   width: 100%;
   margin: 10px 0;
-  padding: 5px 15px;
+  padding: 10px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,8 +97,9 @@ img {
 .social-icons li {
   font-size: rfs(30px);
   padding: 0 10px;
+  line-height: 1;
 }
-.main-area {
+.main-area, .adventure-main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -114,6 +115,11 @@ img {
 }
 .main h1 {
   font-size: rfs(100px);
+  font-weight: 900;
+  margin: 10px 0 40px;
+}
+.main h1.adventure__title {
+  font-size: rfs(50px);
   font-weight: 900;
   margin: 10px 0 40px;
 }
@@ -136,7 +142,7 @@ span.strike {
 }
 .form {
   border: 5px dashed var(--parchment);
-  padding: 15px;
+  padding: 30px;
 }
 .form .form-element {
   width: 100%;
@@ -171,12 +177,17 @@ span.strike {
   border: 3px solid var(--parchment);
   transition: all 350ms ease-in-out;
   text-transform: uppercase;
+  margin-top: 30px;
 }
 .form .form-button button:hover {
   background: var(--black);
   color: var(--parchment);
 }
-
+.form-success {
+  border: 2px solid var(--parchment);
+  padding: 10px;
+  margin-bottom: 20px;
+}
 .list li {
   margin-bottom: 15px;
 }
@@ -234,6 +245,9 @@ span.strike {
   display: inline-block;
   padding: 5px;
 }
+.adventure-main .adventure__image {
+  margin: 0 0 30px;
+}
 @media screen and (min-width: 570px) {
   .head-date {
     padding: 20px 30px;
@@ -249,9 +263,11 @@ span.strike {
     'main date';
   }
   .get-involved {
+    padding: 40px;
+  }
+  .get-involved.get-involved--double {
     display: grid;
     grid-template-columns: 50% 50%;
-    padding: 40px;
   }
   .head-main {
     margin-right: 30px;
@@ -274,7 +290,7 @@ span.strike {
     grid-template-areas:
     'main date';
   }
-  .main-area {
+  .main-area, .adventure-main {
     grid-template-columns: 1fr 40%;
     grid-template-areas:
     'main side';

@@ -22,15 +22,15 @@
     </div>
   </div>
   <div class="newsline">
-  <div class="price">75CP</div>
-  <div class="date">{% today %}</div>
-  <div class="social">
-    <ul class="social-icons">
-      <li><a href="https://www.facebook.com/events/771849836877128/"><i class="fab fa-facebook-square"></i></a></li>
-      <li><a href="https://twitter.com/24hr_rpg"><i class="fab fa-twitter"></i></a></li>
-      <li><a href="https://discord.com/channels/775049680958259302/796451866477199360"><i class="fab fa-discord"></i></a></li>
-    </ul>
-  </div>
+    <div class="price">75 CP</div>
+    <div class="date">{% today %}</div>
+    <div class="social">
+      <ul class="social-icons">
+        <li><a href="https://www.facebook.com/events/771849836877128/"><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href="https://twitter.com/24hr_rpg"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://discord.com/channels/775049680958259302/796451866477199360"><i class="fab fa-discord"></i></a></li>
+      </ul>
+    </div>
   </div>
 {% endblock %}
 
@@ -90,7 +90,7 @@
   </div>
 
   <div class="extras">
-    <div class="get-involved">
+    <div class="get-involved get-involved--double">
       <div class="get-involved__blurb">
         <h2>Getting Involved</h2>
         <p>So you want to get involved in the Event?</p>
@@ -102,13 +102,14 @@
           <li>You can donating via <a href="https://justgiving.com/team/24hrpg">JustGiving</a>.</li>
           <li>By spreading the word far and wide via your various social media profiles, and word of mouth</li>
         </ol>
-        <p>You can also fill out the form below with any general enquires. Clicking the magically send button prompts a kobold to fetch the form and bring it to one of our team for prompt answering.</p>
+        <p>You can also fill out the form with any general enquires. Clicking the magical send button prompts a kobold to fetch the form and bring it to one of our team for prompt answering.</p>
       </div>
         
         <form id="general-enquiry" class="form" name="general-enquiry" method="post" action="/success/" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="bot-field"/>
           <input type="hidden" name="form-name" value="general-enquiry" />
           <input type="hidden" name="subject" value="General Enquiry" />
+          <div id="form-success" class="form-success" style="display: none">A kobold has been sent to the wizards with you message, please expect a reply within the next 24 hours.</div>
           <div class="form-element">
             <label for="name">Name</label>
             <input id="name" type="text" name="name" />
@@ -136,11 +137,8 @@
 {% endblock %}
 
 {% block footer %}
-
   <script>
-    document.querySelector("form").addEventListener("submit", handleSubmit);
-
-    const handleSubmit = (e) => {
+    function handleSubmit(e) {
       e.preventDefault()
       let myForm = document.querySelector('#general-enquiry');
       let formData = new FormData(myForm)
@@ -148,8 +146,12 @@
         method: 'POST',
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString()
-      }).then(() => console.log('Form successfully submitted')).catch((error) =>
+      }).then(() => {
+        document.querySelector('#form-success').style.display = 'block';
+      })
+      .catch((error) =>
         alert(error))
     }
+    document.querySelector("form").addEventListener("submit", handleSubmit);
   </script>
 {% endblock %}

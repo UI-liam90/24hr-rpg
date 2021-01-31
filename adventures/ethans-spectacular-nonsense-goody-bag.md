@@ -3,8 +3,8 @@ date: 2021-01-02
 title: Ethan's Spectacular Nonsense Goody Bag!
 tags: adventures
 gm: Ethan B
-pageNo: 2
-mainImage: img/ethans-wacky-adventure.jpg
+pageNo: 3
+mainImage: /img/ethans-wacky-adventure.jpg
 players:
 ---
 

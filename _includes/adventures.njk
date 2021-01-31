@@ -45,7 +45,81 @@
   </head>
   <body class="bg-parchment">
     <div class="page">
-        {{ content | safe }}
+      <div class="newsline">
+        <div class="price"><a href="/">< Back to the front page</a></div>
+        <div class="page-number">
+          Page {{pageNo}}
+        </div>
+      </div>
+      <div class="adventure-main">
+        <div class="main">
+          <h1 class="adventure__title">{{ title | safe }}</h1>
+          <figure class="adventure__image">
+            <img src="{{mainImage}}" alt="">
+            <figcaption>{{mainImageCaption}}</figcaption>
+          </figure>
+          {{ content | safe }}
+        </div>
+        <div class="sidebar">
+          <div class="get-involved get-involved--single">
+            <div class="get-involved__blurb">
+              {%-if players-%}
+                <h2> Current Players </h2>
+                <ol class="list">
+                  {%- for player in players -%}
+                    <li>{{player}}</li>
+                  {%- endfor -%}
+                </ol>
+              {%- endif -%}
+              <h2>Want to get Involved?</h2>
+              <p>You can fill out this form with any general enquires. Clicking the magical send button prompts a kobold to fetch the form and bring it to one of our team for prompt answering.</p>
+            </div>
+            <form id="I-want-to-play" class="form" name="I-want-to-play" method="post" action="/success/" data-netlify="true" data-netlify-honeypot="bot-field">
+              <input type="hidden" name="bot-field">
+              <input type="hidden" name="form-name" value="I-want-to-play">
+              <input type="hidden" name="subject" value="I want to play {{title}}">
+              <div id="form-success" class="form-success" style="display: none">A kobold has been sent to the wizards with you message, please expect a reply within the next 24 hours.</div>
+              <div class="form-element">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" required="">
+              </div>
+              <div class="form-element">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required="">
+              </div>
+              <div class="form-element">
+                <label for="bid">Bid Amount</label>
+                <input id="bid" type="text" name="bid" required="">
+              </div>
+              <div class="form-element">
+                <input id="gdpr" type="checkbox" name="GDPR" />
+                <label for="gdpr">I agree to be contacted by 24hr RPG regarding my bid. 24hr RPG will not pass your details onto any third parties.</label>
+              </div>
+              <div class="form-button">
+                <button type="submit">Send</button>
+              </div>
+            </form>
+            
+          </div>
+        </div>
+      </div>   
     </div>
+    <script>
+      function handleSubmit(e) {
+        e.preventDefault()
+        let myForm = document.querySelector('#I-want-to-play');
+        let formData = new FormData(myForm)
+        fetch('/', {
+          method: 'POST',
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        }).then(() => {
+          document.querySelector('#form-success').style.display = 'block';
+        })
+        .catch((error) =>
+          alert(error))
+      }
+      document.querySelector("form").addEventListener("submit", handleSubmit);
+    </script>
   </body>
 </html>

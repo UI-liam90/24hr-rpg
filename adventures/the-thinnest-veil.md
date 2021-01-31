@@ -3,7 +3,8 @@ date: 2021-01-03
 title: The Thinnest Veil
 tags: adventures
 gm: Sean H
-pageNo: 3
+mainImage: /img/veiled.png
+pageNo: 4
 players:
 ---
 
