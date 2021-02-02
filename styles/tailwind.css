@@ -66,8 +66,20 @@ img {
   padding: 20px;
   text-align: center;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+}
+.head-date .button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: var(--parchment);
+  color: var(--black);
+  transition: all 300ms ease-in-out;
+}
+.head-date .button:hover {
+  transform: scale(1.05);
 }
 .logo {
   max-width: 750px;
@@ -98,6 +110,11 @@ img {
   font-size: rfs(30px);
   padding: 0 10px;
   line-height: 1;
+  transition: all 300ms ease-in-out;
+}
+  
+.social-icons li:hover {
+  transform: scale(1.1);
 }
 .main-area, .adventure-main {
   display: grid;
@@ -106,6 +123,7 @@ img {
   'main' 
   'side';
   padding-top: 10px;
+  margin-bottom: 30px;
 }
 .main {
   grid-area: 'main';
@@ -113,11 +131,14 @@ img {
 .main__image {
   margin: 0;
 }
-.charity-image {
+.charity-block {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 2px solid var(--black);
-  padding: 15px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main a[href^="http"] {
   word-break: break-all;
@@ -214,6 +235,10 @@ span.strike {
   padding: 10px;
   margin: 0 0 15px;
 }
+.adventures {
+  display: flex;
+  flex-flow: column nowrap;
+}
 .adventure {
   margin: 5px;
   border-top: 2px solid var(--black);
@@ -247,12 +272,17 @@ span.strike {
   display: block;
   align-self: flex-end;
   justify-self: flex-end;
+  margin-top: auto;
 }
 .adventure__link a {
   background: var(--black);
   color: var(--parchment);
   display: inline-block;
-  padding: 5px;
+  padding: 5px 10px;
+  transition: all 300ms ease-in-out;
+}
+.adventure__link a:hover {
+  transform: scale(1.05);
 }
 .adventure-main .adventure__image {
   margin: 0 0 30px;
@@ -287,7 +317,10 @@ span.strike {
   .get-involved__blurb {
     margin-right: 30px;
   }
-  
+  .adventures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media screen and (min-width: 1180px) {
   .page {

@@ -4,8 +4,9 @@ title: Ethan's Spectacular Nonsense Goody Bag!
 tags: adventures
 gm: Ethan B
 pageNo: 3
-mainImage: /img/ethans-wacky-adventure.jpg
+mainImage: ./img/ethans-wacky-adventure.jpg
 players:
+timing: 24 Hours
 ---
 
 This is a series of one-shot, quick and easy rpgs, likely switching every 2 -3 hours!

@@ -13,12 +13,10 @@
           20<sup>th</sup> - 21<sup>st</sup>
         </span>
         <span class="month">
-          March
-        </span>
-        <span class="year">
-          2021
+          March 2021
         </span>
       </p>
+      <a href="https://justgiving.com/team/24hrpg" class="button" target="_BLANK">Donate</a>
     </div>
   </div>
   <div class="newsline">
@@ -26,9 +24,9 @@
     <div class="date">{% today %}</div>
     <div class="social">
       <ul class="social-icons">
-        <li><a href="https://www.facebook.com/events/771849836877128/"><i class="fab fa-facebook-square"></i></a></li>
-        <li><a href="https://twitter.com/24hr_rpg"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://discord.gg/v6R9yj8WyA"><i class="fab fa-discord"></i></a></li>
+        <li><a href="https://www.facebook.com/events/771849836877128/" target="_BLANK"><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href="https://twitter.com/24hr_rpg" target="_BLANK"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://discord.gg/v6R9yj8WyA" target="_BLANK"><i class="fab fa-discord"></i></a></li>
       </ul>
     </div>
   </div>
@@ -38,7 +36,7 @@
   <div class="main-area">
     <article class="main">
       <figure class="main__image">
-        <img src="img/main-img.jpg" alt="Dragon staring down a party of adventures">
+        {% image "./img/main-img.jpg", "Dragon staring down a party of adventures" %}
         <figcaption>Warriors of Waterdeep | Wizards of the Coast</figcaption>
       </figure>
       
@@ -70,8 +68,17 @@
           <li><strong>Mix Mode</strong> - Mainly for videogame streamers, as many hours as you can physically do from 1 to 48 hours depending on the amount of challenge you can manage.</li>
         </ul>
       </div>
+      
+    </article>
+    <aside class="sidebar">
+      <h4 class="side-heading">This Years Charity</h4>
+      <div class="charity-block">
+        <a href="https://www.clatterbridgecc.nhs.uk/charity/events/Challenge-Events/Clatterbridge-Game-On">
+          <img class="charity-image" src="/img/pcKAAa9n_400x400.png" alt="">
+        </a>
+      </div>
       <div class="extras">
-        <div class="get-involved get-involved--double">
+        <div class="get-involved get-involved--single">
           <div class="get-involved__blurb">
             <h2>Getting Involved</h2>
             <p>So you want to get involved in the Event?</p>
@@ -113,31 +120,26 @@
             </form>
           </div>
       </div>
-    </article>
-    <aside class="sidebar">
-    <h4 class="side-heading">This Years Charity</h4>
-    <a href="https://www.clatterbridgecc.nhs.uk/charity/events/Challenge-Events/Clatterbridge-Game-On"><img class="charity-image" src="/img/pcKAAa9n_400x400.png" alt=""></a>
-    <h4 class="side-heading">Adventures</h4>
-    <p>To take part in any of the adventures listed please email <a href="mailto:join@24hr-rpg.fyi">join@24hr-rpg.fyi</a> with the name of the adventure you would like to take part in and your bid amount for the adventure</p>
-      <div class="adventures">
-        {%- for post in collections.adventures -%}
-          <div class="adventure">
-            <figure class="adventure__image">
-              <img src="{{post.data.mainImage}}" alt="">
-              <figcaption>{{post.data.mainImageCaption}}</figcaption>
-            </figure>
-            <h3 class="adventure__title">{{post.data.title}}</h3>
-            <h5 class="adventure__author">By {{post.data.gm}}</h5>
-            {{ post.templateContent | safe | truncate(200) }}
-            <div class="adventure__link">
-              <a href="{{ post.url }}">Read more on Page {{ post.data.pageNo }} ></a>
-            </div>
-          </div>
-        {%- endfor -%}
-      </div>
     </aside>
   </div>
-
+  <h4 class="side-heading">Adventures</h4>
+  <p>To take part in any of the adventures listed please email <a href="mailto:join@24hr-rpg.fyi">join@24hr-rpg.fyi</a> with the name of the adventure you would like to take part in and your bid amount for the adventure</p>
+  <div class="adventures">
+    {%- for post in collections.adventures -%}
+      <div class="adventure">
+        <figure class="adventure__image">
+          {% image post.data.mainImage, post.data.title %}
+          <figcaption>{{post.data.mainImageCaption}}</figcaption>
+        </figure>
+        <h3 class="adventure__title">{{post.data.title}}</h3>
+        <h5 class="adventure__author">By {{post.data.gm}}</h5>
+        {{ post.templateContent | safe | truncate(200) }}
+        <div class="adventure__link">
+          <a href="{{ post.url }}">Read more on Page {{ post.data.pageNo }} ></a>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
   
   
   

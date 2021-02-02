@@ -1,3 +1,31 @@
+const Image = require("@11ty/eleventy-img");
+
+async function imageShortcode(src, alt, sizes = "(max-width: 300px) 600px, (max-width: 600px) 1024px, 100vw") {
+  if(alt === undefined) {
+    // You bet we throw an error on missing alt (alt="" works okay)
+    throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
+  }
+
+  let metadata = await Image(src, {
+    widths: [600, 1200, null],
+    formats: ['webp', 'jpeg'],
+    outputDir: "./_site/img/"
+  });
+
+  let lowsrc = metadata.jpeg[0];
+
+  return `<picture>
+    ${Object.values(metadata).map(imageFormat => {
+      return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
+    }).join("\n")}
+      <img
+        src="${lowsrc.url}"
+        alt="${alt}"
+        loading="lazy"
+        decoding="async">
+    </picture>`;
+}
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
@@ -22,4 +50,6 @@ module.exports = function (eleventyConfig) {
     var year = today.getFullYear();
     return String(`${day}, ${monthNames[month]} ${year}`);
   });
+
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 };

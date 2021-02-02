@@ -3,9 +3,10 @@ date: 2021-01-03
 title: The Thinnest Veil
 tags: adventures
 gm: Sean H
-mainImage: /img/veiled.png
+mainImage: ./img/veiled.png
 pageNo: 4
 players:
+timing: 24 Hours
 ---
 
 Seasoned adventurers all, you have been called to investigate a threat that sages speak of, hidden beneath the great mountain, a growing unbalance that will spew forth its grotesque evil and destroy all life in the world. Those who have returned from that dread place babble about pale men, speaking of ‘science’ and bear maddening visions of worlds beyond worlds. Are those pale men the threat, or are they the salvation? That is up to you to discover...
