@@ -56,6 +56,7 @@
           <h1 class="adventure__title">{{ title | safe }}</h1>
           <figure class="adventure__image">
             <img src="{{mainImage}}" alt="">
+            {% image mainImage, title %}
             <figcaption>{{mainImageCaption}}</figcaption>
           </figure>
           <p><strong>Duration:</strong> {{ timing | safe }}</p>
