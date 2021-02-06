@@ -6,7 +6,7 @@ gm: Robert B
 mainImage: ./img/yawning-portal.jpg
 mainImageCaption: Tales from the Yawning Portal Cover | Wizards of the Coast
 pageNo: 2
-players: [Beki]
+players: ['Beki', 'Christopher Larkman']
 timing: 24 Hours
 ---
 
