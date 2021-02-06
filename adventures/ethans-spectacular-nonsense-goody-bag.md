@@ -5,7 +5,7 @@ tags: adventures
 gm: Ethan B
 pageNo: 3
 mainImage: ./img/ethans-wacky-adventure.jpg
-players: ['Holly Jenkins', 'Matthew Roberts', 'Stephen Abbott', 'Ryan']
+players: ['Holly Jenkins', 'Matthew Roberts', 'Stephen Abbott', 'Ryan','paddy']
 timing: 24 Hours
 ---
 
