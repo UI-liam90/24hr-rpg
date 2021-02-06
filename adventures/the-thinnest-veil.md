@@ -5,7 +5,7 @@ tags: adventures
 gm: Sean H
 mainImage: ./img/veiled.png
 pageNo: 4
-players:
+players: ['Emma Johnson']
 timing: 24 Hours
 ---
 
