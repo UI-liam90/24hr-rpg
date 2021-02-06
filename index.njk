@@ -133,7 +133,7 @@
         </figure>
         <h3 class="adventure__title">{{post.data.title}}</h3>
         <h5 class="adventure__author">By {{post.data.gm}}</h5>
-        <p><strong>Duration:</strong>{{post.data.timing}}</p>
+        <p><strong>Duration: </strong>{{post.data.timing}}</p>
         {{ post.templateContent | safe | truncate(200) }}
         <div class="adventure__link">
           <a href="{{ post.url }}">Read more on Page {{ post.data.pageNo }} ></a>
