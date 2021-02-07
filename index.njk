@@ -127,10 +127,12 @@
   <div class="adventures">
     {%- for post in collections.adventures -%}
       <div class="adventure">
-        <figure class="adventure__image">
-          {% image post.data.mainImage, post.data.title %}
-          <figcaption>{{post.data.mainImageCaption}}</figcaption>
-        </figure>
+        <a href="{{ post.url }}">
+          <figure class="adventure__image">
+            {% image post.data.mainImage, post.data.title %}
+            <figcaption>{{post.data.mainImageCaption}}</figcaption>
+          </figure>
+        </a>
         <h3 class="adventure__title">{{post.data.title}}</h3>
         <h5 class="adventure__author">By {{post.data.gm}}</h5>
         <p><strong>Duration: </strong>{{post.data.timing}}</p>

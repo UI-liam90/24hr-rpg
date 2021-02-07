@@ -7,6 +7,7 @@ mainImage: ./img/yawning-portal.jpg
 mainImageCaption: Tales from the Yawning Portal Cover | Wizards of the Coast
 pageNo: 2
 players: ['Beki', 'Christopher Larkman']
+maxPlayers: 5
 timing: 24 Hours
 ---
 

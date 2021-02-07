@@ -7,6 +7,7 @@ pageNo: 5
 mainImage: ./img/Icewind_Dale_8_cropped.jpg
 mainImageCaption: Icewind Dale - Rime of the Frostmaiden | Wizards of the Coast
 players:
+maxPlayers: 6
 timing: 12 Hours on Saturday
 ---
 

@@ -65,7 +65,7 @@
           <div class="get-involved get-involved--single">
             <div class="get-involved__blurb">
               {%-if players-%}
-                <h2> Current Players </h2>
+                <h2> Current Players ({{players | length}} / {{maxPlayers}})</h2>
                 <ol class="list">
                   {%- for player in players -%}
                     <li>{{player}}</li>

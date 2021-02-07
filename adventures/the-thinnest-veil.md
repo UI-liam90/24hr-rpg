@@ -6,6 +6,7 @@ gm: Sean H
 mainImage: ./img/veiled.png
 pageNo: 4
 players: ['Emma Johnson']
+maxPlayers: 6
 timing: 24 Hours
 ---
 

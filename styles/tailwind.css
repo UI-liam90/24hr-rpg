@@ -32,6 +32,10 @@ a {
 img {
   max-width: 100%;
 }
+a figure,
+a figcaption {
+  text-decoration: none;
+}
 .bg-parchment {
   background-color: var(--parchment);
 }
