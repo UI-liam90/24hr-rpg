@@ -97,7 +97,7 @@
               <input type="hidden" name="bot-field"/>
               <input type="hidden" name="form-name" value="general-enquiry" />
               <input type="hidden" name="subject" value="General Enquiry" />
-              <div id="form-success" class="form-success" style="display: none">A kobold has been sent to the wizards with your message, please expect a reply within the next 24 hours.</div>
+              
               <div class="form-element">
                 <label for="name">Name</label>
                 <input id="name" type="text" name="name" />
@@ -118,6 +118,7 @@
                 <button type="submit">Send</button>
               </div>
             </form>
+            <div id="form-success" class="form-success" style="display: none">A kobold has been sent to the wizards with your message, please expect a reply within the next 24 hours.</div>
           </div>
       </div>
     </aside>
@@ -160,6 +161,7 @@
         body: new URLSearchParams(formData).toString()
       }).then(() => {
         document.querySelector('#form-success').style.display = 'block';
+        myForm.style.display = 'none';
       })
       .catch((error) =>
         alert(error))
