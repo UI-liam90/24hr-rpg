@@ -6,7 +6,7 @@ gm: Robert B
 mainImage: ./img/yawning-portal.jpg
 mainImageCaption: Tales from the Yawning Portal Cover | Wizards of the Coast
 pageNo: 2
-players: ['Christopher Larkman','Beki',Paddy,Stephen Abbott ]
+players: ['Christopher Larkman','Beki','Paddy','Stephen Abbott','James Knowles']
 maxPlayers: 5
 timing: 24 Hours
 ---
