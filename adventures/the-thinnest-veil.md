@@ -5,7 +5,7 @@ tags: adventures
 gm: Sean H
 mainImage: ./img/veiled.png
 pageNo: 4
-players: ['Emma Johnson']
+players: ['Steph Millar','Emma Johnson']
 maxPlayers: 6
 timing: 24 Hours
 ---
