@@ -6,7 +6,7 @@ gm: Peter A
 pageNo: 5
 mainImage: ./img/Icewind_Dale_8_cropped.jpg
 mainImageCaption: Icewind Dale - Rime of the Frostmaiden | Wizards of the Coast
-players:
+players: ['Callum Gillett', 'Liam Wright', 'Jacob Smith']
 maxPlayers: 6
 timing: 12 Hours on Saturday
 ---
