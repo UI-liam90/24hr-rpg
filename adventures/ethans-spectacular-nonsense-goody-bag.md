@@ -5,8 +5,8 @@ tags: adventures
 gm: Ethan B
 pageNo: 3
 mainImage: ./img/ethans-wacky-adventure.jpg
-players: ['Holly Jenkins','Charlie Reavette','Robert Bridge','Matthew Roberts','Mark']
-maxPlayers: 5
+players: ['Holly Jenkins','Charlie Reavette','Robert Bridge','Matthew Roberts','William Cain', 'Mark']
+maxPlayers: 6
 timing: 24 Hours
 ---
 
