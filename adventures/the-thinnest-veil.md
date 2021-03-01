@@ -5,7 +5,7 @@ tags: adventures
 gm: Sean H
 mainImage: ./img/veiled.png
 pageNo: 4
-players: ['Bradley Martin','Steph Millar', 'Trevor Quigley', 'Emma Johnson']
+players: ['Bradley Martin','Steph Millar', 'Trevor Quigley', 'Michael Fenerty', 'Joseph Fenerty', 'Emma Johnson']
 maxPlayers: 6
 timing: 24 Hours
 ---
