@@ -10,6 +10,7 @@ players: ['Christopher Larkman','Beki','Paddy','Stephen Abbott','James Knowles']
 maxPlayers: 5
 timing: 24 Hours
 streamLink: https://www.twitch.tv/shrimpit
+streamEmbed: https://player.twitch.tv/?channel=shrimpit
 donationLink: https://www.justgiving.com/fundraising/TeamTales
 ---
 

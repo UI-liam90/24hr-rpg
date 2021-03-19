@@ -9,6 +9,7 @@ players: ['Holly Jenkins','Charlie Reavette','Robert Bridge','Matthew Roberts','
 maxPlayers: 6
 timing: 24 Hours
 streamLink: https://www.twitch.tv/ikorit
+streamEmbed: https://player.twitch.tv/?channel=ikorit
 donationLink: https://www.justgiving.com/fundraising/24-hr-rpg
 ---
 

@@ -9,6 +9,7 @@ players: ['Bradley Martin','Steph Millar', 'Trevor Quigley', 'Michael Fenerty', 
 maxPlayers: 6
 timing: 24 Hours
 streamLink: https://www.twitch.tv/bunnyfrog
+streamEmbed: https://player.twitch.tv/?channel=bunnyfrog
 donationLink: https://www.justgiving.com/fundraising/24hrpg
 ---
 

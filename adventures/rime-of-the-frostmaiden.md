@@ -10,6 +10,7 @@ players: ['Callum Gillett', 'Liam Wright', 'Jacob Smith']
 maxPlayers: 6
 timing: 12 Hours on Saturday
 streamLink: https://www.twitch.tv/leajen
+streamEmbed: https://player.twitch.tv/?channel=leajen
 donationLink: https://www.justgiving.com/fundraising/24-hr-rpg
 ---
 
