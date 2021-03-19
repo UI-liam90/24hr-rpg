@@ -33,6 +33,33 @@
 {% endblock %}
 
 {% block content %}
+  <section class="event-update">
+    
+    <div class="hightlight">
+      <h2>
+        Less then 24 hours to go!
+      </h2>
+      <p> Our GM's and player have less then 24 hours left till they take on the 24 hour RPG challenge for 2021! Thank you so much to our GM's and players for taking on this challenage, and a massive thank you to everyone who have donated to our teams so far! Please, carry on spreading the word so we can raise as much money as possible for Clatterbridge Cancer Charity during their <a href="www.clatterbridgecc.nhs.uk/charity/home">Game On</a> event.</p>
+      <p>To tune in to or donate to a particulara dventure, please use the links below:</p>
+    </div>
+      
+    <div class="adventure-streams">
+      {%- for post in collections.adventures -%}
+        <div class="adventure">
+          <iframe
+              src="{{post.data.streamLink}}&parent=24hr-rpg.fyi"
+              height="100%"
+              width="100%"
+              allowfullscreen="true">
+          </iframe>
+          <h3 class="adventure__title">{{post.data.title}}</h3>
+          <h5 class="adventure__author">By {{post.data.gm}}</h5>
+          <p><i class="fab fa-twitch"></i> <strong>Watch The Stream:</strong> <a href="{{post.data.streamLink}}">{{post.data.streamLink}}</a></p>
+          <p><i class="fas fa-donate"></i> <strong>Donate to this Adventure:</strong> <a href="{{post.data.donationLink}}">{{post.data.donationLink}}</a></p>
+        </div>
+      {%- endfor -%}
+    </div>
+  </section>
   <div class="main-area">
     <article class="main">
       <figure class="main__image">

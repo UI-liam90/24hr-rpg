@@ -9,6 +9,8 @@ pageNo: 2
 players: ['Christopher Larkman','Beki','Paddy','Stephen Abbott','James Knowles']
 maxPlayers: 5
 timing: 24 Hours
+streamLink: https://www.twitch.tv/shrimpit
+donationLink: https://www.justgiving.com/fundraising/TeamTales
 ---
 
 When the shadows grow long in Waterdeep and the fireplace in the taproom of the Yawning Portal dims to a deep crimson glow, adventurers from across the Forgotten Realms spin tales of dark dungeons and lost treasure. As Students of "Penifolds College of Adventuring Aspirants" you have reached your final year and must now pass the deadly series of practical exams to cement your name as true heroes of The Sword Coast. Will you be brave enough to add your tale to the annals of history?

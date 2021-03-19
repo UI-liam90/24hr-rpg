@@ -9,6 +9,8 @@ mainImageCaption: Icewind Dale - Rime of the Frostmaiden | Wizards of the Coast
 players: ['Callum Gillett', 'Liam Wright', 'Jacob Smith']
 maxPlayers: 6
 timing: 12 Hours on Saturday
+streamLink: https://www.twitch.tv/leajen
+donationLink: https://www.justgiving.com/fundraising/24-hr-rpg
 ---
 
 In Icewind Dale, adventure is a dish best served cold.

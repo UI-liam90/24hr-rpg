@@ -8,6 +8,8 @@ mainImage: ./img/ethans-wacky-adventure.jpg
 players: ['Holly Jenkins','Charlie Reavette','Robert Bridge','Matthew Roberts','William Cain', 'Mark']
 maxPlayers: 6
 timing: 24 Hours
+streamLink: https://www.twitch.tv/ikorit
+donationLink: https://www.justgiving.com/fundraising/24-hr-rpg
 ---
 
 This is a series of one-shot, quick and easy rpgs, likely switching every 2 -3 hours!

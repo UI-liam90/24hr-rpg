@@ -291,12 +291,42 @@ span.strike {
 .adventure-main .adventure__image {
   margin: 0 0 30px;
 }
+.event-update {
+  display: block;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--black);
+}
+.hightlight h2 {
+  /* grid-column: 1 / span 2; */
+  font-size: rfs(100px);
+  text-align: center;
+  font-weight: 900;
+  margin: 10px 0 40px;
+}
+.hightlight p {
+  /* grid-column: 1 / span 2; */
+  font-size: rfs(24px);
+  text-align: center;
+  margin: 10px 0 30px;
+}
+.adventure-streams {
+  display: block;
+}
+.adventure-streams .adventure {
+  padding-top: 15px;
+}
 @media screen and (min-width: 570px) {
   .head-date {
     padding: 20px 30px;
   }
   .main .article {
     columns: 2;
+  }
+  .adventure-streams {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
   }
 }
 @media screen and (min-width: 990px) {
