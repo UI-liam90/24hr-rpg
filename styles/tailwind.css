@@ -324,10 +324,6 @@ span.strike {
   .main .article {
     columns: 2;
   }
-  .adventure-streams {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-  }
 }
 @media screen and (min-width: 990px) {
   .front-header {
@@ -354,6 +350,12 @@ span.strike {
   .adventures {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .adventure-streams {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1180px) {
