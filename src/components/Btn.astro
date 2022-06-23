@@ -3,21 +3,38 @@
     export interface Props {
         text: string;
         link: string;
+        target: string;
+        type: string;
     }
-    const { text, link } = Astro.props as Props;
+    const { text, link, target="_SELF", type="primary" } = Astro.props as Props;
 ---
 
-<a href={link} class="button"><span>{text}</span></a>
+<a href={link} class={`button button--${type}`} target={target} ><span>{text}</span></a>
 
 <style>
-    .button {
+    .button, .button--primary {
+        --btn-bg: var(--black);
+        --btn-color: var(--white);
         display: inline-flex;
         justify-content: center;
         align-items: center;
         padding: 12px 24px;
-        background-color: var(--black);
-        color: var(--white);
+        background-color: var(--btn-bg);
+        color: var(--btn-color);
         text-decoration: none;
         font-weight: 500;
+        transition: all 250ms ease-in;
+        &:hover, &:focus {
+            --btn-bg: var(--white);
+            --btn-color: var(--black);
+        }
+    }
+    .button--secondary {
+        --btn-bg: var(--white);
+        --btn-color: var(--black);
+        &:hover, &:focus {
+            --btn-bg: var(--black);
+            --btn-color: var(--white);
+        }
     }
 </style>
