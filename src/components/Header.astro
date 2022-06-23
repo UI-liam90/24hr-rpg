@@ -3,7 +3,6 @@
     import Btn from "../components/Btn.astro";
     import '../global.css';
     import dayjs from 'dayjs';
-    import Logo from '../components/Logo.astro';
     
     export interface Props {
         charityLogo?: string;
@@ -14,14 +13,16 @@
     const { charityLogo, charityName, link } = Astro.props as Props;
 
     const now = dayjs().format('DD, MMMM YYYY');
+
+    const {default: logosvg} = await import(`../images/index.svg?raw`);
 ---
 
 <header class="site-header">
     <div class="site-header__logo">
-        <Logo />
+        <Fragment set:html={logosvg} />
     </div>
     <div class="site-header__extra">
-        <h2>This Year in Support of:</h2>
+        <h2>This year in support of:</h2>
         <div class="charity-image">
             <Picture src={charityLogo} alt={charityName} />
         </div>
