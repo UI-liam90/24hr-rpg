@@ -12,7 +12,7 @@
     const { logo, charityLogo, charityName, link } = Astro.props as Props;
     const { default: innerHTML } = await import(`../images/${logo}.svg?raw`);
 
-    const now = dayjs().format('DD-MMM-YYYY');
+    const now = dayjs().format('DD, MMMM YYYY');
 ---
 
 <header class="site-header">
