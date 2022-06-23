@@ -1,0 +1,23 @@
+---
+    import '../global.css';
+    export interface Props {
+        text: string;
+        link: string;
+    }
+    const { text, link } = Astro.props as Props;
+---
+
+<a href={link} class="button"><span>{text}</span></a>
+
+<style>
+    .button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 24px;
+        background-color: var(--black);
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 500;
+    }
+</style>

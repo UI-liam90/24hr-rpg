@@ -1,0 +1,106 @@
+---
+    import { Picture } from "astro-imagetools/components";
+    import Btn from "../components/Btn.astro";
+    import '../global.css';
+    import dayjs from 'dayjs';
+    export interface Props {
+        logo: string;
+        charityLogo?: string;
+        charityName?: string;
+        link?: string;
+    }
+    const { logo, charityLogo, charityName, link } = Astro.props as Props;
+    const { default: innerHTML } = await import(`../images/${logo}.svg?raw`);
+
+    const now = dayjs().format('DD-MMM-YYYY');
+---
+
+<header class="site-header">
+    <div class="site-header__logo">
+        <Fragment set:html={innerHTML} />
+    </div>
+    <div class="site-header__extra">
+        <h2>This Year in Support of:</h2>
+        <div class="charity-image">
+            <Picture src={charityLogo} alt={charityName} />
+        </div>
+        <Btn text="Donate" link={link} />
+    </div>
+    <div class="site-header__wrap">
+       <div class="site-header__bottom">
+            <div class="price">
+                <p>Now only 1 silver piece!</p>
+            </div>
+            <div class="publish-date">
+               <p>{now}</p> 
+            </div>
+       </div>
+    </div>
+
+</header>
+
+<style lang="scss">
+    .site-header {
+        padding: 20px 32px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .site-header__wrap {
+        order: 2;
+        width: 100%;
+        border-bottom: 2px solid var(--black);
+        padding-bottom: 4px;
+        margin-bottom: 12px;
+    }
+    .site-header__logo {
+        max-width: 400px;
+        padding-bottom: 12px;
+    }
+    .site-header__extra {
+        order: 3;
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        background-color: var(--dblue);
+        padding: 24px;
+        border-radius: 32px;
+        color: var(--white);
+        h2 {
+            font-size: var(--font-size-cat);
+            margin: 0 0 20px;
+        }
+        .charity-image {
+            margin-bottom: 20px;
+            max-width: 150px;
+        }
+    }
+    .site-header__bottom {
+        margin-top: 16px;
+        padding: 8px 16px;
+        border-bottom: 3px solid var(--black);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            font-size: var(--font-size-mouse);
+            margin: 0;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .site-header{
+            justify-content: space-between;
+        }
+        .site-header__extra {
+            width: auto;
+            order: initial;
+        } 
+        .site-header__wrap {
+            order: initial;
+        }
+    }
+</style>
