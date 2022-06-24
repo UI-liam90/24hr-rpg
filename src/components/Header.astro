@@ -1,7 +1,7 @@
 ---
     import { Picture } from "astro-imagetools/components";
     import Btn from "../components/Btn.astro";
-    import '../global.css';
+    import Social_icon from "../components/Social_icon.astro";
     import dayjs from 'dayjs';
     
     export interface Props {
@@ -18,6 +18,11 @@
 ---
 
 <header class="site-header">
+    <div class="site-header__social">
+        <Social_icon class="social-icon__el" icon="facebook-brands" link="https://www.facebook.com/events/1073741140209097/" />
+        <Social_icon class="social-icon__el" icon="twitter-brands" link="https://www.facebook.com/events/1073741140209097/" />
+        <Social_icon class="social-icon__el" icon="discord-brands" link="https://www.facebook.com/events/1073741140209097/" />
+    </div>
     <div class="site-header__logo">
         <Fragment set:html={logosvg} />
     </div>
@@ -31,7 +36,7 @@
     <div class="site-header__wrap">
        <div class="site-header__bottom">
             <div class="price">
-                <p>Now only 1 silver piece!</p>
+                <p>Now in color!!!</p>
             </div>
             <div class="publish-date">
                <p>{now}</p> 
@@ -43,7 +48,7 @@
 
 <style lang="scss">
     .site-header {
-        padding: 20px 32px;
+        padding: 20px 32px 0;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -52,24 +57,28 @@
     .site-header__wrap {
         order: 2;
         width: 100%;
+        border-top: 2px solid var(--black);
         border-bottom: 2px solid var(--black);
+        padding-top: 4px;
         padding-bottom: 4px;
         margin-bottom: 12px;
+        margin-top: 12px;
     }
     .site-header__logo {
-        max-width: 400px;
+        --logo-svg-fill: var(--dblue);
+        max-width: 500px;
         padding-bottom: 12px;
+        margin: 0 auto;
     }
     .site-header__extra {
         order: 3;
         width: 100%;
-        max-width: 500px;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         background-color: var(--dblue);
         padding: 24px;
-        border-radius: 32px;
+        border-radius: 4px;
         color: var(--white);
         h2 {
             font-size: var(--font-size-cat);
@@ -81,8 +90,8 @@
         }
     }
     .site-header__bottom {
-        margin-top: 16px;
         padding: 8px 16px;
+        border-top: 3px solid var(--black);
         border-bottom: 3px solid var(--black);
         display: flex;
         justify-content: space-between;
@@ -91,18 +100,42 @@
             font-size: var(--font-size-mouse);
             margin: 0;
         }
+        .price p {
+            font-size: var(--font-size-cat);
+            font-weight: 700;
+            background: linear-gradient(90deg, rgba(84,97,200,1) 0%, rgba(84,97,200,1) 12%, rgba(199,36,177,1) 13%, rgba(199,36,177,1) 25%, rgba(228,0,43,1) 26%, rgba(228,0,43,1) 37%, rgba(255,105,0,1) 38%, rgba(255,105,0,1) 50%, rgba(246,190,0,1) 51%, rgba(246,190,0,1) 62%, rgba(151,215,0,1) 63%, rgba(151,215,0,1) 75%, rgba(0,171,132,1) 76%, rgba(0,171,132,1) 88%, rgba(0,163,224,1) 89%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .site-header__social {
+        display: none;
+        margin-right: 20px;   
+
+        .social-icon__el {
+            max-width: 20px;
+            margin: 4px;
+            fill: var(--dblue);
+            &:hover, &:focus {
+                fill: var(--lblue);
+            }
+        }
     }
 
     @media screen and (min-width: 768px) {
         .site-header{
-            justify-content: space-between;
+            justify-content: center;
         }
         .site-header__extra {
+            max-width: 500px;
             width: auto;
             order: initial;
         } 
         .site-header__wrap {
             order: initial;
+        }
+        .site-header__social {
+            display: flex;
         }
     }
 </style>

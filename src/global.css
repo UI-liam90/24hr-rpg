@@ -7,7 +7,9 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-
+* {
+  box-sizing: border-box;
+}
  html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
@@ -511,10 +513,10 @@ Size based Media Queries
 
 
 :root {
-    --dblue: #04384A;
-    --lblue: #0B90AA;
-    --canvas: #EFEBD9;
-    --green: #B1B336;
+    --dblue: #2f404f;
+    --lblue: #3894a1;
+    --canvas: #f0f1ee;
+    --green: #c7dad3;
     --white: #fefefe;
     --black: #1d1d1d;
 
@@ -571,3 +573,6 @@ p, li {
     margin: 0 0 30px;
 }
 
+figure {
+  margin: 0 0 20px;
+}

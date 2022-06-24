@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Picture } from "astro-imagetools/components";
 ---
 <Layout 
 title="24 Hour RPG Challenge 2022"
@@ -12,11 +14,73 @@ openGraphImageAlt="24 Hour RPG Challenge"
 <Header charityLogo="/src/images/Shelter-Logo.png" charityName="Shelter Charity Logo" link="https://www.justgiving.com/fundraising/24-Hour-RPG-Challenge"/>
 
 	<main>
-		
+		<div class="main-article">
+			<h1>The 24 hour RPG challenge returns for 2022!</h1>
+			<div class="intro-article">
+				<figure>
+					<Picture src="/src/images/dungeons-and-dragons-art-19.jpg" alt="Adventurers ready to fight" />
+					<figcaption>(Image credit: Wizards of the Coast)</figcaption>
+				</figure>
+				<div class="intro-article-text">
+						<p>Welcome warriors, both keyboard and otherwise, The 24HR RPG challenge is back for another year of crazy adventures!</p>
+
+						<p>This year we're supporting Shelter. Times are tough for all, but no one should feel the threat of losing there home. That is why we invite gamers of every flavour to join together and raise money to support Shelter in keeping the nation housed and safe.</p>
+
+						<p>We are aiming for a hybrid setup this years with both physical and online games happening, welcoming individual streamers as well as traditional RPG groups. We encourage those online to stream their games on the day via Twitch, YouTube, UStream or any other suitable service.</p>
+
+						<p>Every group should also set up a JustGiving page, by clicking the Join Team button at <a href="https://www.justgiving.com/team/24-hour-rpg">https://www.justgiving.com/team/24-hour-rpg</a>, so all donations go to the same place. You will need to create your own just giving page first.</p>
+
+						<p>Any players at one of the RPG tables will need to bid real money to gain their seat, with the highest bids taking a place in the game. Those streaming videogames, or other activities are less restricted in that regard, but are still very much encouraged raise as much money as they can. GM's and individual streamers don't have to bid (unless they really want to), but everyone is of course strongly encouraged to get as many sponsors as possible.</p>
+
+						<p>Some games may even allow there sponsor the opportunity to help or hinder their chosen beneficiary through their donations. For every £5 given, a sponsor can inflict a Friend or a Foe token, to help or hinder their efforts. Maybe it will give them a reroll, or an extra chance. Maybe the monsters get another attack in, or they are forced to stand still for a bit longer than they should.</p>
+				</div>
+			</div>
+		</div>
+		<div class="aside">
+			<figure>
+				<Picture src="/src/images/cthulhu-wants-you.jpg" alt="cthulhu pointing at you like uncle sam"/>
+			</figure>
+			<h2>GMs and groups wanted!</h2>
+			<p>We want this year to be our biggest yet!</p>
+			<p>As such we are on the lookout for GM's to run games and help us to go above and beyond our target for Shelter.</p>
+			<p>We are looking for both online GM's to run games for folks up and down the country and for local RPG groups who want to get involved from the comfort of there local group.</p>
+			<p>To apply to be a GM or as group send us an email to <a href="mailto:join@24hr-rpg.fyi">join@24hr-rpg.fyi</a> with how you woudl liek to get involved and details on your game.</p>
+		</div>
 	</main>
+	<Footer />
+
 </Layout>
 
 <style>
+	main {
+		padding: 20px 32px;
+	}
 
+	h1 {
+		font-weight: 900;
+		font-size: var(--font-size-elephant);
+	}
+	h2 {
+		font-weight: 900;
+		font-size: var(--font-size-bear);
+	}
+	.intro-article {
+		display: flex;
+		flex-direction: column;
+	}
+
+	@media screen and (min-width: 768px) {
+		main {
+			padding: 20px 32px;
+			display: grid;
+			grid-template-columns: 1.5fr 1fr;
+			gap: 50px;
+		}
+		.intro-article {
+		}
+		.intro-article-text {
+			columns: 2;
+		}
+	}
 
 </style>
