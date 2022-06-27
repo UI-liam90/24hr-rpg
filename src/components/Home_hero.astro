@@ -147,10 +147,12 @@ const {default: logosvg} = await import(`../images/index.svg?raw`);
         inset: 0;
         z-index: 10;
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
         padding: 30px 16px;
+        min-width: 100vw;
+        min-height: 100vh;
     }
     .charity {
         display: flex;
