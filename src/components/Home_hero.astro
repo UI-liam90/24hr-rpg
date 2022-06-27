@@ -1,10 +1,15 @@
 ---
 import dayjs from 'dayjs';
+import { Picture } from "astro-imagetools/components";
+import Btn from "../components/Btn.astro";
     export interface Props {
         eventDate?: string;
+        charityLogo?: string;
+        charityName?: string;
+        link?: string;
     }
 
-const { eventDate } = Astro.props as Props;
+const { eventDate, charityLogo, charityName, link } = Astro.props as Props;
 
 const the_date = dayjs(eventDate);
 const timer_date = dayjs(the_date).format('YYYY-MM-DD');
@@ -99,6 +104,13 @@ const {default: logosvg} = await import(`../images/index.svg?raw`);
                 <div class="smalltext">Seconds</div>
             </div>
         </div>
+        <div class="charity">
+            <h2>This year in support of:</h2>
+            <div class="charity__image">
+                <Picture src={charityLogo} alt={charityName} />
+            </div>
+            <Btn text="Donate" type="secondary" link={link} target="_BLANK" />
+        </div>
     </div>
 </section>
 
@@ -122,7 +134,6 @@ const {default: logosvg} = await import(`../images/index.svg?raw`);
         filter: drop-shadow(0 0 calc(var(--size) / 2.5) var(--white));
 	    animation: shadow-drop var(--speed) cubic-bezier(0.250, 0.460, 0.450, 0.940) var(--delay) infinite both, rotate-scale-up calc(var(--speed) * 1.5) linear var(--delay) infinite both;
     }
-
     .site-logo {
         --logo-svg-fill: var(--canvas);
         max-width: 500px;
@@ -140,10 +151,28 @@ const {default: logosvg} = await import(`../images/index.svg?raw`);
         justify-content: center;
         align-items: center;
     }
+    .charity {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0 12px;
+        h2 {
+            color: var(--canvas);
+            text-align: center;
+            font-size: var(--font-size-wolf);
+            filter: drop-shadow(0 0 10px var(--white));
+        }
+        .charity__image {
+            max-width: 300px;
+            margin: 12px 0 32px;
+        }
+    }
     .event_date {
         color: var(--canvas);
-        font-size: var(--font-size-bear);
+        font-size: var(--font-size-elephant);
         filter: drop-shadow(0 0 10px var(--white));
+        text-align: center;
     }
     .countdown-timer {
         color: var(--canvas);
