@@ -143,8 +143,7 @@ const {default: logosvg} = await import(`../images/index.svg?raw`);
         margin-bottom: 32px;
     }
     .hero-overlay {
-        position: absolute;
-        inset: 0;
+        position: relative;
         z-index: 10;
         display: flex;
         flex-flow: column nowrap;
@@ -194,7 +193,8 @@ const {default: logosvg} = await import(`../images/index.svg?raw`);
         }
     }
     .hex-field {
-        position: relative;
+        position: absolute;
+        inset: 0;
         z-index: 5;
         min-width: 100vw;
         min-height: 100vh;
