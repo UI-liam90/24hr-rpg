@@ -1,15 +1,10 @@
 ---
 import dayjs from 'dayjs';
-import CustomParseFormat from 'dayjs/plugin/customParseFormat';
-
-
     export interface Props {
         eventDate?: string;
     }
 
 const { eventDate } = Astro.props as Props;
-
-dayjs.extend(CustomParseFormat);
 
 const the_date = dayjs(eventDate);
 const timer_date = dayjs(the_date).format('YYYY-MM-DD');
