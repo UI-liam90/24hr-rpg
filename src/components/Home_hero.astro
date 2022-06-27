@@ -82,26 +82,28 @@ const {default: logosvg} = await import(`../images/index.svg?raw`);
         </div>
     </div>
     <div class="hero-overlay">
-        <div class="site-logo">
-            <Fragment set:html={logosvg} />
-        </div>
-        <h2 class="event_date">{the_date_formated}</h2>
-        <div id="clockdiv" class="countdown-timer" data-date={timer_date}>
-            <div>
-                <span class="days countdown-timer__unit"></span>
-                <div class="smalltext">Days</div>
+        <div class="main-area">
+            <div class="site-logo">
+                <Fragment set:html={logosvg} />
             </div>
-            <div>
-                <span class="hours countdown-timer__unit"></span>
-                <div class="smalltext">Hours</div>
-            </div>
-            <div>
-                <span class="minutes countdown-timer__unit"></span>
-                <div class="smalltext">Minutes</div>
-            </div>
-            <div>
-                <span class="seconds countdown-timer__unit"></span>
-                <div class="smalltext">Seconds</div>
+            <h2 class="event_date">{the_date_formated}</h2>
+            <div id="clockdiv" class="countdown-timer" data-date={timer_date}>
+                <div>
+                    <span class="days countdown-timer__unit"></span>
+                    <div class="smalltext">Days</div>
+                </div>
+                <div>
+                    <span class="hours countdown-timer__unit"></span>
+                    <div class="smalltext">Hours</div>
+                </div>
+                <div>
+                    <span class="minutes countdown-timer__unit"></span>
+                    <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                    <span class="seconds countdown-timer__unit"></span>
+                    <div class="smalltext">Seconds</div>
+                </div>
             </div>
         </div>
         <div class="charity">
@@ -149,9 +151,21 @@ const {default: logosvg} = await import(`../images/index.svg?raw`);
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-        padding: 30px 16px;
+        padding: 32px 24px;
         min-width: 100vw;
         min-height: 100vh;
+        .main-area {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        @media screen and (min-width: 1024px) {
+            flex-flow: row wrap;
+            .main-area {
+                padding-right: 52px;
+            }
+        }
     }
     .charity {
         display: flex;
