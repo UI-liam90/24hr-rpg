@@ -456,3 +456,8 @@ p, li {
 figure {
   margin: 0 0 20px;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
