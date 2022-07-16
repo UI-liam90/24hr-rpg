@@ -1,141 +1,370 @@
 ---
-    import { Picture } from "astro-imagetools/components";
-    import Btn from "../components/Btn.astro";
-    import Social_icon from "../components/Social_icon.astro";
-    import dayjs from 'dayjs';
-    
-    export interface Props {
-        charityLogo?: string;
-        charityName?: string;
-        link?: string;
-    }
-
-    const { charityLogo, charityName, link } = Astro.props as Props;
-
-    const now = dayjs().format('DD, MMMM YYYY');
-
-    const {default: logosvg} = await import(`../images/index.svg?raw`);
+const {default: logosvg} = await import(`../images/index.svg?raw`);
 ---
 
-<header class="site-header">
-    <div class="site-header__social">
-        <Social_icon class="social-icon__el" icon="facebook-brands" link="https://www.facebook.com/events/1073741140209097/" />
-        <Social_icon class="social-icon__el" icon="twitter-brands" link="https://www.facebook.com/events/1073741140209097/" />
-        <Social_icon class="social-icon__el" icon="discord-brands" link="https://www.facebook.com/events/1073741140209097/" />
-    </div>
-    <div class="site-header__logo">
-        <Fragment set:html={logosvg} />
-    </div>
-    <div class="site-header__extra">
-        <h2>This year in support of:</h2>
-        <div class="charity-image">
-            <Picture src={charityLogo} alt={charityName} />
+<section class="hero hero--home">
+    <div class="hex-field">
+        <div class="hex-field__hexagon hex-field__hexagon--type-a">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
         </div>
-        <Btn text="Donate" link={link} target="_BLANK" />
+        <div class="hex-field__hexagon hex-field__hexagon--type-b">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-c">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-d">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-e">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-f">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-g">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-h">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-i">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-j">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-k">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-l">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-m">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-n">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-p">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-q">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-o">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-r">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-s">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
+        <div class="hex-field__hexagon hex-field__hexagon--type-t">
+            <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+        </div>
     </div>
-    <div class="site-header__wrap">
-       <div class="site-header__bottom">
-            <div class="price">
-                <p>Now in color!!!</p>
+    <div class="hero-overlay">
+        <div class="main-area">
+            <div class="site-logo">
+                <a href="/">
+                    <Fragment set:html={logosvg} />
+                </a>
             </div>
-            <div class="publish-date">
-               <p>{now}</p> 
+            <!-- <h2 class="event_date">{the_date_formated}</h2>
+            <div id="clockdiv" class="countdown-timer" data-date={timer_date}>
+                <div>
+                    <span class="days countdown-timer__unit"></span>
+                    <div class="smalltext">Days</div>
+                </div>
+                <div>
+                    <span class="hours countdown-timer__unit"></span>
+                    <div class="smalltext">Hours</div>
+                </div>
+                <div>
+                    <span class="minutes countdown-timer__unit"></span>
+                    <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                    <span class="seconds countdown-timer__unit"></span>
+                    <div class="smalltext">Seconds</div>
+                </div>
             </div>
-       </div>
+        </div> -->
+        <!-- <div class="charity">
+            <h2>This year in support of:</h2>
+            <div class="charity__image">
+                <Picture src={charityLogo} alt={charityName} />
+            </div>
+            <Btn text="Donate" type="secondary" link={link} target="_BLANK" /> -->
+        </div>
     </div>
+</section>
 
-</header>
-
-<style lang="scss">
-    .site-header {
-        padding: 20px 32px 0;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
+<style>
+    
+    .hero.hero--home {
+        position: relative;
+        background-color: var(--black);
+        overflow: hidden;
     }
-    .site-header__wrap {
-        order: 2;
-        width: 100%;
-        border-top: 2px solid var(--black);
-        border-bottom: 2px solid var(--black);
-        padding-top: 4px;
-        padding-bottom: 4px;
-        margin-bottom: 12px;
-        margin-top: 12px;
+    .hex-field__hexagon {
+        transform: rotate(30deg);
     }
-    .site-header__logo {
-        --logo-svg-fill: var(--dblue);
-        max-width: 500px;
-        padding-bottom: 12px;
+    .hex-field__hexagon svg {
+        --size: 10px;
+        --speed: 2s;
+        --delay: 0s;
+        width: var(--size);
+        height: var(--size);
+        stroke: var(--canvas);
+        fill: var(--canvas);
+        filter: drop-shadow(0 0 calc(var(--size) / 2.5) var(--white));
+	    animation: shadow-drop var(--speed) cubic-bezier(0.250, 0.460, 0.450, 0.940) var(--delay) infinite both, rotate-scale-up calc(var(--speed) * 1.5) linear var(--delay) infinite both;
+    }
+    .site-logo {
+        --logo-svg-fill: var(--canvas);
+        max-width: 300px;
         margin: 0 auto;
+        filter: drop-shadow(0 0 10px var(--white));
     }
-    .site-header__extra {
-        order: 3;
-        width: 100%;
+    .hero-overlay {
+        position: relative;
+        z-index: 10;
         display: flex;
         flex-flow: column nowrap;
+        justify-content: center;
         align-items: center;
-        background-color: var(--dblue);
-        padding: 24px;
-        border-radius: 4px;
-        color: var(--white);
-        h2 {
-            font-size: var(--font-size-cat);
-            margin: 0 0 20px;
+        padding: 32px 24px;
+        min-width: 100vw;
+        .main-area {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
         }
-        .charity-image {
-            margin-bottom: 20px;
-            max-width: 150px;
-        }
-    }
-    .site-header__bottom {
-        padding: 8px 16px;
-        border-top: 3px solid var(--black);
-        border-bottom: 3px solid var(--black);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        p {
-            font-size: var(--font-size-mouse);
-            margin: 0;
-        }
-        .price p {
-            font-size: var(--font-size-cat);
-            font-weight: 700;
-            background: linear-gradient(90deg, rgba(84,97,200,1) 0%, rgba(84,97,200,1) 12%, rgba(199,36,177,1) 13%, rgba(199,36,177,1) 25%, rgba(228,0,43,1) 26%, rgba(228,0,43,1) 37%, rgba(255,105,0,1) 38%, rgba(255,105,0,1) 50%, rgba(246,190,0,1) 51%, rgba(246,190,0,1) 62%, rgba(151,215,0,1) 63%, rgba(151,215,0,1) 75%, rgba(0,171,132,1) 76%, rgba(0,171,132,1) 88%, rgba(0,163,224,1) 89%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    }
-    .site-header__social {
-        display: none;
-        margin-right: 20px;   
-
-        .social-icon__el {
-            max-width: 20px;
-            margin: 4px;
-            fill: var(--dblue);
-            &:hover, &:focus {
-                fill: var(--lblue);
+        @media screen and (min-width: 1024px) {
+            flex-flow: row wrap;
+            .main-area {
+                padding-right: 52px;
             }
         }
     }
-
-    @media screen and (min-width: 768px) {
-        .site-header{
-            justify-content: center;
-        }
-        .site-header__extra {
-            max-width: 500px;
-            width: auto;
-            order: initial;
-        } 
-        .site-header__wrap {
-            order: initial;
-        }
-        .site-header__social {
-            display: flex;
+    .hex-field {
+        position: absolute;
+        inset: 0;
+        z-index: 5;
+        min-width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        grid-template-rows: repeat(20, 1fr);
+        grid-template-areas: 
+        "a . . . . . . . . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . . . . . . . b ."
+        ". . . . c . . . . . . . . . . . . . . . ."
+        ". . . . . . . . d . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . . . e . . . . ."
+        ". . f . . . . . . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . . . . g . . . ."
+        ". . . . . . . . . . h . . . . . . . . . ."
+        ". . . . . . . . . . . . . . . . . . . . i"
+        ". . . . . . . j . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . k . . . . . . ."
+        ". l . . . . . . . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . . m . . . . . ."
+        ". . . . . . . . . . . . n . . . . . . . ."
+        ". . . . . . . . . . . . . . . . . o . . ."
+        ". . . p . . . . . . . . . . . . . . . . ."
+        ". . . . . . . . . q . . . . . . . . . . ."
+        ". . . . . . . . . . . . . . . . . . r . ."
+        ". . . . . . s . . . . . . . . . . . . . ."
+        ". . . . . t . . . . . . . . . . . . . . .";
+        justify-items: center;
+        align-items: center;
+    }
+    .hex-field__hexagon--type-a {
+        grid-area: a;
+        svg {
+            --size: 5px;
+            --speed: 3s;
+            --delay: 750ms;
         }
     }
+    .hex-field__hexagon--type-b {
+        grid-area: b;
+        svg {
+            --size: 12px;
+            --speed: 5s;
+            --delay: 250ms;
+        }
+    }
+    .hex-field__hexagon--type-c {
+        grid-area: c;
+        svg {
+            --size: 3px;
+            --speed: 1.5s;
+            --delay: 500ms;
+        }
+    }
+    .hex-field__hexagon--type-d {
+        grid-area: d;
+        svg {
+            --size: 7px;
+            --speed: 4s;
+            --delay: 100ms;
+        }
+    }
+    .hex-field__hexagon--type-e {
+        grid-area: e;
+        svg {
+            --size: 12px;
+            --speed: 3.5s;
+            --delay: 400ms;
+        }
+    }
+    .hex-field__hexagon--type-f {
+        grid-area: f;
+        svg {
+            --size: 6px;
+            --speed: 2.5s;
+            --delay: 800ms;
+        }
+    }
+    .hex-field__hexagon--type-g {
+        grid-area: g;
+        svg {
+            --size: 8px;
+            --speed: 5s;
+            --delay: 900ms;
+        }
+    }
+    .hex-field__hexagon--type-h {
+        grid-area: h;
+        svg {
+            --size: 2px;
+            --speed: 1s;
+            --delay: 50ms;
+        }
+    }
+    .hex-field__hexagon--type-i {
+        grid-area: i;
+        svg {
+            --size: 11px;
+            --speed: 7s;
+            --delay: 150ms;
+        }
+    }
+    .hex-field__hexagon--type-j {
+        grid-area: j;
+        svg {
+            --size: 5px;
+            --speed: 5s;
+            --delay: 500ms;
+        }
+    }
+    .hex-field__hexagon--type-k {
+        grid-area: k;
+        svg {
+            --size: 7px;
+            --speed: 4.5s;
+            --delay: 625ms;
+        }
+    }
+    .hex-field__hexagon--type-l {
+        grid-area: l;
+        svg {
+            --size: 4px;
+            --speed: 5s;
+            --delay: 450ms;
+        }
+    }
+    .hex-field__hexagon--type-m {
+        grid-area: m;
+        svg {
+            --size: 9px;
+            --speed: 6s;
+            --delay: 700ms;
+        }
+    }
+    .hex-field__hexagon--type-n {
+        grid-area: n;
+        svg {
+            --size: 10px;
+            --speed: 10s;
+            --delay: 200ms;
+        }
+    }
+    .hex-field__hexagon--type-o {
+        grid-area: o;
+        svg {
+            --size: 15px;
+            --speed: 5s;
+            --delay: 800ms;
+        }
+    }
+    .hex-field__hexagon--type-p {
+        grid-area: p;
+        svg {
+            --size: 13px;
+            --speed: 2s;
+            --delay: 500ms;
+        }
+    }
+    .hex-field__hexagon--type-q {
+        grid-area: q;
+        svg {
+            --size: 7px;
+            --speed: 4s;
+            --delay: 600ms;
+        }
+    }
+    .hex-field__hexagon--type-r {
+        grid-area: r;
+        svg {
+            --size: 4px;
+            --speed: 8.5s;
+            --delay: 450ms;
+        }
+    }
+    .hex-field__hexagon--type-s {
+        grid-area: s;
+        svg {
+            --size: 9px;
+            --speed: 9s;
+            --delay: 325ms;
+        }
+    }
+    .hex-field__hexagon--type-t {
+        grid-area: t;
+        svg {
+            --size: 6px;
+            --speed: 12s;
+            --delay: 100ms;
+        }
+    }
+
+
+@keyframes shadow-drop {
+  0% {
+    filter: drop-shadow(0 0 calc(var(--size) / 2.5) var(--white));
+  }
+  100% {
+    filter: drop-shadow(0 0 calc(var(--size) / 2) var(--white));
+  }
+}
+
+@keyframes rotate-scale-up {
+  0% {
+        transform: scale(1) rotateZ(0);
+  }
+  50% {
+        transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+        transform: scale(1) rotateZ(360deg);
+  }
+}
+
+
 </style>

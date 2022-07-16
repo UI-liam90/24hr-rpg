@@ -9,7 +9,7 @@ import { Picture } from "astro-imagetools/components";
 title="24 Hour RPG Challenge 2022"
 description="bla" 
 openGraphTitle="Welcome to 24 Hour RPG Challenge 2022"
-openGraphImage="/images/facebook.png"
+openGraphImage="/images/social-image.jpg"
 openGraphImageAlt="24 Hour RPG Challenge"
 >
 

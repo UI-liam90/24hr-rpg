@@ -1,16 +1,11 @@
 ---
 import '../global.css';
+import Header from '../components/Header.astro';
 import OffCanvas from '../components/off_canvas.astro';
 import Footer from '../components/Footer.astro';
-export interface Props {
-	title: string;
-	description?: string;
-	openGraphTitle?: string;
-	openGraphImage?: string;
-	openGraphImageAlt?: string;
-}
 
-const { title, description, openGraphTitle, openGraphImage, openGraphImageAlt } = Astro.props as Props;
+
+const { content } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -20,9 +15,9 @@ const { title, description, openGraphTitle, openGraphImage, openGraphImageAlt } 
 	<meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>
-    {title}
+    {content.metaTitle}
   </title>
-  <meta name="description" content={description}/>
+  <meta name="description" content={content.description}/>
   <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
   <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
@@ -41,21 +36,27 @@ const { title, description, openGraphTitle, openGraphImage, openGraphImageAlt } 
   <meta name="msapplication-TileColor" content="#04384A">
   <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#04384A">
-  <meta property="og:image" content={openGraphImage}/>
-  <meta property="og:image:alt" content={openGraphImageAlt}/>
-  <meta property="og:title" content={openGraphTitle}/>
+  <meta property="og:image" content={content.openGraphImage}/>
+  <meta property="og:image:alt" content={content.openGraphImageAlt}/>
+  <meta property="og:title" content={content.openGraphTitle}/>
   <meta property="og:url" content={Astro.canonicalURL}>
   <meta property="og:site_name" content="24 hour RPG Challenge"/>
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="24 hour RPG Challenge">
-  <meta name="twitter:title" content={openGraphTitle}>
-  <meta name="twitter:description" content={description}>
-  <meta name="twitter:image:src" content={openGraphImage}>
+  <meta name="twitter:title" content={content.openGraphTitle}>
+  <meta name="twitter:description" content={content.description}>
+  <meta name="twitter:image:src" content={content.openGraphImage}>
   <meta name="twitter:domain" content={Astro.canonicalURL}>
 </head>
 <body>
-	<slot />
-  <OffCanvas client:load charityLogo="/src/images/Shelter-Logo-small.png" charityName="Shelter Charity Logo" link="https://www.justgiving.com/fundraising/24-Hour-RPG-Challenge"/>
+  <OffCanvas client:load charityLogo="/src/images/Shelter-Logo-small.png" charityName="Shelter Charity Logo" link="https://www.justgiving.com/fundraising/24-Hour-RPG-Challenge" />
+  <Header eventDate="2022-09-24" charityLogo="/src/images/Shelter-Logo-small.png" charityName="Shelter Charity Logo" link="https://www.justgiving.com/fundraising/24-Hour-RPG-Challenge"/>
+	
+  <section class="main-content blar">
+    <h1>{content.title}</h1>
+    <slot />
+  </section>
+
   <Footer />
   <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
@@ -73,7 +74,7 @@ const { title, description, openGraphTitle, openGraphImage, openGraphImageAlt } 
     font-family: var(--font-family);
     font-size: 100%;
     color: var(--black);
-    background-color: var(--canvas);
+    background-color: var(--white);
   }
 
   body {
@@ -81,16 +82,9 @@ const { title, description, openGraphTitle, openGraphImage, openGraphImageAlt } 
     /* background-color: #faf5ed; */
   }
 
-  :global(h1) {
-    font-size: var(--font-size-xl);
-  }
-
-  :global(h2) {
-    font-size: var(--font-size-lg);
-  }
-
-  :global(code) {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+  .main-content {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 62px 32px;
   }
 </style>

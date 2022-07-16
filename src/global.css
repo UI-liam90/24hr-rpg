@@ -360,6 +360,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'roboto';
+    src: url('/fonts/RobotoFlex-VariableFont_wght.ttf') format('woff2-variations');
+    font-weight: 100 950;
+    font-stretch: 75% 125%;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --dblue: #2f404f;
     --lblue: #3894a1;
@@ -369,6 +378,7 @@
     --black: #000000;
 
     --font-famliy: 'robotoSlab', serif;
+    --font-famliy2: 'roboto', sans-serif;
 
     --font-size-mouse: 0.75rem; /* 12px */
     --font-size-cat: clamp(0.88rem, calc(0.83rem + 0.15vw), 1rem); /* 16px */
@@ -405,17 +415,39 @@
 
 }
 
+html.off-canvas-open {
+  overflow: hidden;
+}
+
 body {
-    font-family: var(--font-famliy);
+    font-family: var(--font-famliy2);
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-famliy);
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 20px;
 }
 
+h1 {
+  font-size: var(--font-size-bear);
+}
+h2 {
+  font-size: var(--font-size-lion);
+}
+h3 {
+  font-size: var(--font-size-wolf);
+}
+h4 {
+  font-size: var(--font-size-dog);
+}
+h5, h6 {
+  font-size: var(--font-size-fox);
+}
+
 p, li {
+    font-size: var(--font-size-fox);
     font-weight: 400;
     line-height: 1.4;
     margin: 0 0 30px;

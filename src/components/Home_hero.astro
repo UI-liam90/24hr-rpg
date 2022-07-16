@@ -1,6 +1,7 @@
 ---
 import dayjs from 'dayjs';
 import { Picture } from "astro-imagetools/components";
+import OffCanvas from '../components/off_canvas.astro';
 import Btn from "../components/Btn.astro";
     export interface Props {
         eventDate?: string;
@@ -117,6 +118,11 @@ const {default: logosvg} = await import(`../images/index.svg?raw`);
 </section>
 
 <style>
+    .menu-link {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
     .hero.hero--home {
         position: relative;
         background-color: var(--black);
@@ -422,6 +428,11 @@ const {default: logosvg} = await import(`../images/index.svg?raw`);
   }
 }
 
+@media screen and (min-width: 1024px) {
+    .charity {
+        margin: 0;
+    }
+}
 
 </style>
 
