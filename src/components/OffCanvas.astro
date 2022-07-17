@@ -1,5 +1,6 @@
 ---
 import Btn from "../components/Btn.astro";
+import { Picture } from '@astrojs/image';
 export interface Props {
     charityLogo?: string;
     charityName?: string;
@@ -54,7 +55,7 @@ const {  charityLogo, charityName, link } = Astro.props as Props;
         <div class="charity">
             <h2>This year in support of:</h2>
             <div class="charity__image">
-                <img src={charityLogo} alt={charityName} />
+                <Picture src={import('../../public/images/Shelter-Logo-small.png')} widths={[200,400,600]} alt={charityName} />
             </div>
             <Btn text="Donate" type="secondary" link={link} target="_BLANK" />
         </div>
