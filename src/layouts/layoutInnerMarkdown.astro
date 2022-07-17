@@ -52,7 +52,7 @@ const { content } = Astro.props;
   <OffCanvas client:load charityLogo="/images/Shelter-Logo-small.png" charityName="Shelter Charity Logo" link="https://www.justgiving.com/fundraising/24-Hour-RPG-Challenge" />
   <Header eventDate="2022-09-24" charityLogo="/images/Shelter-Logo-small.png" charityName="Shelter Charity Logo" link="https://www.justgiving.com/fundraising/24-Hour-RPG-Challenge"/>
 	
-  <section class="main-content blar">
+  <section class="main-content">
     <h1>{content.title}</h1>
     <slot />
   </section>
@@ -82,9 +82,5 @@ const { content } = Astro.props;
     /* background-color: #faf5ed; */
   }
 
-  .main-content {
-    margin: 0 auto;
-    max-width: 1024px;
-    padding: 62px 32px;
-  }
+  
 </style>

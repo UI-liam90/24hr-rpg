@@ -461,3 +461,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.main-content {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 62px 32px;
+}
+
+.main-content strong {
+    color: var(--lblue);
+    font-size: 105%;
+}
