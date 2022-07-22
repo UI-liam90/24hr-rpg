@@ -5,7 +5,7 @@
       {{ title }}
     </title>
     <meta charset="UTF-8"/>
-    {% if description %}
+       {% if description %}
       <meta name="description" content="{{description}}"/>
     {% endif %}
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
@@ -28,19 +28,17 @@
     <meta name="msapplication-TileColor" content="#04384A">
     <meta name="msapplication-TileImage" content="/img/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#04384A">
-    <meta property="og:image" content="https://24hr-rpg.fyi/img/facebook.png"/>
-    <meta property="og:title" content="{{title}}"/>
-    <meta property="og:url" content="https://24hr-rpg.fyi">
-    <meta property="og:site_name" content="24 hour RPG Challenge 2021"/>
+    <meta property="og:image" content="https://24hr-rpg.fyi{{openGraphImage}}"/>
+    <meta property="og:image:alt" content="{{openGraphImageAlt}}"/>
+    <meta property="og:title" content="{{openGraphTitle}}"/>
+    <meta property="og:url" content="https://24hr-rpg.fyi{{page.url}}">
+    <meta property="og:site_name" content="24 hour RPG Challenge"/>
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="24 hour RPG Challenge">
-    <meta name="twitter:title" content="{{title}}">
-    <meta name="twitter:description" content="24 hour RPG Challenge 2021 for Clatterbridge Cancer Charity">
-    <meta name="twitter:image:src" content="https://24hr-rpg.fyi/img/facebook.png">
-    <meta name="twitter:domain" content="24hr-rpg.fyi">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;900&display=swap" rel="stylesheet"> 
-    <script src="https://kit.fontawesome.com/732ee7a79a.js" crossorigin="anonymous"></script>
+    <meta name="twitter:title" content="{{openGraphTitle}}">
+    <meta name="twitter:description" content="{{description}}">
+    <meta name="twitter:image:src" content="https://24hr-rpg.fyi{{openGraphImage}}">
+    <meta name="twitter:domain" content="https://24hr-rpg.fyi{{page.url}}">
     <link rel="stylesheet" href="/style.css?v={% version %}"/>
   </head>
   <body class="bg-parchment">
