@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-img": "^0.7.8",
+    "dayjs": "^1.11.4",
     "rfs": "^9.0.3"
   }
 }
