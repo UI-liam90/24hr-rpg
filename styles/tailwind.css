@@ -189,12 +189,14 @@ Size based Media Queries
 
 :root {
   --dblue: #2f404f;
-  --lblue: #3894a1;
+  --lblue: #7fbaaa;
   --canvas: #f0f1ee;
-  --parchment: #efebd9;
-  --green: #c7dad3;
+  --parchment: #eee8c5;
+  --brown: #c89891;
+  --pink: #d26f95;
   --white: #fefefe;
   --black: #000000;
+  --plum: #302a3a;
 
   --font-famliy: "robotoSlab", serif;
   --font-famliy2: "roboto", sans-serif;
@@ -275,13 +277,17 @@ a figcaption {
 }
 
 .button {
+  --bg: var(--dblue);
+  --col: var(--white);
+  --hover-bg: var(--lblue);
+  --hover-col: var(--plum);
   display: inline-flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   padding: 15px 30px;
-  background-color: var(--dblue);
-  color: var(--white);
+  background-color: var(--bg);
+  color: var(--col);
   line-height: 1;
   font-weight: 600;
   text-decoration: none;
@@ -289,7 +295,8 @@ a figcaption {
   border-radius: 4px;
   &:hover,
   &:focus {
-    background-color: var(--lblue);
+    color: var(--hover-col);
+    background-color: var(--hover-bg);
   }
 }
 
@@ -309,7 +316,7 @@ a figcaption {
   z-index: 9999;
   @media screen and (--lg) {
     bottom: auto;
-    top: 48px;
+    top: 36px;
   }
 }
 .offcanvas-menu {
@@ -372,7 +379,7 @@ a figcaption {
 .off-canvas-extra {
   margin: 20px;
   padding-top: 20px;
-  border-top: 1px solid var(--canvas);
+  border-top: 1px solid var(--white);
   .charity {
     display: inline-flex;
     flex-flow: column nowrap;
@@ -380,13 +387,20 @@ a figcaption {
     justify-content: flex-start;
     margin: 40px 0 12px;
     h2 {
-      color: var(--canvas);
+      color: var(--white);
       text-align: center;
       font-size: var(--font-size-wolf);
+      filter: initial;
     }
     .charity__image {
       max-width: 300px;
       margin: 12px 0 32px;
+    }
+    .button {
+      --bg: var(--lblue);
+      --col: var(--plum);
+      --hover-bg: var(--plum);
+      --hover-col: var(--white);
     }
   }
 }
@@ -395,8 +409,9 @@ a figcaption {
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
-  padding: 32px 20px;
+  padding: 32px;
   .social-icons {
+    --color: var(--dblue);
     margin-left: 8px;
   }
   @media screen and (--md) {
@@ -416,19 +431,22 @@ a figcaption {
   margin-right: auto;
   width: 100%;
   margin-bottom: 20px;
-  picture {
+  a {
+    display: inline-block;
     max-width: 400px;
   }
   @media screen and (--md) {
     padding-right: 32px;
     max-width: 300px;
     justify-content: flex-start;
-    picture {
+    margin-bottom: 0;
+    a {
       max-width: 100%;
     }
   }
 }
 .social-icons {
+  color: var(--black);
   --size: 30px;
   list-style: none;
   margin: 0;
@@ -440,6 +458,7 @@ a figcaption {
   line-height: 1;
   transition: all 300ms ease-in-out;
   svg {
+    fill: var(--color);
     width: var(--size);
     height: var(--size);
   }
@@ -447,14 +466,202 @@ a figcaption {
     transform: scale(1.1);
   }
 }
+
+
 .page {
   max-width: 1920px;
 }
-
+.supporters, .main-content-area, .main-content-area-inner, .adventures, .container {
+  padding: 28px 16px;
+  margin: 0 auto;
+  @media screen and (--sm) {
+    padding: 28px 32px;
+  }
+}
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  @media screen and (--md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    .sidebar {
+      position: relative;
+      .extras {
+        position: sticky;
+        top: 0;
+      }
+    }
+  }
+  @media screen and (--lg) {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+.get-involved {
+  padding: 20px;
+  background: var(--lblue);
+  color: var(--black);
+  margin-bottom: 32px;
+  border-radius: 32px;
+  a {
+    color: var(--black);
+  }
+  @media screen and (--md) {
+    padding: 40px;
+  }
+  .form {
+    padding: 24px 0;
+    .form-element {
+      width: 100%;
+      margin-bottom: 16px;
+      label {
+        width: 100%;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--black);
+        margin-bottom: 5px;
+        display: block;
+      }
+    }
+    .form-element input[type="text"], .form-element input[type="email"], .form-element textarea {
+      width: 100%;
+      font-size: 16px;
+      background: var(--white);
+      padding: 12px 20px;
+      border: none;
+    }
+    .form-element textarea {
+      height: 200px;
+    }
+    .form-element input[type="checkbox"] {
+      float: left;
+      margin-right: 4px;
+    }
+    .button {
+      --hover-bg: var(--pink);
+      border: none;
+      width: 100%;
+    }
+  }
+ 
+  .form-success {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+}
+.supporter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  align-content: center;
+}
+.main-content-area {
+  display: flex;
+  flex-direction: column;
+  @media screen and (--sm) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    gap: 24px;
+  }
+  @media screen and (--md) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+.main-content-area-inner {
+  max-width: 1200px;
+  span.highlight {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    box-shadow:
+    2px 0 0 var(--pink),
+    -2px 0 0 var(--pink);
+    background-color: var(--pink);
+    font-weight: 700;
+    box-decoration-break: clone;
+  }
+}
+.advert {
+  background-color: var(--parchment);
+  border-radius: 32px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  h3 {
+    font-size: var(--font-size-dog);
+    margin: 0;
+  }
+  @media screen and (--sm) {
+    margin-bottom: 0;
+  }
+  @media screen and (--md) {
+    grid-column: span 2;
+  }
+  @media screen and (--lg) {
+    grid-column: 5 / 7;
+  }
+}
+.advert-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-size: cover;
+  height: 100%;
+  transform: scale(1);
+  transition: all 250ms ease-in-out;
+  &:hover, &:focus {
+    transform: scale(1.25);
+  }
+}
+.advert--one {
+  color: var(--white);
+  .advert-content {
+    background-image: url('./img/polyscatter1.svg');
+  }
+}
+.advert--two .advert-content {
+  background-image: url('./img/polyscatter2.svg');
+}
+.advert--three {
+  color: var(--white);
+  .advert-content {
+    background-image: url('./img/polyscatter3.svg');
+  }
+}
+.top-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  aspect-ratio: 4 / 1;
+  background-size: cover;
+  text-align: center;
+  &.top-hero--gm {
+    background-image: url('./img/polyscatter2.svg');
+  }
+  &.top-hero--players {
+    background-image: url('./img/polyscatter3.svg');
+    color: var(--white);
+  }
+}
 .hero.hero--home {
   position: relative;
   background-color: var(--black);
   overflow: hidden;
+  border-radius: 32px;
+  margin-bottom: 24px;
+  @media screen and (--sm) {
+    margin-bottom: 0;
+    grid-column: 1 / -1;
+  }
+  @media screen and (--lg) {
+    grid-column: span 4;
+    grid-row: 1 / -1;
+  }
 }
 .hex-field__hexagon {
   transform: rotate(30deg);
@@ -470,14 +677,6 @@ a figcaption {
   filter: drop-shadow(0 0 calc(var(--size) / 2.5) var(--white));
   animation: shadow-drop var(--speed) cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--delay) infinite both, rotate-scale-up calc(var(--speed) * 1.5) linear var(--delay) infinite both;
 }
-.site-logo {
-  --logo-svg-fill: var(--canvas);
-  max-width: 500px;
-  padding-bottom: 12px;
-  margin: 0 auto;
-  filter: drop-shadow(0 0 10px var(--white));
-  margin-bottom: 32px;
-}
 .hero-overlay {
   position: relative;
   z-index: 10;
@@ -486,19 +685,14 @@ a figcaption {
   justify-content: center;
   align-items: center;
   padding: 32px 24px;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   .main-area {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-  }
-  @media screen and (min-width: 1024px) {
-    flex-flow: row wrap;
-    .main-area {
-      padding-right: 52px;
-    }
+    margin-bottom: 32px;
   }
 }
 .charity {
@@ -544,8 +738,8 @@ a figcaption {
   position: absolute;
   inset: 0;
   z-index: 5;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   grid-template-rows: repeat(20, 1fr);
@@ -752,6 +946,19 @@ a figcaption {
   }
   100% {
     transform: scale(1) rotateZ(360deg);
+  }
+}
+
+.site-footer {
+  margin-top: 32px;
+  background-color: var(--dblue);
+  padding: 20px 32px;
+}
+.site-footer__inner {
+  color: var(--white);
+  p {
+      font-size: var(--font-size-mouse);
+      margin: 0;
   }
 }
 

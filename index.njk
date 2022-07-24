@@ -7,14 +7,16 @@ openGraphImageAlt: 24 Hour RPG Challenge
 
 {% extends "_includes/default.njk" %}
 
-{% block title %}24 Hour RPG 2021{% endblock %}
+{% block title %}24 Hour RPG 2022{% endblock %}
 
 {% block header %}
   <div class="front-header">
     <div class="head-main">
-      {% image "./img/index.svg", "24 hour RPG challenge" %}
+      <a href="/">
+        {% image "./img/index.svg", "24 hour RPG challenge" %}
+      </a>
     </div>
-    <a class="button" href="https://www.justgiving.com/fundraising/24-Hour-RPG-Challenge" target="_BLANK">Donate</a>
+    <a class="button" href="https://www.justgiving.com/team/24-hour-rpg" target="_BLANK">Donate</a>
     <div class="social">
       <ul class="social-icons">
         <li>
@@ -38,7 +40,7 @@ openGraphImageAlt: 24 Hour RPG Challenge
 {% endblock %}
 
 {% block content %}
-  <div class="main-area">
+  <div class="main-content-area">
     <section class="hero hero--home">
       <div class="hex-field">
           <div class="hex-field__hexagon hex-field__hexagon--type-a">
@@ -105,8 +107,23 @@ openGraphImageAlt: 24 Hour RPG Challenge
       <div class="hero-overlay">
           <div class="main-area">
               <h2 class="event_date">24, September, 2022</h2>
-              <div id="clockdiv" class="countdown-timer">
-                  
+              <div id="clockdiv" class="countdown-timer" data-date="2022-09-24">
+                <div>
+                    <span class="days countdown-timer__unit"></span>
+                    <div class="smalltext">Days</div>
+                </div>
+                <div>
+                    <span class="hours countdown-timer__unit"></span>
+                    <div class="smalltext">Hours</div>
+                </div>
+                <div>
+                    <span class="minutes countdown-timer__unit"></span>
+                    <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                    <span class="seconds countdown-timer__unit"></span>
+                    <div class="smalltext">Seconds</div>
+                </div>
               </div>
           </div>
           <div class="charity">
@@ -114,33 +131,130 @@ openGraphImageAlt: 24 Hour RPG Challenge
               <div class="charity__image">
                   {% image "./img/Shelter-Logo-small.png", "Shelter" %}
               </div>
-              <a class="button" href="https://www.justgiving.com/fundraising/24-Hour-RPG-Challenge" target="_BLANK">Donate</a>
+              <a class="button" href="https://www.justgiving.com/team/24-hour-rpg" target="_BLANK">Donate</a>
           </div>
       </div>
-    </section> 
-  </div>
-  <h4 class="side-heading">Adventures</h4>
-  <p>To take part in any of the adventures listed please email <a href="mailto:join@24hr-rpg.fyi">join@24hr-rpg.fyi</a> with the name of the adventure you would like to take part in and your bid amount for the adventure</p>
-  <div class="adventures">
-    {%- for post in collections.adventures -%}
-      <div class="adventure">
-        <a href="{{ post.url }}">
-          <figure class="adventure__image">
-            {% image post.data.mainImage, post.data.title %}
-            <figcaption>{{post.data.mainImageCaption}}</figcaption>
-          </figure>
-        </a>
-        <h3 class="adventure__title">{{post.data.title}}</h3>
-        <h5 class="adventure__author">By {{post.data.gm}}</h5>
-        <p><strong>Duration: </strong>{{post.data.timing}}</p>
-        {{ post.templateContent | safe | truncate(200) }}
-        <div class="adventure__link">
-          <a href="{{ post.url }}">Read more on Page {{ post.data.pageNo }} ></a>
-        </div>
+    </section>
+    <div class="advert advert--one">
+      <div class="advert-content">
+          <h3>Shop Coming Soon!</h3>
       </div>
-    {%- endfor -%}
+    </div>
+    <div class="advert advert--two">
+      <a href="/gm-information">
+        <div class="advert-content">
+          <h3>GM Information!</h3>
+        </div>
+      </a>
+    </div>
+    <div class="advert advert--three">
+      <a href="/player-information">
+        <div class="advert-content">
+          <h3>Player Information!</h3>
+        </div>
+      </a>
+    </div>
   </div>
-  
+
+  <div class="container welcome-section">
+    <article class="main">
+      <figure class="main__image">
+        {% image "./img/spelljammers.jpg", "dnd spelljammers art 2022" %}
+        <figcaption>Spelljammer - adventures in space | Wizards of the Coast</figcaption>
+      </figure>
+      
+      <h1>
+        The 24 Hour RPG Event is back!
+      </h1>
+      <div class="article">
+          <p>Welcome warriors, both keyboard and otherwise!</p>
+      
+          <p>This year, 24HR RPG is going a hybrid event with both virtual and in person session happening. Get ready for a weekend of gruelling endurance and exciting adventures, all in aid of <a href="https://england.shelter.org.uk/">Shelter</a>. Times are tough for all, but no one should feel the threat of losing there home. That is why we invite gamers of every flavour to join together and raise money to support Shelter in keeping the nation housed and safe.</p>
+          
+          <p>We are welcoming individual streamers as well as traditional RPG groups. We encourage everybody to stream their games on the day via Twitch, YouTube, UStream or any other suitable service <sup>[1]</sup>.</p>
+
+          <p>Every group should also set up a JustGiving page, by clicking the Join Team button at <a href="https://www.justgiving.com/team/24-hour-rpg">https://www.justgiving.com/team/24-hour-rpg</a>, so all donations go to the same place. You will need to create your own just giving page first.</p>
+
+          <p>Any players at one of the RPG tables will need to bid real money to gain their seat, with the highest bids taking a place in the game. Those streaming videogames, or other activities are less restricted in that regard, but are still very much encouraged raise as much money as they can. GM's and individual streamers don't have to bid (unless they really want to), but everyone is of course strongly encouraged to get as many sponsors as possible.</p>
+          
+          <p>Some games may even allow there sponsor the opportunity to help or hinder their chosen beneficiary through their donations. For every £5 given, a sponsor can inflict a Friend or a Foe token, to help or hinder their efforts. Maybe it will give them a reroll, or an extra chance. Maybe the monsters get another attack in, or they are forced to stand still for a bit longer than they should.</p>
+
+          <p><small><sup>[1]</sup>Individual players/groups don't have to participate in one of the public streams if they are uncomfortable doing so. Using character portraits, or muting from the public stream is fine, as long as they are still part of the JustGiving team page.</small></p>
+      </div>
+      <div class="modes">
+        <h2>The Modes of Play</h2>
+        <ul class="list">
+          <li><strong>Pure Mode</strong> - 10am - 10am, full 24 hour endurance events for those up to the challenge.</li>
+          <li><strong>Mellow Mode</strong> - A relaxed challenge consisting of 12 hours X2, 10am-10pm on both days</li>
+          <li><strong>Rush Mode</strong> - For those who just want to contribute something and still be able to go to work on Monday, a simple 12 hour challenge, 10am-10pm on either day.</li>
+          <li><strong>Mix Mode</strong> - Mainly for videogame streamers, as many hours as you can physically do from 1 to 48 hours depending on the amount of challenge you can manage.</li>
+        </ul>
+      </div>
+      
+    </article>
+    <aside class="sidebar">
+      <div class="extras">
+        <div class="get-involved get-involved--single">
+          <div class="get-involved__blurb">
+            <h2>Getting Involved</h2>
+            <p>So you want to get involved in the Event?</p>
+            <p>Well by the power of <span class="strike">slave</span> paid kobold labor and some human techno-magic you can get involved by the following methods:</p>
+            <ol class="list">
+              <li>Join as a GM by send emailing via <a href="mailto:contact@24hr-rpg.fyi">contact@24hr-rpg.fyi</a> with the details of your campaign and if you have any player to bring along.</li>
+              <li>Join as a player via the campaign pages (comeing Soon).</li>
+              <li>You can donate via <a href="https://www.justgiving.com/team/24-hour-rpg">JustGiving</a>.</li>
+              <li>By spreading the word far and wide via your various social media profiles, and word of mouth</li>
+            </ol>
+            <p>You can also fill out the form with any general enquires. Clicking the magical send button prompts a kobold to fetch the form and bring it to one of our team for prompt answering.</p>
+          </div>
+            
+            <form id="general-enquiry" class="form" name="general-enquiry" method="post" action="/success/" data-netlify="true" data-netlify-honeypot="bot-field">
+              <input type="hidden" name="bot-field"/>
+              <input type="hidden" name="form-name" value="general-enquiry" />
+              <input type="hidden" name="subject" value="General Enquiry" />
+              
+              <div class="form-element">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" />
+              </div>
+              <div class="form-element">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" />
+              </div>
+              <div class="form-element">
+                <label for="enquiry">Enquiry</label>
+                <textarea id="enquiry" name="enquiry"></textarea>
+              </div>
+              <div class="form-element">
+                <input id="gdpr" type="checkbox" name="GDPR" />
+                <label for="gdpr">I agree to be contacted by 24hr RPG regarding my enquiry. 24hr RPG will not pass your details onto any third parties.</label>
+              </div>
+              <div class="form-button">
+                <button class="button" type="submit">Send</button>
+              </div>
+            </form>
+            <div id="form-success" class="form-success" style="display: none">A kobold has been sent to the wizards with your message, please expect a reply within the next 24 hours.</div>
+          </div>
+      </div>
+    </aside>
+  </div>
+
+  {# <div class="adventures">
+    <h3>This Years Adventures</h3>
+    <p>2022's list of adventuures will be published soon!</p>
+  </div> #}
+
+  <div class="supporters">
+    <h3>Our Supporters</h3>
+    <p>A massive thank you to all our supporters this year, who are srpeading the word about our great cause and helping out anyway they can. If you woudl like to get involved as a supporter, please email us at <a href="mailto:contact@24hr-rpg.fyi">contact@24hr-rpg.fyi</a>.</p>
+    <div class="supporter-grid">
+      <div class="supporter-grid__item">
+        <a href="https://www.dungeonland.co.uk/" target="_BLANK">
+          {% image "./img/dungeonland.jpg", "Dungeonland" %}
+        </a>
+      </div>
+    </div>
+  </div>
   
   
 {% endblock %}
@@ -163,5 +277,50 @@ openGraphImageAlt: 24 Hour RPG Challenge
         alert(error))
     }
     document.querySelector("form").addEventListener("submit", handleSubmit);
+
+    let timer_date = document.querySelector('#clockdiv').dataset.date;
+
+    function getTimeRemaining(endtime) {
+        const total = Date.parse(endtime) - Date.parse(new Date());
+        const seconds = Math.floor((total / 1000) % 60);
+        const minutes = Math.floor((total / 1000 / 60) % 60);
+        const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+        const days = Math.floor(total / (1000 * 60 * 60 * 24));
+        
+        return {
+            total,
+            days,
+            hours,
+            minutes,
+            seconds
+        };
+    }
+
+    function initializeClock(id, endtime) {
+    const clock = document.getElementById(id);
+    const daysSpan = clock.querySelector('.days');
+    const hoursSpan = clock.querySelector('.hours');
+    const minutesSpan = clock.querySelector('.minutes');
+    const secondsSpan = clock.querySelector('.seconds');
+
+    function updateClock() {
+        const t = getTimeRemaining(endtime);
+
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+        if (t.total <= 0) {
+            clearInterval(timeinterval);
+        }
+    }
+
+    updateClock();
+        const timeinterval = setInterval(updateClock, 1000);
+    }
+
+    const deadline = new Date(Date.parse(timer_date));
+    initializeClock('clockdiv', deadline);
   </script>
 {% endblock %}

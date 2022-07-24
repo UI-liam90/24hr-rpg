@@ -1,65 +1,5 @@
 const Image = require("@11ty/eleventy-img");
 
-function getTimeRemaining(endtime) {
-  const total = Date.parse(endtime) - Date.parse(new Date());
-  const seconds = Math.floor((total / 1000) % 60);
-  const minutes = Math.floor((total / 1000 / 60) % 60);
-  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-  const days = Math.floor(total / (1000 * 60 * 60 * 24));
-
-  return {
-    total,
-    days,
-    hours,
-    minutes,
-    seconds,
-  };
-}
-function initializeClock(id, endtime) {
-  const clock = document.getElementById(id);
-
-  function updateClock(endtime) {
-    const t = getTimeRemaining(endtime);
-
-    const calcedDays = t.days;
-    const calcedHours = ("0" + t.hours).slice(-2);
-    const calcedMintutes = ("0" + t.minutes).slice(-2);
-    const calcedSeconds = ("0" + t.seconds).slice(-2);
-
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-    }
-
-    return {
-      calcedDays,
-      calcedHours,
-      calcedMintutes,
-      calcedSeconds,
-    };
-  }
-
-  updateClock();
-  const timeinterval = setInterval(updateClock, 1000);
-
-  return `
-      <div>
-        <span class="days countdown-timer__unit"></span>
-        <div class="smalltext">Days</div>
-      </div>
-      <div>
-        <span class="hours countdown-timer__unit"></span>
-        <div class="smalltext">Hours</div>
-      </div>
-      <div>
-        <span class="minutes countdown-timer__unit"></span>
-        <div class="smalltext">Minutes</div>
-      </div>
-      <div>
-        <span class="seconds countdown-timer__unit"></span>
-        <div class="smalltext">Seconds</div>
-      </div>
-    `;
-}
 
 async function imageShortcode(src, alt, sizes = "(max-width: 300px) 600px, (max-width: 600px) 1024px, 100vw") {
   if (alt === undefined) {
@@ -89,12 +29,6 @@ async function imageShortcode(src, alt, sizes = "(max-width: 300px) 600px, (max-
     </picture>`;
 }
 
-async function countdownShortcode(theDate) {
-  let timer_date = theDate;
-  const deadline = new Date(Date.parse(timer_date));
-  initializeClock("clockdiv", deadline);
-}
-
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
@@ -122,5 +56,4 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-  eleventyConfig.addNunjucksAsyncShortcode("countdownTimer", countdownShortcode);
 };
