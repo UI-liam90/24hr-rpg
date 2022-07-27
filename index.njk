@@ -1,8 +1,12 @@
 ---
 description: 24 Hour RPG Challenge 2022, this year in support for Shelter.
-openGraphTitle: Welcome to 24 Hour RPG Challenge 2022
+openGraphTitle: Welcome | 24 Hour RPG Challenge 2022
 openGraphImage: /img/social-image.jpg
 openGraphImageAlt: 24 Hour RPG Challenge
+pagination:
+  data: collections.news
+  size: 4
+  alias: posts
 ---
 
 {% extends "_includes/default.njk" %}
@@ -157,7 +161,29 @@ openGraphImageAlt: 24 Hour RPG Challenge
   </div>
 
   <div class="container welcome-section">
-    <article class="main">
+    <div class="news-main">
+      <h2>
+        Latest News
+      </h2>
+      <div class="news-posts">
+        {%- for post in posts -%}
+          <div class="news-post">
+            <a href="{{ post.url }}">
+              <figure class="adventure__image">
+                {% image post.data.mainImage, post.data.title %}
+                <figcaption>{{post.data.mainImageCaption}}</figcaption>
+              </figure>
+            </a>
+            <h4 class="adventure__title">{{post.data.title}}</h4>
+            {{ post.templateContent | safe | truncate(200) }}
+            <div class="adventure__link">
+              <a href="{{ post.url | url }}" class="button">Read more </a>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+    {# <article class="main">
       <figure class="main__image">
         {% image "./img/24-hr-party.jpg", "An Adventuring party ready for action" %}
         <figcaption>Dungeons & Dragons | Wizards of the Coast</figcaption>
@@ -191,7 +217,7 @@ openGraphImageAlt: 24 Hour RPG Challenge
         </ul>
       </div>
       
-    </article>
+    </article> #}
     <aside class="sidebar">
       <div class="extras">
         <div class="get-involved get-involved--single">
