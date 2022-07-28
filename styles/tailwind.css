@@ -584,7 +584,8 @@ a figcaption {
     box-decoration-break: clone;
   }
 }
-.page--news .main-content-area-inner {
+.page--news .main-content-area-inner,
+.page--adventure .main-content-area-inner {
   margin-top: -100px;
   @media screen and (--md) {
     margin-top: -200px;
@@ -593,6 +594,24 @@ a figcaption {
     margin-top: -250px;
   }
 }
+
+.page--adventure .main-content-area-inner .advernture-content {
+  @media screen and (--lg) {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+  }
+}
+
+.page--news .main-content-area-inner strong {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  box-shadow: 2px 0 0 var(--pink), -2px 0 0 var(--pink);
+  background-color: var(--pink);
+  font-weight: 700;
+  box-decoration-break: clone;
+}
+
 .advert {
   background-color: var(--parchment);
   border-radius: 32px;
@@ -671,11 +690,11 @@ a figcaption {
     color: var(--white);
   }
   &.top-hero--gm,
-  .top-hero--pink {
+  &.top-hero--pink {
     background-image: url("./img/polyscatter2.svg");
   }
   &.top-hero--players,
-  .top-hero--brown {
+  &.top-hero--brown {
     background-image: url("./img/polyscatter3.svg");
     color: var(--white);
   }
@@ -687,6 +706,60 @@ a figcaption {
   @media screen and (--lg) {
     grid-template-columns: 1fr 1fr;
   }
+}
+.news-post {
+  display: flex;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+  }
+  figcaption {
+    text-decoration: none;
+    color: var(--black);
+  }
+  .adventure__link {
+    margin-top: auto;
+  }
+}
+.adventure__image img {
+  border-radius: 32px;
+  overflow: hidden;
+}
+.adventures__grid {
+  display: flex;
+  flex-direction: column;
+  .news-post {
+    margin-bottom: 30px;
+  }
+  @media screen and (--md) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 32px;
+    .news-post {
+      margin-bottom: 0;
+    }
+  }
+}
+.news-main {
+  position: sticky;
+  top: 0;
+  margin-bottom: 40px;
+  h2 {
+    display: block;
+    background-image: url("./img/polyscatter1.svg");
+    background-size: cover;
+    color: var(--white);
+    padding: 16px 24px;
+    border-radius: 40px;
+  }
+}
+.adventures h3 {
+  display: block;
+  background-image: url("./img/polyscatter3.svg");
+  background-size: cover;
+  color: var(--white);
+  padding: 16px 24px;
+  border-radius: 32px;
 }
 .hero.hero--home {
   position: relative;

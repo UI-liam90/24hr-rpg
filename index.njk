@@ -161,26 +161,34 @@ pagination:
   </div>
 
   <div class="container welcome-section">
-    <div class="news-main">
-      <h2>
-        Latest News
-      </h2>
-      <div class="news-posts">
-        {%- for post in posts -%}
-          <div class="news-post">
-            <a href="{{ post.url }}">
-              <figure class="adventure__image">
-                {% image post.data.mainImage, post.data.title %}
-                <figcaption>{{post.data.mainImageCaption}}</figcaption>
-              </figure>
-            </a>
-            <h4 class="adventure__title">{{post.data.title}}</h4>
-            {{ post.templateContent | safe | truncate(200) }}
-            <div class="adventure__link">
-              <a href="{{ post.url | url }}" class="button">Read more </a>
+    <div class="latest-news-block">
+      <div class="news-main">
+        <h2>
+          Latest News
+        </h2>
+        <div class="news-posts">
+          {%- for post in posts -%}
+            <div class="news-post">
+              <a href="{{ post.url }}">
+                <figure class="adventure__image">
+                  {% image post.data.mainImage, post.data.title %}
+                  {%-if post.data.mainImageCaption -%}
+                    <figcaption>{{post.data.mainImageCaption}}</figcaption>
+                  {%- endif -%}
+                </figure>
+              </a>
+              <h4 class="adventure__title">{{post.data.title}}</h4>
+              {%-if post.data.shortDesc -%}
+                {{ post.data.shortDesc | safe }}
+              {%- else -%}
+                {{ post.templateContent | safe | truncate(200) }}
+              {%- endif -%}
+              <div class="adventure__link">
+                <a href="{{ post.url | url }}" class="button">Read more </a>
+              </div>
             </div>
-          </div>
-        {%- endfor -%}
+          {%- endfor -%}
+        </div>
       </div>
     </div>
     {# <article class="main">
@@ -265,10 +273,32 @@ pagination:
     </aside>
   </div>
 
-  {# <div class="adventures">
+  <div class="adventures">
     <h3>This Years Adventures</h3>
-    <p>2022's list of adventuures will be published soon!</p>
-  </div> #}
+    <div class="adventures__grid">
+      {%- for post in collections.adventures -%}
+        <div class="news-post">
+          <a href="{{ post.url }}">
+            <figure class="adventure__image">
+              {% image post.data.mainImage, post.data.title %}
+              {%-if post.data.mainImageCaption -%}
+                <figcaption>{{post.data.mainImageCaption}}</figcaption>
+              {%- endif -%}
+            </figure>
+          </a>
+          <h4 class="adventure__title">{{post.data.title}}</h4>
+          {%-if post.data.shortDesc -%}
+            {{ post.data.shortDesc | safe }}
+          {%- else -%}
+            {{ post.templateContent | safe | truncate(200) }}
+          {%- endif -%}
+          <div class="adventure__link">
+            <a href="{{ post.url | url }}" class="button">Read more </a>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
 
   <div class="supporters">
     <h3>Our Supporters</h3>

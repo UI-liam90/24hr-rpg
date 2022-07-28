@@ -2,6 +2,7 @@
 date: 2022-07-01
 title: The 24 Hour RPG Event is back!
 tags: news
+shortDesc: <p>Welcome warriors, both keyboard and otherwise!</p>
 description: The 2022 24 Hour RPG challenage is here!
 openGraphTitle: 24 Hour RPG Challenge 2022 Launch | 24 Hour RPG Challenge 2022
 openGraphImage: ./img/social-image.jpg
