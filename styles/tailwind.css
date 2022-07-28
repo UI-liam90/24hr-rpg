@@ -755,9 +755,8 @@ a figcaption {
 }
 .adventures h3 {
   display: block;
-  background-image: url("./img/polyscatter3.svg");
+  background-image: url("./img/polyscatter2.svg");
   background-size: cover;
-  color: var(--white);
   padding: 16px 24px;
   border-radius: 32px;
 }
