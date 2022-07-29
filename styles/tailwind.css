@@ -728,6 +728,13 @@ a figcaption {
   }
   .adventure__link {
     margin-top: auto;
+  }
+}
+.adventures__grid .news-post {
+  figcaption {
+    color: var(--white);
+  }
+  .adventure__link {
     .button {
       --bg: var(--pink);
       --col: var(--black);
