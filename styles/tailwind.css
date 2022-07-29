@@ -700,11 +700,9 @@ a figcaption {
   }
   &.top-hero--blink {
     background-image: url("./img/polyscatter6.svg");
-    color: var(--white);
   }
   &.top-hero--lblue {
     background-image: url("./img/polyscatter5.svg");
-    color: var(--white);
   }
   &.top-hero--dblue {
     background-image: url("./img/polyscatter4.svg");
