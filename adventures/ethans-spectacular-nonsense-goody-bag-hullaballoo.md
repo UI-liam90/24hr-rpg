@@ -11,7 +11,7 @@ eventDate: 24th September 2022
 eventLocation: In Person (Southport)
 mode: Mellow
 donationLink: https://www.justgiving.com/fundraising/aaaaasaaaaa
-headerType: plum
+headerType: dblue
 ---
 
 A series of one-shot, quick and easy rpgs, likely switching every 2 -3 hours! You'll be signing up for the whole bunch, but this is the easiest to drop in and out of and/or have someone tag in for you.

@@ -13,6 +13,7 @@ mode: Pure
 streamLink: https://www.twitch.tv/shrimpit
 streamEmbed: https://player.twitch.tv/?channel=shrimpit
 donationLink: https://www.justgiving.com/fundraising/TeamTales
+headerType: lblue
 ---
 
 In a small cosy town in middle America a group of teenage friends find a mystical board game that turns them from teenagers to fantasy heroes! But with every roll of the dice the magical world takes a greater hold. Can these kids defeat the evils that threaten to destroy their town or will the magical land of Thaera swallow it whole!

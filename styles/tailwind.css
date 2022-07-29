@@ -346,11 +346,15 @@ a figcaption {
     padding: 4px 20px;
     text-align: center;
   }
-  ul li a {
+  ul li a, ul li .menu-title {
     font-size: var(--font-size-fox);
     color: var(--white);
     font-weight: 700;
     text-decoration: none;
+  }
+  ul li .menu-title {
+    font-size: var(--font-size-dog);
+    margin: 24px 0;
   }
 }
 .offcanvas-link,
@@ -665,7 +669,7 @@ a figcaption {
   }
 }
 .advert--two .advert-content {
-  background-image: url("./img/polyscatter2.svg");
+  background-image: url("./img/polyscatter6.svg");
 }
 .advert--three {
   color: var(--white);
@@ -693,6 +697,18 @@ a figcaption {
     @media screen and (--lg) {
       padding-bottom: 250px;
     }
+  }
+  &.top-hero--blink {
+    background-image: url("./img/polyscatter6.svg");
+    color: var(--white);
+  }
+  &.top-hero--lblue {
+    background-image: url("./img/polyscatter5.svg");
+    color: var(--white);
+  }
+  &.top-hero--dblue {
+    background-image: url("./img/polyscatter4.svg");
+    color: var(--white);
   }
   &.top-hero--plum {
     background-image: url("./img/polyscatter1.svg");
@@ -765,7 +781,7 @@ a figcaption {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-image: url("./img/polyscatter2.svg");
+      background-image: url("./img/polyscatter6.svg");
       background-size: cover;
       padding: 16px 24px;
       border-radius: 32px;

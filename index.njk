@@ -281,7 +281,7 @@ pagination:
         <p>Have you ever wanted a portrait of your RPG character? Well, look no further, A very talented artist from our community called Asatina is now open for character portrait commissions.</p>
         <a href="/news/character-portrait-commissions" class="button">Find out more</a>
       </div>
-      {%- for post in collections.adventures | reverse -%}
+      {%- for post in collections.adventures -%}
         <div class="news-post">
           <a href="{{ post.url }}">
             <figure class="adventure__image">
