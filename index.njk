@@ -219,8 +219,7 @@ pagination:
         <h2>The Modes of Play</h2>
         <ul class="list">
           <li><strong>Pure Mode</strong> - 10am - 10am, full 24 hour endurance events for those up to the challenge.</li>
-          <li><strong>Mellow Mode</strong> - A relaxed challenge consisting of 12 hours X2, 10am-10pm on both days</li>
-          <li><strong>Rush Mode</strong> - For those who just want to contribute something and still be able to go to work on Monday, a simple 12 hour challenge, 10am-10pm on either day.</li>
+          <li><strong>Mellow Mode</strong> - 10am - 10am, A relaxed challenge for the players, with to options to drop in and out at certain campaign points.</li>
           <li><strong>Mix Mode</strong> - Mainly for videogame streamers, as many hours as you can physically do from 1 to 48 hours depending on the amount of challenge you can manage.</li>
         </ul>
       </div>
@@ -279,7 +278,7 @@ pagination:
       <div class="adventure-ad">
         {% image "./img/IMG_1158_crop.jpg", "Art commissions open" %}
         <h5>Character Portrait Commissions Now Open!</h5>
-        <p>Have you ever wanted a portrait of your RPG character? Well you're in luck, A very talented artist from our community called Asatina is now open for character portrait commissions.</p>
+        <p>Have you ever wanted a portrait of your RPG character? Well, look no further, A very talented artist from our community called Asatina is now open for character portrait commissions.</p>
         <a href="/news/character-portrait-commissions" class="button">Find out more</a>
       </div>
       {%- for post in collections.adventures | reverse -%}
@@ -293,10 +292,12 @@ pagination:
             </figure>
           </a>
           <ul class="stats">
-            <li><strong>Date:</strong> {{ post.data.eventDate | safe }}</li>
-            <li><strong>Duration:</strong> {{ post.data.timing | safe }}</li>
-            <li><strong>Location:</strong> {{ post.data.eventLocation | safe }}</li>
-          </ul>
+              <li><strong>Date:</strong> {{ post.data.eventDate | safe }}</li>
+              <li><strong>Duration:</strong> {{ post.data.timing | safe }}</li>
+              <li><strong>Location:</strong> {{ post.data.eventLocation | safe }}</li>
+              <li><strong>GM:</strong> {{ post.data.gm | safe }}</li>
+              <li><strong>Mode:</strong> {{ post.data.mode | safe }}</li>
+            </ul>
           <h4 class="adventure__title">{{post.data.title}}</h4>
           {%-if post.data.shortDesc -%}
             {{ post.data.shortDesc | safe }}

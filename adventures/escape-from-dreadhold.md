@@ -10,6 +10,7 @@ maxPlayers: 6
 timing: 24 Hours
 eventDate: 24th September 2022
 eventLocation: Online
+mode: Pure
 donationLink: https://www.justgiving.com/team/24-hour-rpg
 headerType: pink
 ---

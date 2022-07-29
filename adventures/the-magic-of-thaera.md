@@ -4,12 +4,12 @@ title: The Magic of Thaera
 tags: adventures
 gm: Robert B
 mainImage: ./img/yawning-portal.jpg
-mainImageCaption: Tales from the Yawning Portal Cover | Wizards of the Coast
 players: []
 maxPlayers: 6
 timing: 24 Hours
 eventDate: 24th September 2022
 eventLocation: Online
+mode: Pure
 streamLink: https://www.twitch.tv/shrimpit
 streamEmbed: https://player.twitch.tv/?channel=shrimpit
 donationLink: https://www.justgiving.com/fundraising/TeamTales
