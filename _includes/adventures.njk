@@ -84,8 +84,13 @@
           {%- endif -%}
         </figure>
         <div class="advernture-content">
+          
           <div class="main">
-            <p><strong>Duration:</strong> {{ timing | safe }}</p>
+            <ul class="stats">
+              <li><strong>Date:</strong> {{ eventDate | safe }}</li>
+              <li><strong>Duration:</strong> {{ timing | safe }}</li>
+              <li><strong>Location:</strong> {{ eventLocation | safe }}</li>
+            </ul>
             {{ content | safe }}
           </div>
           <div class="sidebar">

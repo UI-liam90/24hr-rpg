@@ -161,13 +161,13 @@ pagination:
   </div>
 
   <div class="container welcome-section">
-    <div class="latest-news-block">
+    {# <div class="latest-news-block">
       <div class="news-main">
         <h2>
           Latest News
         </h2>
         <div class="news-posts">
-          {%- for post in posts -%}
+          {%- for post in posts | reverse -%}
             <div class="news-post">
               <a href="{{ post.url }}">
                 <figure class="adventure__image">
@@ -190,8 +190,8 @@ pagination:
           {%- endfor -%}
         </div>
       </div>
-    </div>
-    {# <article class="main">
+    </div> #}
+    <article class="main">
       <figure class="main__image">
         {% image "./img/24-hr-party.jpg", "An Adventuring party ready for action" %}
         <figcaption>Dungeons & Dragons | Wizards of the Coast</figcaption>
@@ -225,7 +225,7 @@ pagination:
         </ul>
       </div>
       
-    </article> #}
+    </article>
     <aside class="sidebar">
       <div class="extras">
         <div class="get-involved get-involved--single">
@@ -274,9 +274,14 @@ pagination:
   </div>
 
   <div class="adventures">
-    <h3>This Years Adventures</h3>
+    <h2 class="adventure-title">This Years Adventures</h2>
     <div class="adventures__grid">
-      {%- for post in collections.adventures -%}
+      <div class="adventure-ad">
+        {% image "./img/IMG_1158_crop.jpg", "Art commissions open" %}
+        <h5>Character Portrait Commissions Now Open!</h5>
+        <p>Have you ever wanted a portrait of your RPG character? Well you're in luck, A very talented artist from our community called Asatina is now open for character portrait commissions.</p>
+      </div>
+      {%- for post in collections.adventures | reverse -%}
         <div class="news-post">
           <a href="{{ post.url }}">
             <figure class="adventure__image">
@@ -286,6 +291,11 @@ pagination:
               {%- endif -%}
             </figure>
           </a>
+          <ul class="stats">
+            <li><strong>Date:</strong> {{ post.data.eventDate | safe }}</li>
+            <li><strong>Duration:</strong> {{ post.data.timing | safe }}</li>
+            <li><strong>Location:</strong> {{ post.data.eventLocation | safe }}</li>
+          </ul>
           <h4 class="adventure__title">{{post.data.title}}</h4>
           {%-if post.data.shortDesc -%}
             {{ post.data.shortDesc | safe }}
