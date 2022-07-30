@@ -45,9 +45,7 @@
   <body class="bg-parchment">
     <div class="page">
       {% include "offCanvas.njk" %}
-      {% block header %}
-        {{ header | safe }}
-      {% endblock %}
+      {% include "header.njk" %}
       {% block content %}
         {{ content | safe }}
       {% endblock %}

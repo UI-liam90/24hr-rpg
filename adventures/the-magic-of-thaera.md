@@ -3,7 +3,7 @@ date: 2022-01-03
 title: The Magic of Thaera
 tags: adventures
 gm: Robert B
-mainImage: ./img/yawning-portal.jpg
+mainImage: ./img/magic-of-thaera.png
 players: []
 maxPlayers: 6
 timing: 24 Hours

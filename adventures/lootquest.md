@@ -11,6 +11,8 @@ eventDate: 24th September 2022
 eventLocation: Online
 mode: Mellow
 donationLink: https://www.justgiving.com/fundraising/liam-24-hr-rpg
+streamLink: https://www.twitch.tv/leajen
+streamEmbed: https://player.twitch.tv/?channel=leajen
 headerType: plum
 ---
 

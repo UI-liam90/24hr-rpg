@@ -37,6 +37,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
 
   eleventyConfig.addPassthroughCopy("img");
+  
+  eleventyConfig.addPassthroughCopy("downloads");
 
   eleventyConfig.addPassthroughCopy("fonts");
 
