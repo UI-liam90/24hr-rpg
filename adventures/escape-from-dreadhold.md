@@ -4,7 +4,6 @@ title: Escape from Dreadhold
 tags: adventures
 gm: Stephanie M
 mainImage: ./img/eberon.png
-mainImageCaption: Exploring Eberron | KB Presents
 players: []
 maxPlayers: 6
 timing: 24 Hours
