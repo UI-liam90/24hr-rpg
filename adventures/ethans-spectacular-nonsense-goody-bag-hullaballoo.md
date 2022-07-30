@@ -9,7 +9,7 @@ maxPlayers: 6
 timing: 24 Hours
 eventDate: 24th September 2022
 eventLocation: In Person (Southport)
-mode: Mellow
+mode: Flexible
 donationLink: https://www.justgiving.com/fundraising/aaaaasaaaaa
 headerType: dblue
 ---

@@ -1,5 +1,5 @@
 ---
-date: 2022-01-02
+date: 2022-01-04
 title: Escape from Dreadhold
 tags: adventures
 gm: Stephanie M

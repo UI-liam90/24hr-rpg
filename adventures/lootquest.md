@@ -1,5 +1,5 @@
 ---
-date: 2022-01-04
+date: 2022-01-02
 title: LootQuest
 tags: adventures
 gm: Liam W
@@ -9,7 +9,7 @@ maxPlayers: 6
 timing: 24 Hours
 eventDate: 24th September 2022
 eventLocation: Online
-mode: Mellow
+mode: Flexible
 donationLink: https://www.justgiving.com/fundraising/liam-24-hr-rpg
 streamLink: https://www.twitch.tv/leajen
 streamEmbed: https://player.twitch.tv/?channel=leajen
