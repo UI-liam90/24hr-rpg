@@ -4,7 +4,7 @@ title: Earthdawn
 tags: adventures
 gm: Tim B
 mainImage: ./img/earthdawn-cropped.jpg
-players: []
+players: [Holly J]
 maxPlayers: 6
 timing: 2 X 12 hours
 eventDate: 24th September 2022
