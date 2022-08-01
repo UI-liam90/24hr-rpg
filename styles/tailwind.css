@@ -593,13 +593,9 @@ a figcaption {
   align-content: center;
 }
 .main-content-area {
-  display: flex;
-  flex-direction: column;
-  @media screen and (--sm) {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 24px;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 24px;
   @media screen and (--md) {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, auto);
