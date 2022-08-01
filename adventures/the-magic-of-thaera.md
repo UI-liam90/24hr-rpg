@@ -4,7 +4,7 @@ title: The Magic of Thaera
 tags: adventures
 gm: Robert B
 mainImage: ./img/magic-of-thaera.png
-players: []
+players: [Beki, Emma J]
 maxPlayers: 6
 timing: 24 Hours
 eventDate: 24th September 2022

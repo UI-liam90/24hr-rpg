@@ -4,7 +4,7 @@ title: Escape from Dreadhold
 tags: adventures
 gm: Stephanie M
 mainImage: ./img/eberon.png
-players: []
+players: [Paddy R]
 maxPlayers: 6
 timing: 24 Hours
 eventDate: 24th September 2022
