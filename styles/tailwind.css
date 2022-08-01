@@ -594,8 +594,11 @@ a figcaption {
 }
 .main-content-area {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
+  @media screen and (--sm) {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
   @media screen and (--md) {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, auto);
