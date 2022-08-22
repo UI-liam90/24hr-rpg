@@ -1,5 +1,5 @@
 ---
-date: 2022-01-08
+date: 2022-01-02
 title: Promise
 tags: adventures
 gm: Tim B
