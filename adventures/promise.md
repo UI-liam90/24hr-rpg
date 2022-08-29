@@ -4,7 +4,7 @@ title: Promise
 tags: adventures
 gm: Tim B
 mainImage: ./img/Weird-West-Tabletop.jpg
-players: []
+players: [Callum G]
 maxPlayers: 6
 timing: 2 X 12 hours
 eventDate: 17th September 2022
