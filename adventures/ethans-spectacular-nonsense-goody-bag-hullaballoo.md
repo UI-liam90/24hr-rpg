@@ -4,7 +4,7 @@ title: Ethan's Spectacular Nonsense Goody Bag Hullaballoo!
 tags: adventures
 gm: Ethan B
 mainImage: ./img/ethans-wacky-adventure-2022.jpg
-players: [Eli, Charlie, Jojo]
+players: [Eli, Charlie, Jojo, Rochelle]
 maxPlayers: 6
 timing: 24 Hours
 eventDate: 24th September 2022
