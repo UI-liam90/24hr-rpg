@@ -15,14 +15,109 @@ pagination:
 
 {% block content %}
   <div class="main-content-area">
-    <iframe
-        class="hero hero--home"
-        src="https://player.twitch.tv/?channel=shrimpit&parent=24hr-rpg.fyi"
-        height="100%"
-        width="100%"
-        allowfullscreen>
-    </iframe>
-
+    <section class="hero hero--home">
+      <div class="hex-field">
+          <div class="hex-field__hexagon hex-field__hexagon--type-a">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-b">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-c">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-d">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-e">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-f">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-g">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-h">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-i">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-j">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-k">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-l">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-m">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-n">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-p">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-q">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-o">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-r">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-s">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+          <div class="hex-field__hexagon hex-field__hexagon--type-t">
+              <svg class="icon icon-hexagonal"><use xlink:href="#icon-hexagonal"></use></svg>
+          </div>
+      </div>
+      <div class="hero-overlay">
+          <div class="main-area">
+              <h2 class="event_date">24, September, 2022</h2>
+              <div id="clockdiv" class="countdown-timer" data-date="2022-09-24T10:00:00+01:00">
+                <div>
+                    <span class="days countdown-timer__unit"></span>
+                    <div class="smalltext">Days</div>
+                </div>
+                <div>
+                    <span class="hours countdown-timer__unit"></span>
+                    <div class="smalltext">Hours</div>
+                </div>
+                <div>
+                    <span class="minutes countdown-timer__unit"></span>
+                    <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                    <span class="seconds countdown-timer__unit"></span>
+                    <div class="smalltext">Seconds</div>
+                </div>
+              </div>
+          </div>
+          <div id="streamlinks" class="streamlinks" style="display: none;">
+            <h2 class="event_date">Stream Links</h2>
+            {%- for post in collections.adventures -%}
+              {%-if post.data.streamLink -%}
+                {# <iframe src="{{post.data.streamEmbed}}&parent=24hr-rpg.fyi&muted=true" height="100%" width="100%" allowfullscreen="true" /> #}
+                <a href="{{post.data.streamLink}}" class="button" target="_BLANK">{{post.data.title}}</a>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+          <div class="charity">
+              <h2>This year in support of:</h2>
+              <div class="charity__image">
+                  {% image "./img/Shelter-Logo-small.png", "Shelter" %}
+              </div>
+              <a class="button" href="https://www.justgiving.com/team/24-hour-rpg" target="_BLANK">Donate</a>
+          </div>
+      </div>
+    </section>
     <div class="call-to-action call-to-action--one">
        <a href="https://shop.24hr-rpg.fyi/">
         <div class="call-to-action-content">
